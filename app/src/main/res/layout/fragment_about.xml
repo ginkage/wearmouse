@@ -31,7 +31,7 @@
 
         <ImageView
             android:id="@+id/header"
-            android:src="@drawable/ic_launcher_mouse"
+            android:src="@drawable/ic_launcher"
             android:layout_width="@dimen/onboarding_icon_size"
             android:layout_height="@dimen/onboarding_icon_size"
             android:layout_marginBottom="8dp"

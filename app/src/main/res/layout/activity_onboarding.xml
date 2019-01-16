@@ -66,8 +66,8 @@
             android:layout_gravity="center_horizontal"
             android:minWidth="@dimen/round_button_circle_diameter_large"
             android:minHeight="@dimen/round_button_circle_diameter_large"
-            android:src="@drawable/ic_arrow_forward_white_24"
-            android:background="@drawable/oval_shape"
+            android:src="@drawable/ic_ob_arrow_forward"
+            android:background="@drawable/ob_background_oval"
             android:backgroundTint="@color/btn_colored_background_material"
             android:scaleType="center"
             tools:ignore="ContentDescription"/>
