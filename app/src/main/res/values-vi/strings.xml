@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">Vui lòng đợi...</string>
+    <string name="generic_disabled">ĐÃ TẮT</string>
+    <string name="pref_bluetooth">Thiết bị được ghép nối</string>
+    <string name="pref_bluetoothAvailable">Thiết bị có sẵn</string>
+    <string name="pref_bluetoothScan">Quét tìm thiết bị lân cận</string>
+    <string name="pref_bluetoothScan_scanning">Đang quét tìm thiết bị lân cận…</string>
+    <string name="pref_bluetooth_connect">Kết nối</string>
+    <string name="pref_bluetooth_disconnect">Ngắt kết nối</string>
+    <string name="pref_bluetooth_unpair">Hủy ghép nối</string>
+    <string name="pref_bluetooth_select">Chọn</string>
+    <string name="pref_bluetooth_turningOn">Đang bật Bluetooth...</string>
+    <string name="pref_bluetooth_turningOff">Đang tắt Bluetooth...</string>
+    <string name="pref_bluetooth_available">Khả dụng</string>
+    <string name="pref_bluetooth_unavailable">Không khả dụng</string>
+    <string name="pref_bluetooth_pairing">Đang ghép nối…</string>
+    <string name="pref_bluetooth_connecting">Đang kết nối…</string>
+    <string name="pref_bluetooth_connected">Đã kết nối</string>
+    <string name="pref_bluetooth_disconnecting">Đang ngắt kết nối…</string>
+    <string name="pref_bluetooth_disconnected">Đã ngắt kết nối</string>
+    <string name="pref_bluetooth_forget">Bỏ qua</string>
+    <string name="pref_appAbout">Giới thiệu</string>
+    <string name="pref_about_openSource">Giấy phép nguồn mở</string>
+    <string name="pref_mode_select">Chế độ nhập</string>
+    <string name="pref_inputMouse">Chuột</string>
+    <string name="left_button_label">T</string>
+    <string name="right_button_label">P</string>
+    <string name="click_and_hold">Nhấp và giữ chuột trái</string>
+    <string name="right_click_hold">Nhấp và giữ chuột phải</string>
+    <string name="middle_click">Nhấp nút chuột giữa</string>
+    <string name="tap_to_click">Vẫy tay để di chuyển con trỏ\nNhấn vào nút để nhấp\nKéo từ trên xuống để chuyển bàn tay</string>
+    <string name="mouse_hand_left">Tay trái\n(Đồng hồ đeo ở cổ tay trái)</string>
+    <string name="mouse_hand_center">Phần giữa\n(Tay bạn đang cầm đồng hồ)</string>
+    <string name="mouse_hand_right">Tay phải\n(Đồng hồ đeo ở cổ tay phải)</string>
+    <string name="pref_inputCursor">Các phím con trỏ</string>
+    <string name="keypad_hint">Nhấn đúp: Phím Enter\nNhấn và giữ: Thoát chế độ bàn phím\nVuốt từ giữa để có thêm phím</string>
+    <string name="key_name_escape">Escape</string>
+    <string name="key_name_backspace">Backspace</string>
+    <string name="key_name_tab">Tab</string>
+    <string name="key_name_space">cách</string>
+    <string name="pref_inputKeyboard">Nhập qua b.phím</string>
+    <string name="pref_inputSettings">Cài đặt</string>
+    <string name="pref_settingStabilize">Ổn định chuyển động của con trỏ</string>
+    <string name="pref_settingStabilize_summary">Dễ dàng trỏ tới các mục tiêu nhỏ hơn</string>
+    <string name="pref_settingCursor8Way">Con trỏ 8 hướng</string>
+    <string name="pref_settingCursor8Way_summary">Cho phép chuyển động chéo trong chế độ bàn phím</string>
+    <string name="pref_settingReducedRate">Giảm tốc độ dữ liệu xuống 50 Hz</string>
+    <string name="pref_settingReducedRate_summary">Bật tùy chọn này nếu con trỏ chuột không bắt kịp chuyển động</string>
+    <string name="pref_settingReplayTutorials">Lặp lại tất cả hướng dẫn</string>
+    <string name="pref_settingReplayTutorials_summary">Hiển thị màn hình trợ giúp cho mọi chế độ một lần nữa khi bạn nhập chúng</string>
+    <string name="onboarding_message_welcome">Sử dụng đồng hồ thông minh chạy Wear OS làm chuột hoặc bàn phím Bluetooth; bắt đầu bằng cách ghép nối với một thiết bị khác.</string>
+    <string name="onboarding_message_mouse">Di chuyển thiết bị chạy Wear OS của bạn để di chuyển con trỏ chuột trên màn hình.</string>
+    <string name="onboarding_message_keypad">Nhấn vào các cạnh màn hình của thiết bị chạy Wear OS để nhấn các phím mũi tên.</string>
+</resources>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.wear.widget.drawer.WearableDrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/content_frame">
+
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/left_guideline"
+                app:layout_constraintGuide_percent=".20"
+                android:orientation="vertical"/>
+
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/top_guideline"
+                app:layout_constraintGuide_percent=".20"
+                android:orientation="horizontal"/>
+
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/right_guideline"
+                app:layout_constraintGuide_percent=".67"
+                android:orientation="vertical"/>
+
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottom_guideline"
+                app:layout_constraintGuide_percent=".80"
+                android:orientation="horizontal"/>
+
+            <Button
+                android:id="@+id/left_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@color/grey"
+                android:text="@string/left_button_label"
+                android:textColor="@color/dark_grey"
+                android:textSize="48sp"
+                app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+                app:layout_constraintLeft_toLeftOf="@id/left_guideline"
+                app:layout_constraintRight_toRightOf="@id/right_guideline"
+                app:layout_constraintTop_toTopOf="@id/top_guideline"/>
+
+            <Button
+                android:id="@+id/right_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@color/grey"
+                android:text="@string/right_button_label"
+                android:textColor="@color/dark_grey"
+                android:textSize="48sp"
+                app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+                app:layout_constraintLeft_toLeftOf="@id/right_guideline"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/top_guideline"/>
+
+            <ImageView
+                android:id="@+id/pointer_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/am_pointer_arrow"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/top_guideline"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/am_drag_handle"
+                android:tint="@color/grey"
+                android:rotation="90"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/left_guideline"
+                app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+                app:layout_constraintTop_toTopOf="@id/top_guideline"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.wear.widget.drawer.WearableNavigationDrawerView
+            android:id="@+id/top_navigation_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_grey"
+            app:navigationStyle="singlePage"/>
+
+        <android.support.wear.widget.drawer.WearableActionDrawerView
+            android:id="@+id/bottom_action_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            app:actionMenu="@menu/action_drawer_menu"
+            app:showOverflowInPeek="true"/>
+
+    </android.support.wear.widget.drawer.WearableDrawerLayout>
+
+    <FrameLayout
+        android:id="@+id/mouse_hint"
+        android:background="#7F000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tap_to_click"/>
+
+    </FrameLayout>
+
+</FrameLayout>

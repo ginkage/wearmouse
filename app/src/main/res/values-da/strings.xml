@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">Vent et øjeblik…</string>
+    <string name="generic_disabled">FRA</string>
+    <string name="pref_bluetooth">Parrede enheder</string>
+    <string name="pref_bluetoothAvailable">Tilgængelige enheder</string>
+    <string name="pref_bluetoothScan">Søg efter enheder i nærheden</string>
+    <string name="pref_bluetoothScan_scanning">Søger efter enheder i nærheden...</string>
+    <string name="pref_bluetooth_connect">Opret forbindelse</string>
+    <string name="pref_bluetooth_disconnect">Afbryd</string>
+    <string name="pref_bluetooth_unpair">Ophæv parring</string>
+    <string name="pref_bluetooth_select">Vælg</string>
+    <string name="pref_bluetooth_turningOn">Bluetooth aktiveres…</string>
+    <string name="pref_bluetooth_turningOff">Bluetooth deaktiveres…</string>
+    <string name="pref_bluetooth_available">Tilgængelig</string>
+    <string name="pref_bluetooth_unavailable">Ikke tilgængelig</string>
+    <string name="pref_bluetooth_pairing">Parrer...</string>
+    <string name="pref_bluetooth_connecting">Tilslutter…</string>
+    <string name="pref_bluetooth_connected">Tilsluttet</string>
+    <string name="pref_bluetooth_disconnecting">Afbryder...</string>
+    <string name="pref_bluetooth_disconnected">Afbrudt</string>
+    <string name="pref_bluetooth_forget">Glem</string>
+    <string name="pref_appAbout">Om</string>
+    <string name="pref_about_openSource">Open source-licens</string>
+    <string name="pref_mode_select">Input-tilstand</string>
+    <string name="pref_inputMouse">Mus</string>
+    <string name="left_button_label">V</string>
+    <string name="right_button_label">H</string>
+    <string name="click_and_hold">Venstreklik og hold nede</string>
+    <string name="right_click_hold">Højreklik og hold nede</string>
+    <string name="middle_click">Midterklik</string>
+    <string name="tap_to_click">Vink med hånden for at flytte markøren\nTryk på knappen for at klikke\nTræk fra toppen for at skifte hånd</string>
+    <string name="mouse_hand_left">Venstre hånd\n(Uret sidder på venstre håndled)</string>
+    <string name="mouse_hand_center">Midt på\n(Du har uret i hånden)</string>
+    <string name="mouse_hand_right">Højre hånd\n(Uret sidder på højre håndled)</string>
+    <string name="pref_inputCursor">Markørstaster</string>
+    <string name="keypad_hint">Tryk to gange: Enter-tasten\nTryk længe: Afslut tastaturtilstanden\nStryg fra midten for at se flere taster</string>
+    <string name="key_name_escape">Escape</string>
+    <string name="key_name_backspace">Backspace</string>
+    <string name="key_name_tab">Tabulator</string>
+    <string name="key_name_space">Mellemrum</string>
+    <string name="pref_inputKeyboard">Tastaturinput</string>
+    <string name="pref_inputSettings">Indstillinger</string>
+    <string name="pref_settingStabilize">Stabiliser markørbevægelser</string>
+    <string name="pref_settingStabilize_summary">Det gør det nemmere at pege på små genstande</string>
+    <string name="pref_settingCursor8Way">Markør med otte retninger</string>
+    <string name="pref_settingCursor8Way_summary">Tillad diagonale bevægelser i tastaturtilstanden</string>
+    <string name="pref_settingReducedRate">Reducer datahastighed til 50 Hz</string>
+    <string name="pref_settingReducedRate_summary">Aktivér dette, hvis markøren ikke kan følge med bevægelserne</string>
+    <string name="pref_settingReplayTutorials">Gentag alle selvstudier</string>
+    <string name="pref_settingReplayTutorials_summary">Se hjælpeskærme for en tilstand igen, når du aktiverer den</string>
+    <string name="onboarding_message_welcome">Brug dit Wear OS-smart-ur som Bluetooth-mus eller tastatur. Start med at knytte det til en anden enhed.</string>
+    <string name="onboarding_message_mouse">Flyt din Wear OS-enhed for at flytte musemarkøren på skærmen.</string>
+    <string name="onboarding_message_keypad">Tryk på siderne af Wear OS-enhedens skærm for at trykke på piletasterne.</string>
+</resources>

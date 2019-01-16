@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">請稍候…</string>
+    <string name="generic_disabled">關閉</string>
+    <string name="pref_bluetooth">已配對的裝置</string>
+    <string name="pref_bluetoothAvailable">可配對的裝置</string>
+    <string name="pref_bluetoothScan">掃描附近的裝置</string>
+    <string name="pref_bluetoothScan_scanning">正在掃描附近的裝置…</string>
+    <string name="pref_bluetooth_connect">連接</string>
+    <string name="pref_bluetooth_disconnect">解除連接</string>
+    <string name="pref_bluetooth_unpair">取消配對</string>
+    <string name="pref_bluetooth_select">選取</string>
+    <string name="pref_bluetooth_turningOn">正在開啟藍牙…</string>
+    <string name="pref_bluetooth_turningOff">正在關閉藍牙…</string>
+    <string name="pref_bluetooth_available">可配對</string>
+    <string name="pref_bluetooth_unavailable">無法使用</string>
+    <string name="pref_bluetooth_pairing">正在配對…</string>
+    <string name="pref_bluetooth_connecting">正在連接…</string>
+    <string name="pref_bluetooth_connected">已連接</string>
+    <string name="pref_bluetooth_disconnecting">正在解除連接…</string>
+    <string name="pref_bluetooth_disconnected">已解除連接</string>
+    <string name="pref_bluetooth_forget">忘記</string>
+    <string name="pref_appAbout">關於</string>
+    <string name="pref_about_openSource">開放原始碼授權</string>
+    <string name="pref_mode_select">輸入法</string>
+    <string name="pref_inputMouse">滑鼠</string>
+    <string name="left_button_label">左</string>
+    <string name="right_button_label">右</string>
+    <string name="click_and_hold">點擊並按住左鍵</string>
+    <string name="right_click_hold">點擊並按住右鍵</string>
+    <string name="middle_click">點擊滑鼠中鍵</string>
+    <string name="tap_to_click">揮手即可移動游標\n輕按按鈕即可點擊\n由頂部往下拉即可換手</string>
+    <string name="mouse_hand_left">左手\n(手錶戴在左手腕)</string>
+    <string name="mouse_hand_center">中央\n(手錶放在手上)</string>
+    <string name="mouse_hand_right">右手\n(手錶戴在右手腕)</string>
+    <string name="pref_inputCursor">游標鍵</string>
+    <string name="keypad_hint">輕按兩下：Enter 鍵\n長按：退出鍵盤模式\n從中間向外快速滑動即可查看更多鍵</string>
+    <string name="key_name_escape">Esc</string>
+    <string name="key_name_backspace">Backspace</string>
+    <string name="key_name_tab">Tab</string>
+    <string name="key_name_space">Space</string>
+    <string name="pref_inputKeyboard">鍵盤輸入</string>
+    <string name="pref_inputSettings">設定</string>
+    <string name="pref_settingStabilize">穩定游標移動方式</string>
+    <string name="pref_settingStabilize_summary">讓您更輕鬆將游標移至小目標</string>
+    <string name="pref_settingCursor8Way">8 方向游標</string>
+    <string name="pref_settingCursor8Way_summary">允許在鍵盤模式執行對角移動</string>
+    <string name="pref_settingReducedRate">將資料傳輸速率減至 50 Hz</string>
+    <string name="pref_settingReducedRate_summary">如果滑鼠游標無法跟上動作，請啟用此功能</string>
+    <string name="pref_settingReplayTutorials">重複所有教學課程</string>
+    <string name="pref_settingReplayTutorials_summary">當您進入每個模式時，再次顯示該模式的說明畫面</string>
+    <string name="onboarding_message_welcome">如要使用 Wear OS 智能手錶作為藍牙滑鼠或鍵盤，請先與其他裝置配對。</string>
+    <string name="onboarding_message_mouse">移動 Wear OS 裝置，即可在螢幕上移動滑鼠指標。</string>
+    <string name="onboarding_message_keypad">輕按 Wear OS 裝置的螢幕兩側，即可按下箭咀鍵。</string>
+</resources>

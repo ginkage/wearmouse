@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">Lütfen bekleyin…</string>
+    <string name="generic_disabled">KAPALI</string>
+    <string name="pref_bluetooth">Eşlenen cihazlar</string>
+    <string name="pref_bluetoothAvailable">Kullanılabilir cihazlar</string>
+    <string name="pref_bluetoothScan">Etrafımdaki cihazları tara</string>
+    <string name="pref_bluetoothScan_scanning">Etrafımdaki cihazlar taranıyor…</string>
+    <string name="pref_bluetooth_connect">Bağlan</string>
+    <string name="pref_bluetooth_disconnect">Bağlantıyı kes</string>
+    <string name="pref_bluetooth_unpair">Eşlemeyi bitir</string>
+    <string name="pref_bluetooth_select">Seç</string>
+    <string name="pref_bluetooth_turningOn">Bluetooth açılıyor...</string>
+    <string name="pref_bluetooth_turningOff">Bluetooth kapatılıyor...</string>
+    <string name="pref_bluetooth_available">Kullanılabilir</string>
+    <string name="pref_bluetooth_unavailable">Kullanılamıyor</string>
+    <string name="pref_bluetooth_pairing">Eşleniyor…</string>
+    <string name="pref_bluetooth_connecting">Bağlanıyor…</string>
+    <string name="pref_bluetooth_connected">Bağlandı</string>
+    <string name="pref_bluetooth_disconnecting">Bağlantı kesiliyor…</string>
+    <string name="pref_bluetooth_disconnected">Bağlantı kesildi</string>
+    <string name="pref_bluetooth_forget">Unut</string>
+    <string name="pref_appAbout">Hakkında</string>
+    <string name="pref_about_openSource">Açık kaynak lisans</string>
+    <string name="pref_mode_select">Giriş Modu</string>
+    <string name="pref_inputMouse">Fare</string>
+    <string name="left_button_label">Sol</string>
+    <string name="right_button_label">Sağ</string>
+    <string name="click_and_hold">Sol tıklayıp basılı tutma</string>
+    <string name="right_click_hold">Sağ tıklayıp basılı tutma</string>
+    <string name="middle_click">Orta tıklama</string>
+    <string name="tap_to_click">İşaretçiyi hareket ettirmek için elinizi sallayın\nTıklamak için düğmeye dokunun\nEl değiştirmek için yukarıdan çekin</string>
+    <string name="mouse_hand_left">Sol El\n(Saat sol bilektedir)</string>
+    <string name="mouse_hand_center">Orta\n(Saat elinizdedir)</string>
+    <string name="mouse_hand_right">Sağ El\n(Saat sağ bilektedir)</string>
+    <string name="pref_inputCursor">İmleç tuşları</string>
+    <string name="keypad_hint">Çift dokunma: Enter tuşu\nUzun basma: Exit tuş takımı modu\nDiğer tuşlar için ortadan dışarıya doğru kaydırın</string>
+    <string name="key_name_escape">Escape</string>
+    <string name="key_name_backspace">Geri tuşu</string>
+    <string name="key_name_tab">Sekme</string>
+    <string name="key_name_space">Boşluk</string>
+    <string name="pref_inputKeyboard">Klavye girişi</string>
+    <string name="pref_inputSettings">Ayarlar</string>
+    <string name="pref_settingStabilize">İşaretçi hareketlerini sabitle</string>
+    <string name="pref_settingStabilize_summary">Küçük hedefleri işaretlemeyi kolaylaştırır</string>
+    <string name="pref_settingCursor8Way">8 yönlü imleç</string>
+    <string name="pref_settingCursor8Way_summary">Tuş takımı modunda çapraz harekete izin verir</string>
+    <string name="pref_settingReducedRate">Veri hızını 50 Hz\'e düşür</string>
+    <string name="pref_settingReducedRate_summary">Fare işaretçisi hareketi takip edemiyorsa bunu etkinleştirin</string>
+    <string name="pref_settingReplayTutorials">Tüm eğiticileri tekrarla</string>
+    <string name="pref_settingReplayTutorials_summary">Girdiğiniz her mod için yardım ekranları tekrar gösterilsin</string>
+    <string name="onboarding_message_welcome">Wear OS akıllı saatinizi Bluetooth fare veya klavye olarak kullanın. Saatinizi başka bir cihazla eşleyerek başlayın.</string>
+    <string name="onboarding_message_mouse">Ekrandaki fare işaretçisini hareket ettirmek için Wear OS cihazınızı hareket ettirin.</string>
+    <string name="onboarding_message_keypad">Ok tuşlarına basmak için Wear OS cihazınızın ekranının kenarlarına dokunun.</string>
+</resources>

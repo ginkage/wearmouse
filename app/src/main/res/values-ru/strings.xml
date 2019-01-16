@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">Подождите…</string>
+    <string name="generic_disabled">ВЫКЛ</string>
+    <string name="pref_bluetooth">Сопряженные устройства</string>
+    <string name="pref_bluetoothAvailable">Доступные устройства</string>
+    <string name="pref_bluetoothScan">Искать устройства рядом</string>
+    <string name="pref_bluetoothScan_scanning">Поиск устройств рядом…</string>
+    <string name="pref_bluetooth_connect">Подключить</string>
+    <string name="pref_bluetooth_disconnect">Отключить</string>
+    <string name="pref_bluetooth_unpair">Отключить</string>
+    <string name="pref_bluetooth_select">Выбрать</string>
+    <string name="pref_bluetooth_turningOn">Включение Bluetooth…</string>
+    <string name="pref_bluetooth_turningOff">Отключение Bluetooth…</string>
+    <string name="pref_bluetooth_available">Доступно</string>
+    <string name="pref_bluetooth_unavailable">Недоступно</string>
+    <string name="pref_bluetooth_pairing">Подключение…</string>
+    <string name="pref_bluetooth_connecting">Подключение…</string>
+    <string name="pref_bluetooth_connected">Подключено</string>
+    <string name="pref_bluetooth_disconnecting">Отключение…</string>
+    <string name="pref_bluetooth_disconnected">Отключено</string>
+    <string name="pref_bluetooth_forget">Удалить</string>
+    <string name="pref_appAbout">О приложении</string>
+    <string name="pref_about_openSource">Лицензия открытого ПО</string>
+    <string name="pref_mode_select">Режим ввода</string>
+    <string name="pref_inputMouse">Мышь</string>
+    <string name="left_button_label">Л</string>
+    <string name="right_button_label">П</string>
+    <string name="click_and_hold">Нажать и удерживать левую кнопку мыши</string>
+    <string name="right_click_hold">Нажать и удерживать правую кнопку мыши</string>
+    <string name="middle_click">Нажать среднюю кнопку мыши</string>
+    <string name="tap_to_click">Чтобы переместить указатель мыши, взмахните рукой.\nЧтобы нажать кнопку мыши, коснитесь кнопки на экране.\nЧтобы сменить руку, потяните экран вниз.</string>
+    <string name="mouse_hand_left">Левая рука\n(часы на левом запястье)</string>
+    <string name="mouse_hand_center">Центр\n(часы в руках)</string>
+    <string name="mouse_hand_right">Правая рука\n(часы на правом запястье)</string>
+    <string name="pref_inputCursor">Клавиши курсора</string>
+    <string name="keypad_hint">Двойное нажатие: клавиша ВВОД.\nДолгое нажатие: выход из режима клавиатуры.\nЧтобы посмотреть другие клавиши, проведите по экрану от центра к краю.</string>
+    <string name="key_name_escape">Escape</string>
+    <string name="key_name_backspace">Backspace</string>
+    <string name="key_name_tab">Табуляция</string>
+    <string name="key_name_space">Пробел</string>
+    <string name="pref_inputKeyboard">Ввод с клавиатуры</string>
+    <string name="pref_inputSettings">Настройки</string>
+    <string name="pref_settingStabilize">Стабилизация указателя</string>
+    <string name="pref_settingStabilize_summary">Используйте эту настройку, чтобы повысить точность указателя</string>
+    <string name="pref_settingCursor8Way">Перемещение в 8 направлениях</string>
+    <string name="pref_settingCursor8Way_summary">Перемещение по диагонали в режиме курсорных клавиш</string>
+    <string name="pref_settingReducedRate">Уменьшение частоты до 50 Гц</string>
+    <string name="pref_settingReducedRate_summary">Если указатель не успевает за перемещением устройства</string>
+    <string name="pref_settingReplayTutorials">Повторять руководство</string>
+    <string name="pref_settingReplayTutorials_summary">Показывать все справочные подсказки повторно при входе в раздел руководства</string>
+    <string name="onboarding_message_welcome">Используйте часы с Wear OS как мышь или клавиатуру Bluetooth. Для начала подключите часы к другому устройству.</string>
+    <string name="onboarding_message_mouse">Чтобы управлять указателем мыши, двигайте устройство с Wear OS.</string>
+    <string name="onboarding_message_keypad">Чтобы использовать устройство с Wear OS как клавиши со стрелками, нажимайте на края его экрана.</string>
+</resources>

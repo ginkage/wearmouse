@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">Harap tunggu...</string>
+    <string name="generic_disabled">NONAKTIF</string>
+    <string name="pref_bluetooth">Perangkat disambungkan</string>
+    <string name="pref_bluetoothAvailable">Perangkat yang tersedia</string>
+    <string name="pref_bluetoothScan">Pindai perangkat di sekitar</string>
+    <string name="pref_bluetoothScan_scanning">Memindai perangkat di sekitar…</string>
+    <string name="pref_bluetooth_connect">Sambungkan</string>
+    <string name="pref_bluetooth_disconnect">Putuskan sambungan</string>
+    <string name="pref_bluetooth_unpair">Lepas sambungan</string>
+    <string name="pref_bluetooth_select">Pilih</string>
+    <string name="pref_bluetooth_turningOn">Bluetooth diaktifkan...</string>
+    <string name="pref_bluetooth_turningOff">Bluetooth dinonaktifkan...</string>
+    <string name="pref_bluetooth_available">Tersedia</string>
+    <string name="pref_bluetooth_unavailable">Tidak Tersedia</string>
+    <string name="pref_bluetooth_pairing">Menyambungkan...</string>
+    <string name="pref_bluetooth_connecting">Menghubungkan…</string>
+    <string name="pref_bluetooth_connected">Tersambung</string>
+    <string name="pref_bluetooth_disconnecting">Memutus sambungan...</string>
+    <string name="pref_bluetooth_disconnected">Sambungan terputus</string>
+    <string name="pref_bluetooth_forget">Lupakan</string>
+    <string name="pref_appAbout">Tentang</string>
+    <string name="pref_about_openSource">Lisensi open source</string>
+    <string name="pref_mode_select">Mode Masukan</string>
+    <string name="pref_inputMouse">Mouse</string>
+    <string name="left_button_label">Ki</string>
+    <string name="right_button_label">Ka</string>
+    <string name="click_and_hold">Klik lama tombol kiri</string>
+    <string name="right_click_hold">Klik lama tombol kanan</string>
+    <string name="middle_click">Klik tombol tengah</string>
+    <string name="tap_to_click">Lambaikan tangan untuk memindahkan pointer\nTap tombol untuk mengklik\nTarik dari atas untuk beralih tangan</string>
+    <string name="mouse_hand_left">Tangan Kiri\n(Jam tangan di pergelangan kiri)</string>
+    <string name="mouse_hand_center">Tengah\n(Jam tangan berada di tangan)</string>
+    <string name="mouse_hand_right">Tangan Kanan\n(Jam tangan di pergelangan kanan)</string>
+    <string name="pref_inputCursor">Tombol kursor</string>
+    <string name="keypad_hint">Tap 2 kali: Masukkan tombol\nTekan lama: Keluar dari mode keypad\nGeser dari tengah untuk tombol tambahan</string>
+    <string name="key_name_escape">Escape</string>
+    <string name="key_name_backspace">Backspace</string>
+    <string name="key_name_tab">Tab</string>
+    <string name="key_name_space">Spasi</string>
+    <string name="pref_inputKeyboard">Masukan keyboard</string>
+    <string name="pref_inputSettings">Setelan</string>
+    <string name="pref_settingStabilize">Stabilkan pergerakan penunjuk</string>
+    <string name="pref_settingStabilize_summary">Memudahkan untuk menunjuk target yang kecil</string>
+    <string name="pref_settingCursor8Way">Kursor 8 arah</string>
+    <string name="pref_settingCursor8Way_summary">Mengizinkan pergerakan diagonal di mode keypad</string>
+    <string name="pref_settingReducedRate">Kurangi kecepatan data ke 50 Hz</string>
+    <string name="pref_settingReducedRate_summary">Aktifkan jika penunjuk mouse tidak dapat mengikuti gerakan</string>
+    <string name="pref_settingReplayTutorials">Ulangi semua tutorial</string>
+    <string name="pref_settingReplayTutorials_summary">Tampilkan layar bantuan sekali lagi untuk setiap mode saat Anda memasukinya</string>
+    <string name="onboarding_message_welcome">Gunakan smartwatch Wear OS sebagai mouse atau keyboard Bluetooth, mulai dengan menyambungkannya ke perangkat lain.</string>
+    <string name="onboarding_message_mouse">Gerakkan perangkat Wear OS untuk menggerakkan kursor mouse di layar.</string>
+    <string name="onboarding_message_keypad">Tap pada sisi layar perangkat Wear OS untuk menekan tombol panah.</string>
+</resources>

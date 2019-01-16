@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">โปรดรอสักครู่…</string>
+    <string name="generic_disabled">ปิด</string>
+    <string name="pref_bluetooth">อุปกรณ์ที่จับคู่</string>
+    <string name="pref_bluetoothAvailable">อุปกรณ์ที่จับคู่ได้</string>
+    <string name="pref_bluetoothScan">สแกนหาอุปกรณ์ที่อยู่ใกล้เคียง</string>
+    <string name="pref_bluetoothScan_scanning">กำลังสแกนหาอุปกรณ์ที่อยู่ใกล้เคียง…</string>
+    <string name="pref_bluetooth_connect">เชื่อมต่อ</string>
+    <string name="pref_bluetooth_disconnect">ยกเลิกการเชื่อมต่อ</string>
+    <string name="pref_bluetooth_unpair">เลิกจับคู่</string>
+    <string name="pref_bluetooth_select">เลือก</string>
+    <string name="pref_bluetooth_turningOn">กำลังเปิดบลูทูธ…</string>
+    <string name="pref_bluetooth_turningOff">กำลังปิดบลูทูธ…</string>
+    <string name="pref_bluetooth_available">จับคู่ได้</string>
+    <string name="pref_bluetooth_unavailable">ไม่มี</string>
+    <string name="pref_bluetooth_pairing">กำลังจับคู่…</string>
+    <string name="pref_bluetooth_connecting">กำลังเชื่อมต่อ…</string>
+    <string name="pref_bluetooth_connected">เชื่อมต่อแล้ว</string>
+    <string name="pref_bluetooth_disconnecting">กำลังยกเลิกการเชื่อมต่อ…</string>
+    <string name="pref_bluetooth_disconnected">ยกเลิกการเชื่อมต่อแล้ว</string>
+    <string name="pref_bluetooth_forget">ไม่จำ</string>
+    <string name="pref_appAbout">เกี่ยวกับ</string>
+    <string name="pref_about_openSource">ใบอนุญาตโอเพนซอร์ส</string>
+    <string name="pref_mode_select">โหมดป้อนข้อมูล</string>
+    <string name="pref_inputMouse">เมาส์</string>
+    <string name="left_button_label">L</string>
+    <string name="right_button_label">R</string>
+    <string name="click_and_hold">คลิกซ้ายค้างไว้</string>
+    <string name="right_click_hold">คลิกขวาค้างไว้</string>
+    <string name="middle_click">คลิกตรงกลาง</string>
+    <string name="tap_to_click">โบกมือเพื่อย้ายตัวชี้\nแตะปุ่มเพื่อคลิก\nดึงจากด้านบนเพื่อเปลี่ยนมือ</string>
+    <string name="mouse_hand_left">มือซ้าย\n(นาฬิกาอยู่ที่ข้อมือซ้าย)</string>
+    <string name="mouse_hand_center">ตรงกลาง\n(ถือนาฬิกาไว้ในมือ)</string>
+    <string name="mouse_hand_right">มือขวา\n(นาฬิกาอยู่ที่ข้อมือขวา)</string>
+    <string name="pref_inputCursor">ปุ่มเคอร์เซอร์</string>
+    <string name="keypad_hint">แตะสองครั้ง: ปุ่ม Enter\nกดค้าง: ออกจากโหมดปุ่มกด\nเลื่อนจากตรงกลางเพื่อดูปุ่มเพิ่มเติม</string>
+    <string name="key_name_escape">Escape</string>
+    <string name="key_name_backspace">Backspace</string>
+    <string name="key_name_tab">Tab</string>
+    <string name="key_name_space">Space</string>
+    <string name="pref_inputKeyboard">ใช้แป้นพิมพ์ป้อนข้อความ</string>
+    <string name="pref_inputSettings">การตั้งค่า</string>
+    <string name="pref_settingStabilize">ปรับให้ตัวชี้เคลื่อนไหวคงที่</string>
+    <string name="pref_settingStabilize_summary">ช่วยให้ชี้ไปที่เป้าหมายขนาดเล็กได้ง่ายขึ้น</string>
+    <string name="pref_settingCursor8Way">เคอร์เซอร์ 8 ทิศทาง</string>
+    <string name="pref_settingCursor8Way_summary">อนุญาตให้มีการเคลื่อนไหวแนวทแยงในโหมดปุ่มกด</string>
+    <string name="pref_settingReducedRate">ลดอัตราส่งข้อมูลเป็น 50 Hz</string>
+    <string name="pref_settingReducedRate_summary">เปิดใช้ตัวเลือกนี้ถ้าตัวชี้เมาส์เคลื่อนไหวตามไม่ทัน</string>
+    <string name="pref_settingReplayTutorials">ดูบทแนะนำทั้งหมดอีกครั้ง</string>
+    <string name="pref_settingReplayTutorials_summary">แสดงหน้าจอความช่วยเหลือเมื่อใช้ทุกโหมดอีกครั้ง</string>
+    <string name="onboarding_message_welcome">ใช้สมาร์ทวอทช์ Wear OS เป็นเมาส์หรือแป้นพิมพ์บลูทูธ โดยเริ่มจากการจับคู่กับอุปกรณ์อื่นก่อน</string>
+    <string name="onboarding_message_mouse">เลื่อนอุปกรณ์ Wear OS เพื่อเลื่อนตัวชี้เมาส์บนหน้าจอ</string>
+    <string name="onboarding_message_keypad">แตะที่ด้านข้างของหน้าจออุปกรณ์ Wear OS เพื่อกดปุ่มลูกศร</string>
+</resources>

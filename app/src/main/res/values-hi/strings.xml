@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">इंतज़ार करें...</string>
+    <string name="generic_disabled">बंद</string>
+    <string name="pref_bluetooth">युग्‍मित डिवाइस</string>
+    <string name="pref_bluetoothAvailable">उपलब्ध डिवाइस</string>
+    <string name="pref_bluetoothScan">आस-पास के डिवाइस के लिए स्कैन करें</string>
+    <string name="pref_bluetoothScan_scanning">आस-पास के डिवाइस के लिए स्कैन किया जा रहा है...</string>
+    <string name="pref_bluetooth_connect">कनेक्ट करें</string>
+    <string name="pref_bluetooth_disconnect">डिसकनेक्ट करें</string>
+    <string name="pref_bluetooth_unpair">अयुग्‍मित करें</string>
+    <string name="pref_bluetooth_select">चुनें</string>
+    <string name="pref_bluetooth_turningOn">ब्लूटूथ चालू हो रहा है...</string>
+    <string name="pref_bluetooth_turningOff">ब्लूटूथ बंद हो रहा है…</string>
+    <string name="pref_bluetooth_available">उपलब्ध</string>
+    <string name="pref_bluetooth_unavailable">अनुपलब्ध</string>
+    <string name="pref_bluetooth_pairing">युग्‍मित कर रहा है…</string>
+    <string name="pref_bluetooth_connecting">कनेक्ट हो रहा है...</string>
+    <string name="pref_bluetooth_connected">कनेक्ट हो गया</string>
+    <string name="pref_bluetooth_disconnecting">डिसकनेक्ट हो रहा है...</string>
+    <string name="pref_bluetooth_disconnected">डिसकनेक्ट किया गया</string>
+    <string name="pref_bluetooth_forget">भूल जाएं</string>
+    <string name="pref_appAbout">संक्षिप्त विवरण</string>
+    <string name="pref_about_openSource">ओपन सोर्स लाइसेंस</string>
+    <string name="pref_mode_select">इनपुट मोड</string>
+    <string name="pref_inputMouse">माउस</string>
+    <string name="left_button_label">L</string>
+    <string name="right_button_label">R</string>
+    <string name="click_and_hold">बाईं ओर क्लिक करके रखें</string>
+    <string name="right_click_hold">दाईं ओर क्लिक करके रखें</string>
+    <string name="middle_click">बीच में क्लिक करें</string>
+    <string name="tap_to_click">पॉइंटर को एक स्थान से दूसरे स्थान पर ले जाने के लिए अपना हाथ इधर-उधर घुमाएं\nक्लिक करने के लिए बटन पर टैप करें\nहाथ बदलने के लिए ऊपर से खींचें</string>
+    <string name="mouse_hand_left">बायां हाथ\n(घड़ी बाईं कलाई पर है)</string>
+    <string name="mouse_hand_center">मध्य\n(घड़ी आपके हाथ में है)</string>
+    <string name="mouse_hand_right">दायां हाथ\n(घड़ी दाईं कलाई पर है)</string>
+    <string name="pref_inputCursor">कर्सर कुंजियां</string>
+    <string name="keypad_hint">डबल टैप करें: Enter कुंजी\nदेर तक दबाएं: कीपैड मोड से बाहर निकलें\nअतिरिक्त कुंजियों के लिए बीच से स्वाइप करें</string>
+    <string name="key_name_escape">Escape</string>
+    <string name="key_name_backspace">Backspace</string>
+    <string name="key_name_tab">Tab</string>
+    <string name="key_name_space">Space</string>
+    <string name="pref_inputKeyboard">कीबोर्ड इनपुट</string>
+    <string name="pref_inputSettings">सेटिंग</string>
+    <string name="pref_settingStabilize">पॉइंटर गतियों को स्थिर करें</string>
+    <string name="pref_settingStabilize_summary">छोटे लक्ष्यों की ओर इंगित करना आसान बनाता है</string>
+    <string name="pref_settingCursor8Way">8-दिशाओं वाला कर्सर</string>
+    <string name="pref_settingCursor8Way_summary">कीपैड मोड में तिरछा करके गतिविधियां करने दें</string>
+    <string name="pref_settingReducedRate">डेटा दर को 50 Hz तक घटाएं</string>
+    <string name="pref_settingReducedRate_summary">माउस पॉइंटर के गति के साथ नहीं बने रह पाने पर इसे सक्षम करें</string>
+    <string name="pref_settingReplayTutorials">सभी ट्यूटोरियल दोहराएं</string>
+    <string name="pref_settingReplayTutorials_summary">किसी भी मोड का इस्तेमाल करने से पहले सहायता स्क्रीन को दोबारा दिखाएं</string>
+    <string name="onboarding_message_welcome">अपनी Wear OS स्मार्टवॉच को ब्लूटूथ माउस या कीबोर्ड की तरह इस्तेमाल करें. दूसरे डिवाइस के साथ जोड़कर शुरुआत करें.</string>
+    <string name="onboarding_message_mouse">अपने Wear OS डिवाइस को हिलाकर, स्क्रीन पर कर्सर को एक जगह से दूसरी जगह पर ले जाएं.</string>
+    <string name="onboarding_message_keypad">तीर के निशान वाले बटनों को दबाने के लिए Wear OS डिवाइस की स्क्रीन के किनारे वाले हिस्सों पर टैप करें.</string>
+</resources>

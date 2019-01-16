@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">Attendi…</string>
+    <string name="generic_disabled">DISATTIVATA</string>
+    <string name="pref_bluetooth">Dispositivi accoppiati</string>
+    <string name="pref_bluetoothAvailable">Dispositivi disponibili</string>
+    <string name="pref_bluetoothScan">Cerca dispositivi vicini</string>
+    <string name="pref_bluetoothScan_scanning">Ricerca di dispositivi vicini…</string>
+    <string name="pref_bluetooth_connect">Connetti</string>
+    <string name="pref_bluetooth_disconnect">Disconnetti</string>
+    <string name="pref_bluetooth_unpair">Disaccoppia</string>
+    <string name="pref_bluetooth_select">Seleziona</string>
+    <string name="pref_bluetooth_turningOn">Attivazione del Bluetooth…</string>
+    <string name="pref_bluetooth_turningOff">Disattivazione del Bluetooth…</string>
+    <string name="pref_bluetooth_available">Disponibile</string>
+    <string name="pref_bluetooth_unavailable">Non disponibile</string>
+    <string name="pref_bluetooth_pairing">Accoppiamento…</string>
+    <string name="pref_bluetooth_connecting">Connessione…</string>
+    <string name="pref_bluetooth_connected">Connesso</string>
+    <string name="pref_bluetooth_disconnecting">Disconnessione…</string>
+    <string name="pref_bluetooth_disconnected">Disconnesso</string>
+    <string name="pref_bluetooth_forget">Elimina</string>
+    <string name="pref_appAbout">Informazioni</string>
+    <string name="pref_about_openSource">Licenza open source</string>
+    <string name="pref_mode_select">Mod. immissione</string>
+    <string name="pref_inputMouse">Mouse</string>
+    <string name="left_button_label">S</string>
+    <string name="right_button_label">D</string>
+    <string name="click_and_hold">Pressione pulsante sinistro</string>
+    <string name="right_click_hold">Pressione pulsante destro</string>
+    <string name="middle_click">Clic con pulsante centrale</string>
+    <string name="tap_to_click">Agita la mano per spostare il puntatore\nTocca il pulsante per fare clic\nTrascina dall\'alto per cambiare mano</string>
+    <string name="mouse_hand_left">Mano sinistra\n(Orologio al polso sinistro)</string>
+    <string name="mouse_hand_center">Centro\n(Orologio in mano)</string>
+    <string name="mouse_hand_right">Mano destra\n(Orologio al polso destro)</string>
+    <string name="pref_inputCursor">Tasti cursore</string>
+    <string name="keypad_hint">Doppio tocco: tasto INVIO\nPressione prolungata: esci dalla modalità keypad\nScorri dal centro per tasti aggiuntivi</string>
+    <string name="key_name_escape">ESC</string>
+    <string name="key_name_backspace">BACKSPACE</string>
+    <string name="key_name_tab">TAB</string>
+    <string name="key_name_space">BARRA SPAZIATRICE</string>
+    <string name="pref_inputKeyboard">Immiss. tastiera</string>
+    <string name="pref_inputSettings">Impostazioni</string>
+    <string name="pref_settingStabilize">Stabilizza movimenti puntatore</string>
+    <string name="pref_settingStabilize_summary">Facilita il posizionamento del puntatore su piccoli target</string>
+    <string name="pref_settingCursor8Way">Cursore a otto direzioni</string>
+    <string name="pref_settingCursor8Way_summary">Consenti movimenti diagonali in modalità keypad</string>
+    <string name="pref_settingReducedRate">Riduci velocità dati a 50 Hz</string>
+    <string name="pref_settingReducedRate_summary">Attiva se il puntatore del mouse non segue il movimento</string>
+    <string name="pref_settingReplayTutorials">Ripeti tutti i tutorial</string>
+    <string name="pref_settingReplayTutorials_summary">Mostra di nuovo le schermate di supporto di ogni modalità quando viene attivata</string>
+    <string name="onboarding_message_welcome">Usa il tuo smartwatch Wear OS come tastiera o mouse Bluetooth. Inizia eseguendo l\'accoppiamento con un altro dispositivo.</string>
+    <string name="onboarding_message_mouse">Muovi il dispositivo Wear OS per spostare il puntatore del mouse sullo schermo.</string>
+    <string name="onboarding_message_keypad">Tocca i lati dello schermo del dispositivo Wear OS per premere i tasti freccia.</string>
+</resources>

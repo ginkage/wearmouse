@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">Espera…</string>
+    <string name="generic_disabled">DESACTIVADO</string>
+    <string name="pref_bluetooth">Dispositivos vinculados</string>
+    <string name="pref_bluetoothAvailable">Dispositivos disponibles</string>
+    <string name="pref_bluetoothScan">Buscar dispositivos cercanos</string>
+    <string name="pref_bluetoothScan_scanning">Buscando dispositivos cercanos…</string>
+    <string name="pref_bluetooth_connect">Conectar</string>
+    <string name="pref_bluetooth_disconnect">Desconectar</string>
+    <string name="pref_bluetooth_unpair">Desincronizar</string>
+    <string name="pref_bluetooth_select">Seleccionar</string>
+    <string name="pref_bluetooth_turningOn">Activando Bluetooth…</string>
+    <string name="pref_bluetooth_turningOff">Desactivando Bluetooth…</string>
+    <string name="pref_bluetooth_available">Disponible</string>
+    <string name="pref_bluetooth_unavailable">No disponible</string>
+    <string name="pref_bluetooth_pairing">Sincronizando…</string>
+    <string name="pref_bluetooth_connecting">Conectando…</string>
+    <string name="pref_bluetooth_connected">Conectado</string>
+    <string name="pref_bluetooth_disconnecting">Desconectando…</string>
+    <string name="pref_bluetooth_disconnected">Desconectado</string>
+    <string name="pref_bluetooth_forget">Olvidar</string>
+    <string name="pref_appAbout">Acerca de</string>
+    <string name="pref_about_openSource">Licencia de código abierto</string>
+    <string name="pref_mode_select">Modo de entrada</string>
+    <string name="pref_inputMouse">Mouse</string>
+    <string name="left_button_label">Izq</string>
+    <string name="right_button_label">Der</string>
+    <string name="click_and_hold">Mantener botón izquierdo</string>
+    <string name="right_click_hold">Mantener botón derecho</string>
+    <string name="middle_click">Clic con el botón central</string>
+    <string name="tap_to_click">Mueve la mano para desplazar el puntero\nPresiona el botón para hacer clic\nMueve</string>
+    <string name="mouse_hand_left">Mano izquierda\n(Reloj está en muñeca izquierda)</string>
+    <string name="mouse_hand_center">Centro\n(Tienes el reloj en la mano)</string>
+    <string name="mouse_hand_right">Mano derecha\n(El reloj está en la muñeca derecha)</string>
+    <string name="pref_inputCursor">Teclas de cursor</string>
+    <string name="keypad_hint">Presiona dos veces para ingresar una tecla\nMantén presionada la pantalla para salir del modo de teclado\nDesliza el dedo desde el centro para ver más teclas</string>
+    <string name="key_name_escape">Escape</string>
+    <string name="key_name_backspace">Retroceso</string>
+    <string name="key_name_tab">Tabulación</string>
+    <string name="key_name_space">Espacio</string>
+    <string name="pref_inputKeyboard">Teclado: entrada</string>
+    <string name="pref_inputSettings">Configuración</string>
+    <string name="pref_settingStabilize">Estabilizar el puntero</string>
+    <string name="pref_settingStabilize_summary">Hace que sea más fácil apuntar a objetivos pequeños</string>
+    <string name="pref_settingCursor8Way">Cursor de 8 direcciones</string>
+    <string name="pref_settingCursor8Way_summary">Permitir movimientos diagonales en el modo de teclado</string>
+    <string name="pref_settingReducedRate">Reducir velocidad a 50 Hz</string>
+    <string name="pref_settingReducedRate_summary">Habilítala si el puntero no puede seguir el movimiento</string>
+    <string name="pref_settingReplayTutorials">Repetir todos los instructivos</string>
+    <string name="pref_settingReplayTutorials_summary">Se vuelven a mostrar las pantallas de ayuda de todos los modos al ingresar en cada sección</string>
+    <string name="onboarding_message_welcome">Usa el reloj inteligente Wear OS como mouse o teclado Bluetooth. Para comenzar, sincronízalo con otro dispositivo.</string>
+    <string name="onboarding_message_mouse">Mueve el dispositivo Wear OS para que se desplace el puntero del mouse por la pantalla.</string>
+    <string name="onboarding_message_keypad">Para usar las teclas de dirección, presiona los costados de la pantalla del dispositivo Wear OS.</string>
+</resources>

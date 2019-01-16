@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">お待ちください…</string>
+    <string name="generic_disabled">OFF</string>
+    <string name="pref_bluetooth">ペア設定済みのデバイス</string>
+    <string name="pref_bluetoothAvailable">使用可能なデバイス</string>
+    <string name="pref_bluetoothScan">周辺のデバイスのスキャン</string>
+    <string name="pref_bluetoothScan_scanning">周辺のデバイスをスキャンしています…</string>
+    <string name="pref_bluetooth_connect">接続</string>
+    <string name="pref_bluetooth_disconnect">接続を解除</string>
+    <string name="pref_bluetooth_unpair">ペア設定を解除</string>
+    <string name="pref_bluetooth_select">選択</string>
+    <string name="pref_bluetooth_turningOn">Bluetooth を ON にしています…</string>
+    <string name="pref_bluetooth_turningOff">Bluetooth を OFF にしています…</string>
+    <string name="pref_bluetooth_available">使用可能</string>
+    <string name="pref_bluetooth_unavailable">使用不可</string>
+    <string name="pref_bluetooth_pairing">ペア設定しています…</string>
+    <string name="pref_bluetooth_connecting">接続しています…</string>
+    <string name="pref_bluetooth_connected">接続しました</string>
+    <string name="pref_bluetooth_disconnecting">接続を解除しています…</string>
+    <string name="pref_bluetooth_disconnected">接続を解除しました</string>
+    <string name="pref_bluetooth_forget">削除</string>
+    <string name="pref_appAbout">電話アプリについて</string>
+    <string name="pref_about_openSource">オープンソース ライセンス</string>
+    <string name="pref_mode_select">入力モード</string>
+    <string name="pref_inputMouse">マウス</string>
+    <string name="left_button_label">左</string>
+    <string name="right_button_label">右</string>
+    <string name="click_and_hold">左ボタンを長押し</string>
+    <string name="right_click_hold">右ボタンを長押し</string>
+    <string name="middle_click">中ボタンをクリック</string>
+    <string name="tap_to_click">手を振ると、ポインタが移動します\nボタンをタップすると、クリックします\n上からプルすると、利き手を変更できます</string>
+    <string name="mouse_hand_left">左手\n（時計を左手首に装着している場合）</string>
+    <string name="mouse_hand_center">中央\n（時計を手に持っている場合）</string>
+    <string name="mouse_hand_right">右手\n（時計を右手首に装着している場合）</string>
+    <string name="pref_inputCursor">カーソルキー</string>
+    <string name="keypad_hint">ダブルタップ: Enter キー\n長押し: キーパッド モードを終了\n中央からスワイプで他のキーを表示</string>
+    <string name="key_name_escape">Esc</string>
+    <string name="key_name_backspace">Backspace</string>
+    <string name="key_name_tab">Tab</string>
+    <string name="key_name_space">Space</string>
+    <string name="pref_inputKeyboard">キーボード入力</string>
+    <string name="pref_inputSettings">設定</string>
+    <string name="pref_settingStabilize">ポインタの動きの補正</string>
+    <string name="pref_settingStabilize_summary">小さい項目にポインタを合わせやすくします</string>
+    <string name="pref_settingCursor8Way">8 方向カーソル</string>
+    <string name="pref_settingCursor8Way_summary">キーパッド モードで斜め移動をできるようにします</string>
+    <string name="pref_settingReducedRate">データレートを 50 Hz に下げます</string>
+    <string name="pref_settingReducedRate_summary">マウスの動きにポインタが追いつかない場合に有効にします</string>
+    <string name="pref_settingReplayTutorials">すべてのチュートリアルを繰り返す</string>
+    <string name="pref_settingReplayTutorials_summary">各モードを選択した際にヘルプ画面をもう一度表示します</string>
+    <string name="onboarding_message_welcome">Wear OS 時計を Bluetooth マウスまたはキーボードとして使用します。まず、他の端末とペア設定します。</string>
+    <string name="onboarding_message_mouse">Wear OS 端末を動かして、画面上のマウスポインタを動かします。</string>
+    <string name="onboarding_message_keypad">Wear OS 端末の画面側面をタップし、矢印キーを押します。</string>
+</resources>

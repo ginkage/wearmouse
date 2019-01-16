@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">Odota…</string>
+    <string name="generic_disabled">POIS KÄYTÖSTÄ</string>
+    <string name="pref_bluetooth">Laiteparit</string>
+    <string name="pref_bluetoothAvailable">Saatavilla olevat laitteet</string>
+    <string name="pref_bluetoothScan">Etsi laitteita lähistöltä</string>
+    <string name="pref_bluetoothScan_scanning">Etsitään laitteita lähistöltä…</string>
+    <string name="pref_bluetooth_connect">Yhdistä</string>
+    <string name="pref_bluetooth_disconnect">Katkaise yhteys</string>
+    <string name="pref_bluetooth_unpair">Poista laitepari</string>
+    <string name="pref_bluetooth_select">Valitse</string>
+    <string name="pref_bluetooth_turningOn">Käynnistetään Bluetooth…</string>
+    <string name="pref_bluetooth_turningOff">Suljetaan Bluetooth…</string>
+    <string name="pref_bluetooth_available">Käytettävissä</string>
+    <string name="pref_bluetooth_unavailable">Ei käytettävissä</string>
+    <string name="pref_bluetooth_pairing">Laiteparia muodostetaan…</string>
+    <string name="pref_bluetooth_connecting">Yhdistetään…</string>
+    <string name="pref_bluetooth_connected">Yhdistetty</string>
+    <string name="pref_bluetooth_disconnecting">Katkaistaan yhteyttä…</string>
+    <string name="pref_bluetooth_disconnected">Yhteys katkaistu</string>
+    <string name="pref_bluetooth_forget">Unohda</string>
+    <string name="pref_appAbout">Tietoja</string>
+    <string name="pref_about_openSource">Avoimen lähdekoodin käyttölupa</string>
+    <string name="pref_mode_select">Syöttötapa</string>
+    <string name="pref_inputMouse">Hiiri</string>
+    <string name="left_button_label">V</string>
+    <string name="right_button_label">O</string>
+    <string name="click_and_hold">Klikkaa vasenta pitkään</string>
+    <string name="right_click_hold">Klikkaa oikeaa pitkään</string>
+    <string name="middle_click">Klikkaa keskimmäistä</string>
+    <string name="tap_to_click">Siirrä osoitinta heilauttamalla kättä.\nKlikkaa koskettamalla painiketta.\nVaihda kättä vetämällä ylhäältä alas.</string>
+    <string name="mouse_hand_left">Vasen käsi\n(kello vasemmassa ranteessa)</string>
+    <string name="mouse_hand_center">Keskitys\n(kelloa pidetään kädessä)</string>
+    <string name="mouse_hand_right">Oikea käsi\n(kello oikeassa ranteessa)</string>
+    <string name="pref_inputCursor">Kursorinäppäimet</string>
+    <string name="keypad_hint">Kaksoisnapautus: Enter\nPitkä painallus: Poistu näppäimistötilasta\nPyyhkäisy keskeltä: Lisää näppäimiä</string>
+    <string name="key_name_escape">Escape</string>
+    <string name="key_name_backspace">Askelpalautin</string>
+    <string name="key_name_tab">Sarkain</string>
+    <string name="key_name_space">Välilyönti</string>
+    <string name="pref_inputKeyboard">Näppäimistösyöte</string>
+    <string name="pref_inputSettings">Asetukset</string>
+    <string name="pref_settingStabilize">Vakauta osoittimen liikkeet</string>
+    <string name="pref_settingStabilize_summary">Helpottaa pienten kohteiden osoittamista.</string>
+    <string name="pref_settingCursor8Way">Kahdeksansuuntainen kohdistin</string>
+    <string name="pref_settingCursor8Way_summary">Sallii viistoon liikkumisen näppäimistötilassa.</string>
+    <string name="pref_settingReducedRate">Tiedonsiirtonopeus 50 Hz</string>
+    <string name="pref_settingReducedRate_summary">Vähennä nopeutta, jos kohdistin ei pysy liikkeen tasalla.</string>
+    <string name="pref_settingReplayTutorials">Toista kaikki ohjeet</string>
+    <string name="pref_settingReplayTutorials_summary">Näytä ohjenäyttö kerran uudelleen kaikissa tiloissa, kun ne avataan.</string>
+    <string name="onboarding_message_welcome">Wear OS ‑älykello toimii myös Bluetooth-hiirenä tai ‑näppäimistönä. Aloita muodostamalla laitepari toisen laitteen kanssa.</string>
+    <string name="onboarding_message_mouse">Liikuta Wear OS ‑laitetta, niin hiiren osoitin liikkuu näytöllä.</string>
+    <string name="onboarding_message_keypad">Napauta Wear OS ‑laitteen näytön reunoja painaaksesi nuolinäppäimiä.</string>
+</resources>

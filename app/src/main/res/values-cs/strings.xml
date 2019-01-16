@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">Čekejte prosím…</string>
+    <string name="generic_disabled">VYPNUTO</string>
+    <string name="pref_bluetooth">Spárovaná zařízení</string>
+    <string name="pref_bluetoothAvailable">Dostupná zařízení</string>
+    <string name="pref_bluetoothScan">Vyhledat blízká zařízení</string>
+    <string name="pref_bluetoothScan_scanning">Vyhledávání blízkých zařízení…</string>
+    <string name="pref_bluetooth_connect">Připojit</string>
+    <string name="pref_bluetooth_disconnect">Odpojit</string>
+    <string name="pref_bluetooth_unpair">Zrušit párování</string>
+    <string name="pref_bluetooth_select">Vybrat</string>
+    <string name="pref_bluetooth_turningOn">Zapínání Bluetooth…</string>
+    <string name="pref_bluetooth_turningOff">Vypínání Bluetooth…</string>
+    <string name="pref_bluetooth_available">Dostupné</string>
+    <string name="pref_bluetooth_unavailable">Nedostupné</string>
+    <string name="pref_bluetooth_pairing">Párování…</string>
+    <string name="pref_bluetooth_connecting">Připojování…</string>
+    <string name="pref_bluetooth_connected">Připojeno</string>
+    <string name="pref_bluetooth_disconnecting">Odpojování…</string>
+    <string name="pref_bluetooth_disconnected">Odpojeno</string>
+    <string name="pref_bluetooth_forget">Odstranit</string>
+    <string name="pref_appAbout">O aplikaci</string>
+    <string name="pref_about_openSource">Licence open source</string>
+    <string name="pref_mode_select">Režim vstupu</string>
+    <string name="pref_inputMouse">Myš</string>
+    <string name="left_button_label">L</string>
+    <string name="right_button_label">R</string>
+    <string name="click_and_hold">Kliknout levým a podržet</string>
+    <string name="right_click_hold">Kliknout pravým a podržet</string>
+    <string name="middle_click">Kliknout prostředním</string>
+    <string name="tap_to_click">Pohybem ruky přesunete ukazatel\nKlepnutím na tlačítko kliknete\nPotažením od horního okraje přepnete ruku</string>
+    <string name="mouse_hand_left">Levá ruka\n(hodinky máte na levém zápěstí)</string>
+    <string name="mouse_hand_center">Střed\n(hodinky máte v ruce)</string>
+    <string name="mouse_hand_right">Pravá ruka\n(hodinky máte na pravém zápěstí)</string>
+    <string name="pref_inputCursor">Klávesy kurzoru</string>
+    <string name="keypad_hint">Dvojité klepnutí: Enter\nDlouhé stisknutí: Ukončit režim kláves\nPřejetím z prostředka zobrazíte další klávesy</string>
+    <string name="key_name_escape">Escape</string>
+    <string name="key_name_backspace">Zpět</string>
+    <string name="key_name_tab">Tabulátor</string>
+    <string name="key_name_space">Mezerník</string>
+    <string name="pref_inputKeyboard">Klávesnice</string>
+    <string name="pref_inputSettings">Nastavení</string>
+    <string name="pref_settingStabilize">Stabilizovat pohyby ukazatele</string>
+    <string name="pref_settingStabilize_summary">Usnadňuje ukázání na malé cíle</string>
+    <string name="pref_settingCursor8Way">Osmisměrný kurzor</string>
+    <string name="pref_settingCursor8Way_summary">Povolit v režimu klávesnice diagonální pohyby</string>
+    <string name="pref_settingReducedRate">Snížit přenosovou rychlost na 50 Hz</string>
+    <string name="pref_settingReducedRate_summary">Zapněte, pokud ukazatel myši nestíhá vaše pohyby</string>
+    <string name="pref_settingReplayTutorials">Zopakovat všechny výukové programy</string>
+    <string name="pref_settingReplayTutorials_summary">Znovu zobrazit obrazovky nápovědy pro všechny režimy, jakmile je použijete</string>
+    <string name="onboarding_message_welcome">Použijte chytré hodinky Wear OS jako myš nebo klávesnici Bluetooth. Začněte tím, že je spárujete s dalším zařízením.</string>
+    <string name="onboarding_message_mouse">Pohybem zařízení Wear OS pohybujte ukazatelem myši na obrazovce.</string>
+    <string name="onboarding_message_keypad">Klepáním na okraje obrazovky zařízení Wear OS stisknete tlačítka se šipkami.</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WearMouse</string>
+    <string name="please_wait">Bitte warten…</string>
+    <string name="generic_disabled">DEAKTIVIERT</string>
+    <string name="pref_bluetooth">Gekoppelte Geräte</string>
+    <string name="pref_bluetoothAvailable">Verfügbare Geräte</string>
+    <string name="pref_bluetoothScan">Nach Geräten in der Nähe suchen</string>
+    <string name="pref_bluetoothScan_scanning">Nach Geräten in der Nähe wird gesucht…</string>
+    <string name="pref_bluetooth_connect">Verbinden</string>
+    <string name="pref_bluetooth_disconnect">Trennen</string>
+    <string name="pref_bluetooth_unpair">Entkoppeln</string>
+    <string name="pref_bluetooth_select">Auswählen</string>
+    <string name="pref_bluetooth_turningOn">Bluetooth wird aktiviert…</string>
+    <string name="pref_bluetooth_turningOff">Bluetooth wird deaktiviert…</string>
+    <string name="pref_bluetooth_available">Verfügbar</string>
+    <string name="pref_bluetooth_unavailable">Nicht verfügbar</string>
+    <string name="pref_bluetooth_pairing">Wird gekoppelt…</string>
+    <string name="pref_bluetooth_connecting">Wird verbunden…</string>
+    <string name="pref_bluetooth_connected">Verbunden</string>
+    <string name="pref_bluetooth_disconnecting">Verbindung wird getrennt…</string>
+    <string name="pref_bluetooth_disconnected">Nicht verbunden</string>
+    <string name="pref_bluetooth_forget">Entfernen</string>
+    <string name="pref_appAbout">Info</string>
+    <string name="pref_about_openSource">Open-Source-Lizenz</string>
+    <string name="pref_mode_select">Eingabemodus</string>
+    <string name="pref_inputMouse">Maus</string>
+    <string name="left_button_label">L</string>
+    <string name="right_button_label">R</string>
+    <string name="click_and_hold">Linke Maustaste gedrückt halten</string>
+    <string name="right_click_hold">Rechte Maustaste gedrückt halten</string>
+    <string name="middle_click">Mit mittlerer Maustaste klicken</string>
+    <string name="tap_to_click">Hand hin- und herbewegen, um den Mauszeiger zu verschieben\nAuf die Schaltfläche tippen, um zu klicken\nVon oben ziehen, um die Hand zu wechseln</string>
+    <string name="mouse_hand_left">Linke Hand\n(Smartwatch am linken Handgelenk)</string>
+    <string name="mouse_hand_center">Mitte\n(Smartwatch in deiner Hand)</string>
+    <string name="mouse_hand_right">Rechte Hand\n(Smartwatch am rechten Handgelenk)</string>
+    <string name="pref_inputCursor">Pfeiltasten</string>
+    <string name="keypad_hint">Doppeltippen: Eingabetaste\nLanges Drücken: Keypad-Modus beenden\nFür weitere Tasten von der Mitte zur Seite wischen</string>
+    <string name="key_name_escape">Escape-Taste</string>
+    <string name="key_name_backspace">Rücktaste</string>
+    <string name="key_name_tab">Tabulatortaste</string>
+    <string name="key_name_space">Leertaste</string>
+    <string name="pref_inputKeyboard">Tastatureingabe</string>
+    <string name="pref_inputSettings">Einstellungen</string>
+    <string name="pref_settingStabilize">Zeigerbewegungen stabilisieren</string>
+    <string name="pref_settingStabilize_summary">Vereinfacht das Zeigen auf kleine Elemente</string>
+    <string name="pref_settingCursor8Way">Cursor für 8 Richtungen</string>
+    <string name="pref_settingCursor8Way_summary">Diagonale Bewegungen im Keypad-Modus zulassen</string>
+    <string name="pref_settingReducedRate">Datenrate auf 50 Hz reduzieren</string>
+    <string name="pref_settingReducedRate_summary">Aktivieren, wenn der Mauszeiger mit der Bewegung nicht Schritt halten kann</string>
+    <string name="pref_settingReplayTutorials">Alle Anleitungen noch einmal durchgehen</string>
+    <string name="pref_settingReplayTutorials_summary">Hilfebildschirme wieder in jedem Modus anzeigen, wenn Anleitungen abgerufen werden</string>
+    <string name="onboarding_message_welcome">Du kannst deine Wear OS-Smartwatch als Bluetooth-Maus oder -Tastatur verwenden. Dazu musst du sie als Erstes mit einem anderen Gerät koppeln.</string>
+    <string name="onboarding_message_mouse">Damit sich der Mauszeiger auf dem Bildschirm bewegt, musst du dein Wear OS-Gerät entsprechend bewegen.</string>
+    <string name="onboarding_message_keypad">Um die Pfeiltasten zu drücken, musst du auf die entsprechenden Seiten des Wear OS-Gerätebildschirms tippen.</string>
+</resources>

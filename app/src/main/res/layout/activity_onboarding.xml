@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2018 Google LLC All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".ui.onboarding.OnboardingActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/content_start_padding"
+        android:paddingBottom="@dimen/content_end_padding"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/header"
+            android:layout_width="@dimen/onboarding_icon_size"
+            android:layout_height="@dimen/onboarding_icon_size"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Text.Dialog.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="4dp"
+            android:paddingStart="@dimen/info_action_padding"
+            android:paddingEnd="@dimen/info_action_padding"/>
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/Text.Dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="@dimen/info_action_padding"
+            android:paddingEnd="@dimen/info_action_padding"/>
+
+        <ImageView
+            android:id="@+id/roundbutton_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="@dimen/round_button_circle_diameter_large"
+            android:minHeight="@dimen/round_button_circle_diameter_large"
+            android:src="@drawable/ic_arrow_forward_white_24"
+            android:background="@drawable/oval_shape"
+            android:backgroundTint="@color/btn_colored_background_material"
+            android:scaleType="center"
+            tools:ignore="ContentDescription"/>
+
+    </LinearLayout>
+
+</ScrollView>
