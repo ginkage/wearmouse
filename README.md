@@ -48,8 +48,7 @@ The main sections of the code tree are:
     * Implements orientation tracking using Google VR library. The GVR-based
        approach produces results that are a drop-in replacement for the 
        Rotation Vector sensor, but doesn't rely on the watch manufacturer's
-       implementation of that sensor (Huawei Watch 2 is one example of a poor
-       implementation).
+       implementation of that sensor.
 1. /ui
     * The user interface
 
