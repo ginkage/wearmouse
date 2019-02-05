@@ -20,21 +20,30 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.IntDef;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.input.KeyboardInputController;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /** Implements a "card-flip" animation using custom fragment transactions. */
 public class InputActivity extends Activity {
     public static final String EXTRA_INPUT_MODE = "input_mode";
+
+    @Retention(RetentionPolicy.SOURCE)
+    @IntDef({MODE_MOUSE, MODE_KEYPAD, MODE_TOUCHPAD})
+    @interface InputMode {}
+
     public static final int MODE_MOUSE = 1;
     public static final int MODE_KEYPAD = 2;
+    public static final int MODE_TOUCHPAD = 3;
 
     private static final int INPUT_REQUEST_CODE = 1;
 
     private KeyboardInputController keyboardController;
-    private boolean keypadMode;
+    private @InputMode int currentMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,20 +53,18 @@ public class InputActivity extends Activity {
         keyboardController = new KeyboardInputController(this::finish);
         keyboardController.onCreate(this);
 
-        keypadMode = false;
+        currentMode = MODE_MOUSE;
         Intent intent = getIntent();
         if (intent != null) {
             int mode = intent.getIntExtra(EXTRA_INPUT_MODE, -1);
             if (mode > 0) {
-                keypadMode = mode == MODE_KEYPAD;
+                currentMode = mode;
             }
         }
 
         getFragmentManager()
                 .beginTransaction()
-                .add(
-                        R.id.fragment_container,
-                        keypadMode ? new KeypadFragment() : new MouseFragment())
+                .add(R.id.fragment_container, getFragment(currentMode))
                 .commit();
     }
 
@@ -73,7 +80,10 @@ public class InputActivity extends Activity {
         int action = event.getAction();
         if (keyCode == KeyEvent.KEYCODE_STEM_1) {
             if (action == KeyEvent.ACTION_UP) {
-                flipCard();
+                flipCard(
+                        currentMode == MODE_MOUSE
+                                ? MODE_TOUCHPAD
+                                : currentMode == MODE_TOUCHPAD ? MODE_KEYPAD : MODE_MOUSE);
             }
             return true;
         } else if (keyCode == KeyEvent.KEYCODE_STEM_2) {
@@ -98,7 +108,10 @@ public class InputActivity extends Activity {
 
     @Override
     public boolean onGenericMotionEvent(MotionEvent ev) {
-        return (!keypadMode && ((MouseFragment) getFragment()).onGenericMotionEvent(ev))
+        return ((currentMode == MODE_MOUSE
+                                && ((MouseFragment) getFragment()).onGenericMotionEvent(ev))
+                        || (currentMode == MODE_TOUCHPAD
+                                && ((TouchpadFragment) getFragment()).onGenericMotionEvent(ev)))
                 || super.onGenericMotionEvent(ev);
     }
 
@@ -106,15 +119,18 @@ public class InputActivity extends Activity {
         return getFragmentManager().findFragmentById(R.id.fragment_container);
     }
 
-    private void flipCard() {
+    private void flipCard(@InputMode int mode) {
+        currentMode = mode;
         getFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.animator.card_flip_right_in, R.animator.card_flip_right_out)
-                .replace(
-                        R.id.fragment_container,
-                        keypadMode ? new MouseFragment() : new KeypadFragment())
+                .replace(R.id.fragment_container, getFragment(currentMode))
                 .commit();
+    }
 
-        keypadMode = !keypadMode;
+    private Fragment getFragment(@InputMode int mode) {
+        return mode == MODE_KEYPAD
+                ? new KeypadFragment()
+                : mode == MODE_MOUSE ? new MouseFragment() : new TouchpadFragment();
     }
 }

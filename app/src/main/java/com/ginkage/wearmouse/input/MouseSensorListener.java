@@ -18,17 +18,28 @@ package com.ginkage.wearmouse.input;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import android.support.annotation.IntDef;
 import com.ginkage.wearmouse.bluetooth.MouseReport.MouseDataSender;
 import com.ginkage.wearmouse.sensors.SensorService;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
 
 /** Helper class that interprets sensor data and translates it to Mouse data events. */
 public class MouseSensorListener implements SensorService.OrientationListener {
 
+    @Retention(RetentionPolicy.SOURCE)
+    @IntDef({HAND_LEFT, HAND_CENTER, HAND_RIGHT})
+    @interface HandMode {}
+
     public static final int HAND_LEFT = 0;
     public static final int HAND_CENTER = 1;
     public static final int HAND_RIGHT = 2;
+
+    @Retention(RetentionPolicy.SOURCE)
+    @IntDef({BUTTON_LEFT, BUTTON_RIGHT, BUTTON_MIDDLE})
+    @interface MouseButton {}
 
     public static final int BUTTON_LEFT = 0;
     public static final int BUTTON_RIGHT = 1;
@@ -37,8 +48,8 @@ public class MouseSensorListener implements SensorService.OrientationListener {
     private static final double CURSOR_SPEED = 1024.0 / (Math.PI / 4);
     private static final double STABILIZE_BIAS = 16.0;
 
-    private static final class ButtonEvent {
-        final int button;
+    static final class ButtonEvent {
+        final @MouseButton int button;
         final boolean state;
 
         ButtonEvent(int b, boolean s) {
@@ -70,7 +81,7 @@ public class MouseSensorListener implements SensorService.OrientationListener {
     private boolean leftButtonPressed;
     private boolean rightButtonPressed;
     private boolean middleButtonPressed;
-    private int handMode;
+    private @HandMode int handMode;
     private boolean stabilize;
     private boolean lefty;
 
@@ -152,7 +163,7 @@ public class MouseSensorListener implements SensorService.OrientationListener {
      * @param button Button index. Can be one of BUTTON_LEFT, BUTTON_RIGHT, BUTTON_MIDDLE.
      * @param state {@code true} if the button is pressed, {@code false} otherwise.
      */
-    void sendButtonEvent(int button, boolean state) {
+    void sendButtonEvent(@MouseButton int button, boolean state) {
         synchronized (pendingEvents) {
             pendingEvents.add(new ButtonEvent(button, state));
         }
@@ -176,7 +187,7 @@ public class MouseSensorListener implements SensorService.OrientationListener {
      *
      * @param hand Can be one of HAND_LEFT, HAND_CENTER, HAND_RIGHT.
      */
-    void setHand(int hand) {
+    void setHand(@HandMode int hand) {
         handMode = hand;
         firstRead = true;
     }

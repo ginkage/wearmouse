@@ -20,6 +20,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import com.ginkage.wearmouse.input.MouseSensorListener.HandMode;
 import com.google.common.collect.ImmutableMap;
 import java.util.Map;
 
@@ -56,7 +57,7 @@ public class SettingsUtil {
      * @return Watch location (left/right wrist, or held in hand).
      * @see MouseSensorListener
      */
-    public int getMouseHand() {
+    public @HandMode int getMouseHand() {
         return sharedPref.getInt(MOUSE_HAND, 0);
     }
 
@@ -66,7 +67,7 @@ public class SettingsUtil {
      * @param hand Watch location (left/right wrist, or held in hand).
      * @see MouseSensorListener
      */
-    public void putMouseHand(int hand) {
+    public void putMouseHand(@HandMode int hand) {
         sharedPref.edit().putInt(MOUSE_HAND, hand).apply();
     }
 

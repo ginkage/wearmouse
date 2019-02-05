@@ -26,6 +26,8 @@ import android.support.annotation.MainThread;
 import android.view.MotionEvent;
 import android.view.Surface;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
+import com.ginkage.wearmouse.input.MouseSensorListener.HandMode;
+import com.ginkage.wearmouse.input.MouseSensorListener.MouseButton;
 import com.ginkage.wearmouse.sensors.SensorService;
 import com.ginkage.wearmouse.sensors.SensorServiceConnection;
 
@@ -115,7 +117,7 @@ public class MouseController {
      */
     public void onTouch(MotionEvent event, boolean leftButton) {
         final int action = event.getActionMasked();
-        final int button =
+        final @MouseButton int button =
                 leftButton ? MouseSensorListener.BUTTON_LEFT : MouseSensorListener.BUTTON_RIGHT;
         if (action == MotionEvent.ACTION_DOWN) {
             sendButtonEvent(button, true);
@@ -155,7 +157,7 @@ public class MouseController {
      * @param hand Hand index: left wrist, center (in the hand) or right wrist.
      * @see MouseSensorListener
      */
-    public void setMouseHand(int hand) {
+    public void setMouseHand(@HandMode int hand) {
         settings.putMouseHand(hand);
         sensorListener.setHand(hand);
     }
@@ -166,7 +168,7 @@ public class MouseController {
      * @return Hand index.
      * @see MouseSensorListener
      */
-    public int getMouseHand() {
+    public @HandMode int getMouseHand() {
         return settings.getMouseHand();
     }
 
