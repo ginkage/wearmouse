@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">左手\n（時計を左手首に装着している場合）</string>
     <string name="mouse_hand_center">中央\n（時計を手に持っている場合）</string>
     <string name="mouse_hand_right">右手\n（時計を右手首に装着している場合）</string>
+    <string name="pref_inputTouchpad">タッチパッド</string>
     <string name="pref_inputCursor">カーソルキー</string>
     <string name="keypad_hint">ダブルタップ: Enter キー\n長押し: キーパッド モードを終了\n中央からスワイプで他のキーを表示</string>
     <string name="key_name_escape">Esc</string>

@@ -22,6 +22,11 @@
         android:icon="@drawable/ic_ms_mouse"
         android:persistent="false" />
     <Preference
+        android:key="pref_inputTouchpad"
+        android:title="@string/pref_inputTouchpad"
+        android:icon="@drawable/ic_ms_touchpad"
+        android:persistent="false" />
+    <Preference
         android:key="pref_inputCursor"
         android:title="@string/pref_inputCursor"
         android:icon="@drawable/ic_ms_keypad"

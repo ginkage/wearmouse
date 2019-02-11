@@ -17,11 +17,11 @@
 package com.ginkage.wearmouse.ui.input;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout.LayoutParams;
+import android.support.v4.app.Fragment;
 import android.support.wearable.view.DismissOverlayView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -181,9 +181,8 @@ public class KeypadFragment extends Fragment {
             crossView.setImageDrawable(
                     getResources()
                             .getDrawable(
-                                    is8Way
-                                            ? R.drawable.kp_cross_8_way
-                                            : R.drawable.kp_cross_4_way));
+                                    is8Way ? R.drawable.kp_cross_8_way : R.drawable.kp_cross_4_way,
+                                    null));
         }
 
         @Override

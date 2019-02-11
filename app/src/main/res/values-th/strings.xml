@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">มือซ้าย\n(นาฬิกาอยู่ที่ข้อมือซ้าย)</string>
     <string name="mouse_hand_center">ตรงกลาง\n(ถือนาฬิกาไว้ในมือ)</string>
     <string name="mouse_hand_right">มือขวา\n(นาฬิกาอยู่ที่ข้อมือขวา)</string>
+    <string name="pref_inputTouchpad">ทัชแพด</string>
     <string name="pref_inputCursor">ปุ่มเคอร์เซอร์</string>
     <string name="keypad_hint">แตะสองครั้ง: ปุ่ม Enter\nกดค้าง: ออกจากโหมดปุ่มกด\nเลื่อนจากตรงกลางเพื่อดูปุ่มเพิ่มเติม</string>
     <string name="key_name_escape">Escape</string>

@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Main gauche\n(La montre est sur le poignet gauche)</string>
     <string name="mouse_hand_center">Centre\n(La montre est dans votre main)</string>
     <string name="mouse_hand_right">Main droite\n(La montre est sur le poignet droit)</string>
+    <string name="pref_inputTouchpad">Pavé tactile</string>
     <string name="pref_inputCursor">Touches de curseur</string>
     <string name="keypad_hint">Toucher deux fois : touche Entrée\nMaintenir le doigt : quitter le mode Clavier\nBalayez l\'écran à partir du centre pour afficher des touches supplémentaires</string>
     <string name="key_name_escape">Échappement</string>

@@ -17,10 +17,14 @@
 package com.ginkage.wearmouse.ui.input;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IntDef;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.wear.ambient.AmbientModeSupport;
+import android.support.wear.ambient.AmbientModeSupport.AmbientCallback;
+import android.support.wear.ambient.AmbientModeSupport.AmbientCallbackProvider;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import com.ginkage.wearmouse.R;
@@ -29,7 +33,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /** Implements a "card-flip" animation using custom fragment transactions. */
-public class InputActivity extends Activity {
+public class InputActivity extends FragmentActivity implements AmbientCallbackProvider {
     public static final String EXTRA_INPUT_MODE = "input_mode";
 
     @Retention(RetentionPolicy.SOURCE)
@@ -46,9 +50,21 @@ public class InputActivity extends Activity {
     private @InputMode int currentMode;
 
     @Override
+    public AmbientCallback getAmbientCallback() {
+        return new AmbientCallback() {
+            @Override
+            public void onEnterAmbient(Bundle ambientDetails) {
+                super.onEnterAmbient(ambientDetails);
+                finish();
+            }
+        };
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_flip);
+        AmbientModeSupport.attach(this);
 
         keyboardController = new KeyboardInputController(this::finish);
         keyboardController.onCreate(this);
@@ -62,7 +78,7 @@ public class InputActivity extends Activity {
             }
         }
 
-        getFragmentManager()
+        getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.fragment_container, getFragment(currentMode))
                 .commit();
@@ -116,12 +132,12 @@ public class InputActivity extends Activity {
     }
 
     private Fragment getFragment() {
-        return getFragmentManager().findFragmentById(R.id.fragment_container);
+        return getSupportFragmentManager().findFragmentById(R.id.fragment_container);
     }
 
     private void flipCard(@InputMode int mode) {
         currentMode = mode;
-        getFragmentManager()
+        getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.animator.card_flip_right_in, R.animator.card_flip_right_out)
                 .replace(R.id.fragment_container, getFragment(currentMode))

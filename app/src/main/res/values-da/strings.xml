@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Venstre hånd\n(Uret sidder på venstre håndled)</string>
     <string name="mouse_hand_center">Midt på\n(Du har uret i hånden)</string>
     <string name="mouse_hand_right">Højre hånd\n(Uret sidder på højre håndled)</string>
+    <string name="pref_inputTouchpad">Touchpad</string>
     <string name="pref_inputCursor">Markørstaster</string>
     <string name="keypad_hint">Tryk to gange: Enter-tasten\nTryk længe: Afslut tastaturtilstanden\nStryg fra midten for at se flere taster</string>
     <string name="key_name_escape">Escape</string>

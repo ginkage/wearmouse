@@ -19,8 +19,8 @@ package com.ginkage.wearmouse.ui.onboarding;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import com.ginkage.wearmouse.ui.onboarding.OnboardingController.ScreenKey;
 

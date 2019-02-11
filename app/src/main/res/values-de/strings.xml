@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Linke Hand\n(Smartwatch am linken Handgelenk)</string>
     <string name="mouse_hand_center">Mitte\n(Smartwatch in deiner Hand)</string>
     <string name="mouse_hand_right">Rechte Hand\n(Smartwatch am rechten Handgelenk)</string>
+    <string name="pref_inputTouchpad">Touchpad</string>
     <string name="pref_inputCursor">Pfeiltasten</string>
     <string name="keypad_hint">Doppeltippen: Eingabetaste\nLanges Drücken: Keypad-Modus beenden\nFür weitere Tasten von der Mitte zur Seite wischen</string>
     <string name="key_name_escape">Escape-Taste</string>

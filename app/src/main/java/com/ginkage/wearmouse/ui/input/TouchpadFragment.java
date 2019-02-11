@@ -16,12 +16,13 @@
 
 package com.ginkage.wearmouse.ui.input;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.wearable.input.RotaryEncoder;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import com.ginkage.wearmouse.R;
@@ -49,7 +50,7 @@ public class TouchpadFragment extends Fragment {
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_touchpad, container, false);
 
-        scrollFactor = -RotaryEncoder.getScaledScrollFactor(getContext()) / 5.0f;
+        scrollFactor = -ViewConfiguration.get(getContext()).getScaledVerticalScrollFactor() / 5.0f;
 
         gestureDetector =
                 new TouchpadGestureDetector(

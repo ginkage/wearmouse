@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Tay trái\n(Đồng hồ đeo ở cổ tay trái)</string>
     <string name="mouse_hand_center">Phần giữa\n(Tay bạn đang cầm đồng hồ)</string>
     <string name="mouse_hand_right">Tay phải\n(Đồng hồ đeo ở cổ tay phải)</string>
+    <string name="pref_inputTouchpad">Bàn di chuột</string>
     <string name="pref_inputCursor">Các phím con trỏ</string>
     <string name="keypad_hint">Nhấn đúp: Phím Enter\nNhấn và giữ: Thoát chế độ bàn phím\nVuốt từ giữa để có thêm phím</string>
     <string name="key_name_escape">Escape</string>

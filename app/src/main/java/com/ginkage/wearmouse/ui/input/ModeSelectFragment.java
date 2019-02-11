@@ -16,11 +16,17 @@
 
 package com.ginkage.wearmouse.ui.input;
 
+import static android.os.PowerManager.ACQUIRE_CAUSES_WAKEUP;
+import static android.os.PowerManager.SCREEN_DIM_WAKE_LOCK;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.os.PowerManager.WakeLock;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.support.wearable.preference.WearablePreferenceActivity;
 import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.input.KeyboardInputController;
 
@@ -28,21 +34,31 @@ import com.ginkage.wearmouse.input.KeyboardInputController;
 public class ModeSelectFragment extends PreferenceFragment {
 
     private static final String KEY_PREF_INPUT_MOUSE = "pref_inputMouse";
+    private static final String KEY_PREF_INPUT_TOUCHPAD = "pref_inputTouchpad";
     private static final String KEY_PREF_INPUT_CURSOR = "pref_inputCursor";
     private static final String KEY_PREF_INPUT_KEYBOARD = "pref_inputKeyboard";
     private static final int INPUT_REQUEST_CODE = 1;
 
     private KeyboardInputController keyboardController;
+    private WakeLock wakeLock;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.prefs_mode_select);
 
+        WearablePreferenceActivity activity = ((WearablePreferenceActivity) getActivity());
+        activity.setAmbientEnabled();
+        PowerManager powerManager = activity.getSystemService(PowerManager.class);
+        wakeLock =
+                powerManager.newWakeLock(
+                        SCREEN_DIM_WAKE_LOCK | ACQUIRE_CAUSES_WAKEUP, "WearMouse:PokeScreen");
+
         assignIntent(KEY_PREF_INPUT_MOUSE, InputActivity.MODE_MOUSE);
+        assignIntent(KEY_PREF_INPUT_TOUCHPAD, InputActivity.MODE_TOUCHPAD);
         assignIntent(KEY_PREF_INPUT_CURSOR, InputActivity.MODE_KEYPAD);
 
-        keyboardController = new KeyboardInputController(() -> getActivity().finish());
+        keyboardController = new KeyboardInputController(activity::finish);
         keyboardController.onCreate(getContext());
 
         Preference keyboardPref = findPreference(KEY_PREF_INPUT_KEYBOARD);
@@ -56,6 +72,13 @@ public class ModeSelectFragment extends PreferenceFragment {
                         return true;
                     });
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        wakeLock.acquire();
+        wakeLock.release();
     }
 
     @Override

@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Levá ruka\n(hodinky máte na levém zápěstí)</string>
     <string name="mouse_hand_center">Střed\n(hodinky máte v ruce)</string>
     <string name="mouse_hand_right">Pravá ruka\n(hodinky máte na pravém zápěstí)</string>
+    <string name="pref_inputTouchpad">Touchpad</string>
     <string name="pref_inputCursor">Klávesy kurzoru</string>
     <string name="keypad_hint">Dvojité klepnutí: Enter\nDlouhé stisknutí: Ukončit režim kláves\nPřejetím z prostředka zobrazíte další klávesy</string>
     <string name="key_name_escape">Escape</string>

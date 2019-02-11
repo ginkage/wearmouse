@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">왼손\n(시계를 왼쪽 손목에 착용)</string>
     <string name="mouse_hand_center">가운데\n(시계가 손에 있음)</string>
     <string name="mouse_hand_right">오른손\n(시계를 오른쪽 손목에 착용)</string>
+    <string name="pref_inputTouchpad">터치패드</string>
     <string name="pref_inputCursor">커서 키</string>
     <string name="keypad_hint">두 번 탭하기: Enter 키\n길게 누르기: 키패드 모드 종료\n가운데에서 스와이프: 추가 키 확인</string>
     <string name="key_name_escape">Esc</string>

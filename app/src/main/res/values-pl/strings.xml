@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Lewa ręka\n(zegarek na lewym nadgarstku)</string>
     <string name="mouse_hand_center">Pośrodku\n(zegarek trzymany w dłoni)</string>
     <string name="mouse_hand_right">Prawa ręka\n(zegarek na prawym nadgarstku)</string>
+    <string name="pref_inputTouchpad">Touchpad</string>
     <string name="pref_inputCursor">Klawisze kursora</string>
     <string name="keypad_hint">Podwójne kliknięcie: klawisz Enter\nPrzytrzymanie: wyłączenie trybu klawiatury\nAby zobaczyć więcej klawiszy, przesuń palcem od środka ekranu</string>
     <string name="key_name_escape">Escape</string>

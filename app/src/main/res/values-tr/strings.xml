@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Sol El\n(Saat sol bilektedir)</string>
     <string name="mouse_hand_center">Orta\n(Saat elinizdedir)</string>
     <string name="mouse_hand_right">Sağ El\n(Saat sağ bilektedir)</string>
+    <string name="pref_inputTouchpad">Dokunmatik alan</string>
     <string name="pref_inputCursor">İmleç tuşları</string>
     <string name="keypad_hint">Çift dokunma: Enter tuşu\nUzun basma: Exit tuş takımı modu\nDiğer tuşlar için ortadan dışarıya doğru kaydırın</string>
     <string name="key_name_escape">Escape</string>

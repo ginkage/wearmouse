@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Левая рука\n(часы на левом запястье)</string>
     <string name="mouse_hand_center">Центр\n(часы в руках)</string>
     <string name="mouse_hand_right">Правая рука\n(часы на правом запястье)</string>
+    <string name="pref_inputTouchpad">Сенсорная панель</string>
     <string name="pref_inputCursor">Клавиши курсора</string>
     <string name="keypad_hint">Двойное нажатие: клавиша ВВОД.\nДолгое нажатие: выход из режима клавиатуры.\nЧтобы посмотреть другие клавиши, проведите по экрану от центра к краю.</string>
     <string name="key_name_escape">Escape</string>

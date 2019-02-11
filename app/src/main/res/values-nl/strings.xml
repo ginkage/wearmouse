@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Linkerhand\n(horloge om de linkerpols)</string>
     <string name="mouse_hand_center">Midden\n(horloge in je hand)</string>
     <string name="mouse_hand_right">Rechterhand\n(horloge om de rechterpols)</string>
+    <string name="pref_inputTouchpad">Touchpad</string>
     <string name="pref_inputCursor">Cursortoetsen</string>
     <string name="keypad_hint">Dubbeltikken: toets invoeren\nLang indrukken: toetsenblokmodus afsluiten\nVeeg vanuit het midden voor extra toetsen</string>
     <string name="key_name_escape">Escape</string>

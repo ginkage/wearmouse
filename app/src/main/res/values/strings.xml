@@ -90,6 +90,9 @@
     <!-- Name of the right wrist mode (2 lines) -->
     <string name="mouse_hand_right">Right Hand\n(Watch is on the right wrist)</string>
 
+    <!-- Title of the Touchpad emulation mode -->
+    <string name="pref_inputTouchpad">Touchpad</string>
+
     <!-- Title of the Keypad cursor emulation mode -->
     <string name="pref_inputCursor">Cursor keys</string>
     <!-- Hint for the user to learn about the keypad mode interaction -->

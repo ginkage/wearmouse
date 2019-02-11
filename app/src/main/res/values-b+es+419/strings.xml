@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Mano izquierda\n(Reloj está en muñeca izquierda)</string>
     <string name="mouse_hand_center">Centro\n(Tienes el reloj en la mano)</string>
     <string name="mouse_hand_right">Mano derecha\n(El reloj está en la muñeca derecha)</string>
+    <string name="pref_inputTouchpad">Panel táctil</string>
     <string name="pref_inputCursor">Teclas de cursor</string>
     <string name="keypad_hint">Presiona dos veces para ingresar una tecla\nMantén presionada la pantalla para salir del modo de teclado\nDesliza el dedo desde el centro para ver más teclas</string>
     <string name="key_name_escape">Escape</string>

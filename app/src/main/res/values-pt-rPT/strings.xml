@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Mão esquerda\n(O relógio está no pulso esquerdo)</string>
     <string name="mouse_hand_center">Centro\n(O relógio está na mão)</string>
     <string name="mouse_hand_right">Mão direita\n(O relógio está no pulso direito)</string>
+    <string name="pref_inputTouchpad">Touchpad</string>
     <string name="pref_inputCursor">Teclas do cursor</string>
     <string name="keypad_hint">Tocar duas vezes: tecla Enter\nManter premido: sair do modo de teclado\nDeslize rapidamente a partir do centro para obter teclas adicionais</string>
     <string name="key_name_escape">Escape</string>

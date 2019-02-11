@@ -17,11 +17,11 @@
 package com.ginkage.wearmouse.ui.input;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.wear.widget.drawer.WearableActionDrawerView;
 import android.support.wear.widget.drawer.WearableNavigationDrawerView;
 import android.support.wearable.input.RotaryEncoder;
@@ -29,6 +29,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -77,7 +78,7 @@ public class MouseFragment extends Fragment {
         setPointerRotation(controller.getMouseHand());
 
         edgeSize = getResources().getDimensionPixelSize(R.dimen.ws_drawer_view_edge_size);
-        scrollFactor = -RotaryEncoder.getScaledScrollFactor(getContext()) / 5.0f;
+        scrollFactor = -ViewConfiguration.get(getContext()).getScaledVerticalScrollFactor() / 5.0f;
 
         navigationDrawer = root.findViewById(R.id.top_navigation_drawer);
         navigationDrawer.setAdapter(new HandPagerAdapter());

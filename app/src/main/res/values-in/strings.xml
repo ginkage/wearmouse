@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Tangan Kiri\n(Jam tangan di pergelangan kiri)</string>
     <string name="mouse_hand_center">Tengah\n(Jam tangan berada di tangan)</string>
     <string name="mouse_hand_right">Tangan Kanan\n(Jam tangan di pergelangan kanan)</string>
+    <string name="pref_inputTouchpad">Touchpad</string>
     <string name="pref_inputCursor">Tombol kursor</string>
     <string name="keypad_hint">Tap 2 kali: Masukkan tombol\nTekan lama: Keluar dari mode keypad\nGeser dari tengah untuk tombol tambahan</string>
     <string name="key_name_escape">Escape</string>

@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">बायां हाथ\n(घड़ी बाईं कलाई पर है)</string>
     <string name="mouse_hand_center">मध्य\n(घड़ी आपके हाथ में है)</string>
     <string name="mouse_hand_right">दायां हाथ\n(घड़ी दाईं कलाई पर है)</string>
+    <string name="pref_inputTouchpad">टचपैड</string>
     <string name="pref_inputCursor">कर्सर कुंजियां</string>
     <string name="keypad_hint">डबल टैप करें: Enter कुंजी\nदेर तक दबाएं: कीपैड मोड से बाहर निकलें\nअतिरिक्त कुंजियों के लिए बीच से स्वाइप करें</string>
     <string name="key_name_escape">Escape</string>

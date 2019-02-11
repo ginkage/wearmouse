@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Left Hand\n(Watch is on the left wrist)</string>
     <string name="mouse_hand_center">Centre\n(Watch is in your hand)</string>
     <string name="mouse_hand_right">Right Hand\n(Watch is on the right wrist)</string>
+    <string name="pref_inputTouchpad">Touchpad</string>
     <string name="pref_inputCursor">Cursor keys</string>
     <string name="keypad_hint">Double tap: Enter key\nLong press: Exit keypad mode\nSwipe from centre for extra keys</string>
     <string name="key_name_escape">Escape</string>

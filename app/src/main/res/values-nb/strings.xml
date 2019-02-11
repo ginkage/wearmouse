@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Venstre hånd\n(klokken er på venstre håndledd)</string>
     <string name="mouse_hand_center">Midten\n(du holder klokken)</string>
     <string name="mouse_hand_right">Høyre hånd\n(klokken er på høyre håndledd)</string>
+    <string name="pref_inputTouchpad">Styreflate</string>
     <string name="pref_inputCursor">Markørtaster</string>
     <string name="keypad_hint">Dobbelttrykk: Enter-tast\nLangt trykk: Avslutt tastaturmodus\nSveip fra midten for å se flere taster</string>
     <string name="key_name_escape">Escape</string>

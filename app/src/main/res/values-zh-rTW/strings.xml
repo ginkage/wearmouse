@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">左手\n(手錶在左手腕上)</string>
     <string name="mouse_hand_center">中央\n(手錶在你手中)</string>
     <string name="mouse_hand_right">右手\n(手錶在右手腕上)</string>
+    <string name="pref_inputTouchpad">觸控板</string>
     <string name="pref_inputCursor">游標鍵</string>
     <string name="keypad_hint">輕觸兩下：Enter 鍵\n長按：退出鍵盤模式\n從中央往外滑動可查看更多按鍵</string>
     <string name="key_name_escape">Escape</string>

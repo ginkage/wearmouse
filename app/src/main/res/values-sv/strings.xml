@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Vänster hand\n(klockan sitter på vänster handled)</string>
     <string name="mouse_hand_center">I mitten\n(du håller klockan i handen)</string>
     <string name="mouse_hand_right">Höger hand\n(klockan sitter på höger handled)</string>
+    <string name="pref_inputTouchpad">Styrplatta</string>
     <string name="pref_inputCursor">Piltangenter</string>
     <string name="keypad_hint">Trycka snabbt två gånger: Returtangenten\nTrycka länge: Avsluta knappsatsläget\nSvep från mitten för extra tangenter</string>
     <string name="key_name_escape">Escape</string>

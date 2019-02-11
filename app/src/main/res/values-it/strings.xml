@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Mano sinistra\n(Orologio al polso sinistro)</string>
     <string name="mouse_hand_center">Centro\n(Orologio in mano)</string>
     <string name="mouse_hand_right">Mano destra\n(Orologio al polso destro)</string>
+    <string name="pref_inputTouchpad">Touchpad</string>
     <string name="pref_inputCursor">Tasti cursore</string>
     <string name="keypad_hint">Doppio tocco: tasto INVIO\nPressione prolungata: esci dalla modalità keypad\nScorri dal centro per tasti aggiuntivi</string>
     <string name="key_name_escape">ESC</string>

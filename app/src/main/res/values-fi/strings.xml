@@ -49,6 +49,7 @@
     <string name="mouse_hand_left">Vasen käsi\n(kello vasemmassa ranteessa)</string>
     <string name="mouse_hand_center">Keskitys\n(kelloa pidetään kädessä)</string>
     <string name="mouse_hand_right">Oikea käsi\n(kello oikeassa ranteessa)</string>
+    <string name="pref_inputTouchpad">Kosketuslevy</string>
     <string name="pref_inputCursor">Kursorinäppäimet</string>
     <string name="keypad_hint">Kaksoisnapautus: Enter\nPitkä painallus: Poistu näppäimistötilasta\nPyyhkäisy keskeltä: Lisää näppäimiä</string>
     <string name="key_name_escape">Escape</string>
