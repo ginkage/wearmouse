@@ -19,7 +19,7 @@
     <!-- Name of the app in launcher. -->
     <string name="app_name">WearMouse</string>
     <!-- Prompt to wait for Bluetooth to turn on. -->
-    <string name="please_wait">Please wait\u2026</string>
+    <string name="please_wait">Please wait…</string>
     <!-- Generic text to indicate that a setting is disabled. Should be in all caps. -->
     <string name="generic_disabled">OFF</string>
     <!-- The title of the activity for managing paired bluetooth devices -->
@@ -29,7 +29,7 @@
     <!-- Title of the list item to be clicked on when the user wants to trigger a new bluetooth device discovery process. -->
     <string name="pref_bluetoothScan">Scan for nearby devices</string>
     <!-- Message to be shown during the bluetooth device discovery process. -->
-    <string name="pref_bluetoothScan_scanning">Scanning for nearby devices\u2026</string>
+    <string name="pref_bluetoothScan_scanning">Scanning for nearby devices…</string>
     <!-- Action to connect to a paired Bluetooth device. -->
     <string name="pref_bluetooth_connect">Connect</string>
     <!-- Action to disconnect from a connected paired Bluetooth device. -->
@@ -39,21 +39,21 @@
     <!-- Action to select a connected paired Bluetooth device. -->
     <string name="pref_bluetooth_select">Select</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is enabling. -->
-    <string name="pref_bluetooth_turningOn">Bluetooth turning on\u2026</string>
+    <string name="pref_bluetooth_turningOn">Bluetooth turning on…</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is disabling. -->
-    <string name="pref_bluetooth_turningOff">Bluetooth turning off\u2026</string>
+    <string name="pref_bluetooth_turningOff">Bluetooth turning off…</string>
     <!-- The connection status of an unpaired remote bluetooth device. It means the device is available for pairing. -->
     <string name="pref_bluetooth_available">Available</string>
     <!-- The profile availability of the remote device. It means no shared profiles between the two devices. -->
     <string name="pref_bluetooth_unavailable">Unavailable</string>
     <!-- The connection status of a remote bluetooth device which is currently being paired with. -->
-    <string name="pref_bluetooth_pairing">Pairing\u2026</string>
+    <string name="pref_bluetooth_pairing">Pairing…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_connecting">Connecting\u2026</string>
+    <string name="pref_bluetooth_connecting">Connecting…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
     <string name="pref_bluetooth_connected">Connected</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnecting">Disconnecting\u2026</string>
+    <string name="pref_bluetooth_disconnecting">Disconnecting…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
     <string name="pref_bluetooth_disconnected">Disconnected</string>
     <!-- The ability to forget a shared bluetooth device. -->
@@ -61,7 +61,7 @@
     <!-- Name of the menu entry for the About dialog. -->
     <string name="pref_appAbout">About</string>
     <!-- Title of the button that shows the license. -->
-    <string name="pref_about_openSource">Open source license</string>
+    <string name="pref_about_openSource">Open source licence</string>
     <!-- Title at the top of the input mode selection -->
     <string name="pref_mode_select">Input Mode</string>
     <!-- Title of the Mouse emulation mode -->
@@ -81,7 +81,7 @@
     <!-- Name of the left wrist mode (2 lines) -->
     <string name="mouse_hand_left">Left Hand\n(Watch is on the left wrist)</string>
     <!-- Name of the hand-held mode (2 lines) -->
-    <string name="mouse_hand_center">Center\n(Watch is in your hand)</string>
+    <string name="mouse_hand_center">Centre\n(Watch is in your hand)</string>
     <!-- Name of the right wrist mode (2 lines) -->
     <string name="mouse_hand_right">Right Hand\n(Watch is on the right wrist)</string>
     <!-- Title of the Touchpad emulation mode -->
@@ -89,7 +89,7 @@
     <!-- Title of the Keypad cursor emulation mode -->
     <string name="pref_inputCursor">Cursor keys</string>
     <!-- Hint for the user to learn about the keypad mode interaction -->
-    <string name="keypad_hint">Double tap: Enter key\nLong press: Exit keypad mode\nSwipe from center for extra keys</string>
+    <string name="keypad_hint">Double tap: Enter key\nLong press: Exit keypad mode\nSwipe from centre for extra keys</string>
     <!-- Name of the Escape key -->
     <string name="key_name_escape">Escape</string>
     <!-- Name of the Backspace key -->
@@ -103,7 +103,7 @@
     <!-- Title at the top of settings view -->
     <string name="pref_inputSettings">Settings</string>
     <!-- Name of the preference for stabilizing mouse pointer movements -->
-    <string name="pref_settingStabilize">Stabilize pointer movements</string>
+    <string name="pref_settingStabilize">Stabilise pointer movements</string>
     <!-- Description of the preference for stabilizing mouse pointer movements -->
     <string name="pref_settingStabilize_summary">Makes it easier to point at small targets</string>
     <!-- Name of the preference for enabling 8-way keypad instead of 4-way -->
@@ -114,10 +114,14 @@
     <string name="pref_settingReducedRate">Reduce data rate to 50 Hz</string>
     <!-- Description of the preference for reducing the mouse data rate -->
     <string name="pref_settingReducedRate_summary">Enable this if the mouse pointer can\'t keep up with motion</string>
+    <!-- Name of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected">Stay connected in the background</string>
+    <!-- Description of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized.</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
     <string name="pref_settingReplayTutorials">Repeat all tutorials</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->
-    <string name="pref_settingReplayTutorials_summary">Show help screens for every mode once again when you enter them</string>
+    <string name="pref_settingReplayTutorials_summary">Show help screens once again for every mode entered.</string>
     <!-- Tutorial text for the first launch of the application -->
     <string name="onboarding_message_welcome">Use your Wear OS smartwatch as a Bluetooth mouse or keyboard; start by pairing to another device.</string>
     <!-- Tutorial text for the mouse mode -->
