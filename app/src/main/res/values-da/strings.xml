@@ -29,7 +29,7 @@
     <!-- Title of the list item to be clicked on when the user wants to trigger a new bluetooth device discovery process. -->
     <string name="pref_bluetoothScan">Søg efter enheder i nærheden</string>
     <!-- Message to be shown during the bluetooth device discovery process. -->
-    <string name="pref_bluetoothScan_scanning">Søger efter enheder i nærheden...</string>
+    <string name="pref_bluetoothScan_scanning">Søger efter enheder i nærheden…</string>
     <!-- Action to connect to a paired Bluetooth device. -->
     <string name="pref_bluetooth_connect">Opret forbindelse</string>
     <!-- Action to disconnect from a connected paired Bluetooth device. -->
@@ -47,13 +47,13 @@
     <!-- The profile availability of the remote device. It means no shared profiles between the two devices. -->
     <string name="pref_bluetooth_unavailable">Ikke tilgængelig</string>
     <!-- The connection status of a remote bluetooth device which is currently being paired with. -->
-    <string name="pref_bluetooth_pairing">Parrer...</string>
+    <string name="pref_bluetooth_pairing">Parrer…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
     <string name="pref_bluetooth_connecting">Tilslutter…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
     <string name="pref_bluetooth_connected">Tilsluttet</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnecting">Afbryder...</string>
+    <string name="pref_bluetooth_disconnecting">Afbryder…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
     <string name="pref_bluetooth_disconnected">Afbrudt</string>
     <!-- The ability to forget a shared bluetooth device. -->
@@ -114,6 +114,10 @@
     <string name="pref_settingReducedRate">Reducer datahastighed til 50 Hz</string>
     <!-- Description of the preference for reducing the mouse data rate -->
     <string name="pref_settingReducedRate_summary">Aktivér dette, hvis markøren ikke kan følge med bevægelserne</string>
+    <!-- Name of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected">Stay connected in the background</string>
+    <!-- Description of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
     <string name="pref_settingReplayTutorials">Gentag alle selvstudier</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->
