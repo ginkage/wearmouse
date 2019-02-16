@@ -114,6 +114,10 @@
     <string name="pref_settingReducedRate">ลดอัตราส่งข้อมูลเป็น 50 Hz</string>
     <!-- Description of the preference for reducing the mouse data rate -->
     <string name="pref_settingReducedRate_summary">เปิดใช้ตัวเลือกนี้ถ้าตัวชี้เมาส์เคลื่อนไหวตามไม่ทัน</string>
+    <!-- Name of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected">Stay connected in the background</string>
+    <!-- Description of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized.</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
     <string name="pref_settingReplayTutorials">ดูบทแนะนำทั้งหมดอีกครั้ง</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->
