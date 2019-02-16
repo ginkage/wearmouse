@@ -114,6 +114,10 @@
     <string name="pref_settingReducedRate">Snížit přenosovou rychlost na 50 Hz</string>
     <!-- Description of the preference for reducing the mouse data rate -->
     <string name="pref_settingReducedRate_summary">Zapněte, pokud ukazatel myši nestíhá vaše pohyby</string>
+    <!-- Name of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected">Stay connected in the background</string>
+    <!-- Description of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
     <string name="pref_settingReplayTutorials">Zopakovat všechny výukové programy</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->
