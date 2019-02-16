@@ -117,7 +117,7 @@
     <!-- Name of the preference for keeping the device connection in the background -->
     <string name="pref_settingStayConnected">Stay connected in the background</string>
     <!-- Description of the preference for keeping the device connection in the background -->
-    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized.</string>
+    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
     <string name="pref_settingReplayTutorials">Répéter tous les didacticiels</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->
