@@ -23,47 +23,47 @@
     <!-- Generic text to indicate that a setting is disabled. Should be in all caps. -->
     <string name="generic_disabled">關閉</string>
     <!-- The title of the activity for managing paired bluetooth devices -->
-    <string name="pref_bluetooth">配對裝置</string>
+    <string name="pref_bluetooth">已配對的裝置</string>
     <!-- The title of the category for unpaired bluetooth devices available to pair with. -->
-    <string name="pref_bluetoothAvailable">可用的裝置</string>
+    <string name="pref_bluetoothAvailable">可配對的裝置</string>
     <!-- Title of the list item to be clicked on when the user wants to trigger a new bluetooth device discovery process. -->
     <string name="pref_bluetoothScan">掃描附近的裝置</string>
     <!-- Message to be shown during the bluetooth device discovery process. -->
     <string name="pref_bluetoothScan_scanning">正在掃描附近的裝置…</string>
     <!-- Action to connect to a paired Bluetooth device. -->
-    <string name="pref_bluetooth_connect">連線</string>
+    <string name="pref_bluetooth_connect">連接</string>
     <!-- Action to disconnect from a connected paired Bluetooth device. -->
-    <string name="pref_bluetooth_disconnect">中斷連線</string>
+    <string name="pref_bluetooth_disconnect">解除連接</string>
     <!-- Action to unpair a paired Bluetooth device. -->
-    <string name="pref_bluetooth_unpair">解除配對</string>
+    <string name="pref_bluetooth_unpair">取消配對</string>
     <!-- Action to select a connected paired Bluetooth device. -->
     <string name="pref_bluetooth_select">選取</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is enabling. -->
-    <string name="pref_bluetooth_turningOn">正在開啟藍牙功能…</string>
+    <string name="pref_bluetooth_turningOn">正在開啟藍牙…</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is disabling. -->
-    <string name="pref_bluetooth_turningOff">正在關閉藍牙功能…</string>
+    <string name="pref_bluetooth_turningOff">正在關閉藍牙…</string>
     <!-- The connection status of an unpaired remote bluetooth device. It means the device is available for pairing. -->
-    <string name="pref_bluetooth_available">可供使用</string>
+    <string name="pref_bluetooth_available">可配對</string>
     <!-- The profile availability of the remote device. It means no shared profiles between the two devices. -->
     <string name="pref_bluetooth_unavailable">無法使用</string>
     <!-- The connection status of a remote bluetooth device which is currently being paired with. -->
-    <string name="pref_bluetooth_pairing">配對中…</string>
+    <string name="pref_bluetooth_pairing">正在配對…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_connecting">連線中…</string>
+    <string name="pref_bluetooth_connecting">正在連接…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_connected">已連線</string>
+    <string name="pref_bluetooth_connected">已連接</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnecting">正在中斷連線…</string>
+    <string name="pref_bluetooth_disconnecting">正在解除連接…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnected">已中斷連線</string>
+    <string name="pref_bluetooth_disconnected">已解除連接</string>
     <!-- The ability to forget a shared bluetooth device. -->
-    <string name="pref_bluetooth_forget">清除</string>
+    <string name="pref_bluetooth_forget">忘記</string>
     <!-- Name of the menu entry for the About dialog. -->
     <string name="pref_appAbout">關於</string>
     <!-- Title of the button that shows the license. -->
     <string name="pref_about_openSource">開放原始碼授權</string>
     <!-- Title at the top of the input mode selection -->
-    <string name="pref_mode_select">輸入模式</string>
+    <string name="pref_mode_select">輸入法</string>
     <!-- Title of the Mouse emulation mode -->
     <string name="pref_inputMouse">滑鼠</string>
     <!-- Single-letter left button label -->
@@ -71,33 +71,33 @@
     <!-- Single-letter right button label -->
     <string name="right_button_label">右</string>
     <!-- Name of the extra option to click and hold the left mouse button -->
-    <string name="click_and_hold">按住左鍵</string>
+    <string name="click_and_hold">點擊並按住左鍵</string>
     <!-- Name of the extra option to click and hold the right mouse button -->
-    <string name="right_click_hold">按住右鍵</string>
+    <string name="right_click_hold">點擊並按住右鍵</string>
     <!-- Name of the extra option to click the middle mouse button -->
-    <string name="middle_click">按中間鍵</string>
+    <string name="middle_click">點擊滑鼠中鍵</string>
     <!-- Hint for the users about the way they can navigate in the mouse emulation mode (3 lines) -->
-    <string name="tap_to_click">揮手可移動游標\n輕觸按鈕可點選\n從頂端往下拉可換手</string>
+    <string name="tap_to_click">揮手即可移動游標\n輕按按鈕即可點擊\n由頂部往下拉即可換手</string>
     <!-- Name of the left wrist mode (2 lines) -->
-    <string name="mouse_hand_left">左手\n(手錶在左手腕上)</string>
+    <string name="mouse_hand_left">左手\n(手錶戴在左手腕)</string>
     <!-- Name of the hand-held mode (2 lines) -->
-    <string name="mouse_hand_center">中央\n(手錶在你手中)</string>
+    <string name="mouse_hand_center">中央\n(手錶放在手上)</string>
     <!-- Name of the right wrist mode (2 lines) -->
-    <string name="mouse_hand_right">右手\n(手錶在右手腕上)</string>
+    <string name="mouse_hand_right">右手\n(手錶戴在右手腕)</string>
     <!-- Title of the Touchpad emulation mode -->
     <string name="pref_inputTouchpad">觸控板</string>
     <!-- Title of the Keypad cursor emulation mode -->
     <string name="pref_inputCursor">游標鍵</string>
     <!-- Hint for the user to learn about the keypad mode interaction -->
-    <string name="keypad_hint">輕觸兩下：Enter 鍵\n長按：退出鍵盤模式\n從中央往外滑動可查看更多按鍵</string>
+    <string name="keypad_hint">輕按兩下：Enter 鍵\n長按：退出鍵盤模式\n從中間向外快速滑動即可查看更多鍵</string>
     <!-- Name of the Escape key -->
-    <string name="key_name_escape">Escape</string>
+    <string name="key_name_escape">Esc</string>
     <!-- Name of the Backspace key -->
     <string name="key_name_backspace">Backspace</string>
     <!-- Name of the Tab key -->
     <string name="key_name_tab">Tab</string>
     <!-- Name of the Space key -->
-    <string name="key_name_space">空格</string>
+    <string name="key_name_space">Space</string>
     <!-- Title of the Keyboard text input emulation mode -->
     <string name="pref_inputKeyboard">鍵盤輸入</string>
     <!-- Title at the top of settings view -->
@@ -105,27 +105,27 @@
     <!-- Name of the preference for stabilizing mouse pointer movements -->
     <string name="pref_settingStabilize">穩定游標移動方式</string>
     <!-- Description of the preference for stabilizing mouse pointer movements -->
-    <string name="pref_settingStabilize_summary">可以更輕鬆地將游標移至小型目標</string>
+    <string name="pref_settingStabilize_summary">讓您更輕鬆將游標移至小目標</string>
     <!-- Name of the preference for enabling 8-way keypad instead of 4-way -->
-    <string name="pref_settingCursor8Way">8 向游標</string>
+    <string name="pref_settingCursor8Way">8 方向游標</string>
     <!-- Description of the preference for enabling 8-way keypad instead of 4-way -->
-    <string name="pref_settingCursor8Way_summary">允許在鍵盤模式進行對角移動</string>
+    <string name="pref_settingCursor8Way_summary">允許在鍵盤模式執行對角移動</string>
     <!-- Name of the preference for reducing the mouse data rate -->
-    <string name="pref_settingReducedRate">將資料傳輸速率降為 50 Hz</string>
+    <string name="pref_settingReducedRate">將資料傳輸速率減至 50 Hz</string>
     <!-- Description of the preference for reducing the mouse data rate -->
-    <string name="pref_settingReducedRate_summary">如果滑鼠游標無法跟上動作，請啟用這項功能</string>
+    <string name="pref_settingReducedRate_summary">如果滑鼠游標無法跟上動作，請啟用此功能</string>
     <!-- Name of the preference for keeping the device connection in the background -->
     <string name="pref_settingStayConnected">在後臺保持連接</string>
     <!-- Description of the preference for keeping the device connection in the background -->
-    <string name="pref_settingStayConnected_summary">在應用最小化的情況下保持設備連接處於活動狀態。</string>
+    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
     <string name="pref_settingReplayTutorials">重複所有教學課程</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->
-    <string name="pref_settingReplayTutorials_summary">進入時再次顯示每個模式的說明畫面</string>
+    <string name="pref_settingReplayTutorials_summary">當您進入每個模式時，再次顯示該模式的說明畫面</string>
     <!-- Tutorial text for the first launch of the application -->
-    <string name="onboarding_message_welcome">如要使用 Wear OS 智慧型手錶做為藍牙滑鼠或鍵盤，請先與其他裝置進行配對。</string>
+    <string name="onboarding_message_welcome">如要使用 Wear OS 智能手錶作為藍牙滑鼠或鍵盤，請先與其他裝置配對。</string>
     <!-- Tutorial text for the mouse mode -->
-    <string name="onboarding_message_mouse">移動你的 Wear OS 裝置，即可移動畫面上的滑鼠游標。</string>
+    <string name="onboarding_message_mouse">移動 Wear OS 裝置，即可在螢幕上移動滑鼠指標。</string>
     <!-- Tutorial text for the cursor keys mode -->
-    <string name="onboarding_message_keypad">輕觸 Wear OS 裝置的螢幕兩側，即可按下方向鍵。</string>
+    <string name="onboarding_message_keypad">輕按 Wear OS 裝置的螢幕兩側，即可按下箭咀鍵。</string>
 </resources>
