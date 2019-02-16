@@ -19,109 +19,109 @@
     <!-- Name of the app in launcher. -->
     <string name="app_name">WearMouse</string>
     <!-- Prompt to wait for Bluetooth to turn on. -->
-    <string name="please_wait">Please wait\u2026</string>
+    <string name="please_wait">Espera…</string>
     <!-- Generic text to indicate that a setting is disabled. Should be in all caps. -->
-    <string name="generic_disabled">OFF</string>
+    <string name="generic_disabled">DESACTIVADO</string>
     <!-- The title of the activity for managing paired bluetooth devices -->
-    <string name="pref_bluetooth">Paired devices</string>
+    <string name="pref_bluetooth">Dispositivos vinculados</string>
     <!-- The title of the category for unpaired bluetooth devices available to pair with. -->
-    <string name="pref_bluetoothAvailable">Available devices</string>
+    <string name="pref_bluetoothAvailable">Dispositivos disponibles</string>
     <!-- Title of the list item to be clicked on when the user wants to trigger a new bluetooth device discovery process. -->
-    <string name="pref_bluetoothScan">Scan for nearby devices</string>
+    <string name="pref_bluetoothScan">Buscar dispositivos cercanos</string>
     <!-- Message to be shown during the bluetooth device discovery process. -->
-    <string name="pref_bluetoothScan_scanning">Scanning for nearby devices\u2026</string>
+    <string name="pref_bluetoothScan_scanning">Buscando dispositivos cercanos…</string>
     <!-- Action to connect to a paired Bluetooth device. -->
-    <string name="pref_bluetooth_connect">Connect</string>
+    <string name="pref_bluetooth_connect">Conectar</string>
     <!-- Action to disconnect from a connected paired Bluetooth device. -->
-    <string name="pref_bluetooth_disconnect">Disconnect</string>
+    <string name="pref_bluetooth_disconnect">Desconectar</string>
     <!-- Action to unpair a paired Bluetooth device. -->
-    <string name="pref_bluetooth_unpair">Unpair</string>
+    <string name="pref_bluetooth_unpair">Desvincular</string>
     <!-- Action to select a connected paired Bluetooth device. -->
-    <string name="pref_bluetooth_select">Select</string>
+    <string name="pref_bluetooth_select">Seleccionar</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is enabling. -->
-    <string name="pref_bluetooth_turningOn">Bluetooth turning on\u2026</string>
+    <string name="pref_bluetooth_turningOn">Activando Bluetooth…</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is disabling. -->
-    <string name="pref_bluetooth_turningOff">Bluetooth turning off\u2026</string>
+    <string name="pref_bluetooth_turningOff">Desactivando Bluetooth…</string>
     <!-- The connection status of an unpaired remote bluetooth device. It means the device is available for pairing. -->
-    <string name="pref_bluetooth_available">Available</string>
+    <string name="pref_bluetooth_available">Disponible</string>
     <!-- The profile availability of the remote device. It means no shared profiles between the two devices. -->
-    <string name="pref_bluetooth_unavailable">Unavailable</string>
+    <string name="pref_bluetooth_unavailable">No disponible</string>
     <!-- The connection status of a remote bluetooth device which is currently being paired with. -->
-    <string name="pref_bluetooth_pairing">Pairing\u2026</string>
+    <string name="pref_bluetooth_pairing">Vinculando…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_connecting">Connecting\u2026</string>
+    <string name="pref_bluetooth_connecting">Conectando…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_connected">Connected</string>
+    <string name="pref_bluetooth_connected">Conectado</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnecting">Disconnecting\u2026</string>
+    <string name="pref_bluetooth_disconnecting">Desconectando…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnected">Disconnected</string>
+    <string name="pref_bluetooth_disconnected">Desconectado</string>
     <!-- The ability to forget a shared bluetooth device. -->
-    <string name="pref_bluetooth_forget">Forget</string>
+    <string name="pref_bluetooth_forget">Olvidar</string>
     <!-- Name of the menu entry for the About dialog. -->
-    <string name="pref_appAbout">About</string>
+    <string name="pref_appAbout">Información</string>
     <!-- Title of the button that shows the license. -->
-    <string name="pref_about_openSource">Open source license</string>
+    <string name="pref_about_openSource">Licencia de código abierto</string>
     <!-- Title at the top of the input mode selection -->
-    <string name="pref_mode_select">Input Mode</string>
+    <string name="pref_mode_select">Modo de entrada</string>
     <!-- Title of the Mouse emulation mode -->
-    <string name="pref_inputMouse">Mouse</string>
+    <string name="pref_inputMouse">Ratón</string>
     <!-- Single-letter left button label -->
-    <string name="left_button_label">L</string>
+    <string name="left_button_label">I</string>
     <!-- Single-letter right button label -->
-    <string name="right_button_label">R</string>
+    <string name="right_button_label">D</string>
     <!-- Name of the extra option to click and hold the left mouse button -->
-    <string name="click_and_hold">Left click and hold</string>
+    <string name="click_and_hold">Clic izquierdo y mantener</string>
     <!-- Name of the extra option to click and hold the right mouse button -->
-    <string name="right_click_hold">Right click and hold</string>
+    <string name="right_click_hold">Clic derecho y mantener</string>
     <!-- Name of the extra option to click the middle mouse button -->
-    <string name="middle_click">Middle click</string>
+    <string name="middle_click">Clic central</string>
     <!-- Hint for the users about the way they can navigate in the mouse emulation mode (3 lines) -->
-    <string name="tap_to_click">Wave your hand to move pointer\nTap button to click\nPull from the top to switch hand</string>
+    <string name="tap_to_click">Pasa la mano para mover el puntero\nToca el botón para hacer clic\nDesliza el dedo hacia abajo desde la parte superior para cambiar de mano</string>
     <!-- Name of the left wrist mode (2 lines) -->
-    <string name="mouse_hand_left">Left Hand\n(Watch is on the left wrist)</string>
+    <string name="mouse_hand_left">Mano izquierda\n(Reloj está en la muñeca izqda.)</string>
     <!-- Name of the hand-held mode (2 lines) -->
-    <string name="mouse_hand_center">Center\n(Watch is in your hand)</string>
+    <string name="mouse_hand_center">Centro\n(Tienes el reloj en la mano)</string>
     <!-- Name of the right wrist mode (2 lines) -->
-    <string name="mouse_hand_right">Right Hand\n(Watch is on the right wrist)</string>
+    <string name="mouse_hand_right">Mano derecha\n(El reloj está en la muñeca derecha)</string>
     <!-- Title of the Touchpad emulation mode -->
-    <string name="pref_inputTouchpad">Touchpad</string>
+    <string name="pref_inputTouchpad">Panel táctil</string>
     <!-- Title of the Keypad cursor emulation mode -->
-    <string name="pref_inputCursor">Cursor keys</string>
+    <string name="pref_inputCursor">Teclas de cursor</string>
     <!-- Hint for the user to learn about the keypad mode interaction -->
-    <string name="keypad_hint">Double tap: Enter key\nLong press: Exit keypad mode\nSwipe from center for extra keys</string>
+    <string name="keypad_hint">Da dos toques para usar la tecla Intro\nMantén la pantalla pulsada para salir del modo de teclado\nDesliza el dedo desde el centro para ver más teclas</string>
     <!-- Name of the Escape key -->
     <string name="key_name_escape">Escape</string>
     <!-- Name of the Backspace key -->
-    <string name="key_name_backspace">Backspace</string>
+    <string name="key_name_backspace">Tecla de retroceso</string>
     <!-- Name of the Tab key -->
-    <string name="key_name_tab">Tab</string>
+    <string name="key_name_tab">Tabulador</string>
     <!-- Name of the Space key -->
-    <string name="key_name_space">Space</string>
+    <string name="key_name_space">Espacio</string>
     <!-- Title of the Keyboard text input emulation mode -->
-    <string name="pref_inputKeyboard">Keyboard input</string>
+    <string name="pref_inputKeyboard">Entrada de tecla</string>
     <!-- Title at the top of settings view -->
-    <string name="pref_inputSettings">Settings</string>
+    <string name="pref_inputSettings">Ajustes</string>
     <!-- Name of the preference for stabilizing mouse pointer movements -->
-    <string name="pref_settingStabilize">Stabilize pointer movements</string>
+    <string name="pref_settingStabilize">Estabilizar el puntero</string>
     <!-- Description of the preference for stabilizing mouse pointer movements -->
-    <string name="pref_settingStabilize_summary">Makes it easier to point at small targets</string>
+    <string name="pref_settingStabilize_summary">Hace que resulte más fácil seleccionar elementos pequeños</string>
     <!-- Name of the preference for enabling 8-way keypad instead of 4-way -->
-    <string name="pref_settingCursor8Way">8-directional cursor</string>
+    <string name="pref_settingCursor8Way">Cursor de 8 direcciones</string>
     <!-- Description of the preference for enabling 8-way keypad instead of 4-way -->
-    <string name="pref_settingCursor8Way_summary">Allow diagonal movements in the keypad mode</string>
+    <string name="pref_settingCursor8Way_summary">Permite movimientos diagonales en modo de teclado</string>
     <!-- Name of the preference for reducing the mouse data rate -->
-    <string name="pref_settingReducedRate">Reduce data rate to 50 Hz</string>
+    <string name="pref_settingReducedRate">Reducir frecuencia datos a 50 Hz</string>
     <!-- Description of the preference for reducing the mouse data rate -->
-    <string name="pref_settingReducedRate_summary">Enable this if the mouse pointer can\'t keep up with motion</string>
+    <string name="pref_settingReducedRate_summary">Habilítala si el puntero no puede seguir el movimiento</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
-    <string name="pref_settingReplayTutorials">Repeat all tutorials</string>
+    <string name="pref_settingReplayTutorials">Repetir todos los tutoriales</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->
-    <string name="pref_settingReplayTutorials_summary">Show help screens for every mode once again when you enter them</string>
+    <string name="pref_settingReplayTutorials_summary">Vuelve a mostrar las pantallas de ayuda de cada modo al acceder a ellos</string>
     <!-- Tutorial text for the first launch of the application -->
-    <string name="onboarding_message_welcome">Use your Wear OS smartwatch as a Bluetooth mouse or keyboard; start by pairing to another device.</string>
+    <string name="onboarding_message_welcome">Utiliza tu smartwatch Wear OS como teclado o ratón Bluetooth. Para empezar, vincúlalo con otro dispositivo.</string>
     <!-- Tutorial text for the mouse mode -->
-    <string name="onboarding_message_mouse">Move your Wear OS device to move the mouse pointer on the screen.</string>
+    <string name="onboarding_message_mouse">Mueve tu dispositivo Wear OS para mover el puntero del ratón por la pantalla.</string>
     <!-- Tutorial text for the cursor keys mode -->
-    <string name="onboarding_message_keypad">Tap on the sides of the Wear OS device\'s screen to press arrow keys.</string>
+    <string name="onboarding_message_keypad">Toca los lados de la pantalla del dispositivo Wear OS para pulsar las teclas de flecha.</string>
 </resources>
