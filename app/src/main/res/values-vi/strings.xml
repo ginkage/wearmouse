@@ -19,7 +19,7 @@
     <!-- Name of the app in launcher. -->
     <string name="app_name">WearMouse</string>
     <!-- Prompt to wait for Bluetooth to turn on. -->
-    <string name="please_wait">Vui lòng đợi...</string>
+    <string name="please_wait">Vui lòng đợi…</string>
     <!-- Generic text to indicate that a setting is disabled. Should be in all caps. -->
     <string name="generic_disabled">ĐÃ TẮT</string>
     <!-- The title of the activity for managing paired bluetooth devices -->
@@ -39,9 +39,9 @@
     <!-- Action to select a connected paired Bluetooth device. -->
     <string name="pref_bluetooth_select">Chọn</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is enabling. -->
-    <string name="pref_bluetooth_turningOn">Đang bật Bluetooth...</string>
+    <string name="pref_bluetooth_turningOn">Đang bật Bluetooth…</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is disabling. -->
-    <string name="pref_bluetooth_turningOff">Đang tắt Bluetooth...</string>
+    <string name="pref_bluetooth_turningOff">Đang tắt Bluetooth…</string>
     <!-- The connection status of an unpaired remote bluetooth device. It means the device is available for pairing. -->
     <string name="pref_bluetooth_available">Khả dụng</string>
     <!-- The profile availability of the remote device. It means no shared profiles between the two devices. -->
@@ -114,6 +114,10 @@
     <string name="pref_settingReducedRate">Giảm tốc độ dữ liệu xuống 50 Hz</string>
     <!-- Description of the preference for reducing the mouse data rate -->
     <string name="pref_settingReducedRate_summary">Bật tùy chọn này nếu con trỏ chuột không bắt kịp chuyển động</string>
+    <!-- Name of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected">Stay connected in the background</string>
+    <!-- Description of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized.</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
     <string name="pref_settingReplayTutorials">Lặp lại tất cả hướng dẫn</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->
