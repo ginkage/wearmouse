@@ -19,12 +19,12 @@ package com.ginkage.wearmouse.ui.input;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.IntDef;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.wear.ambient.AmbientModeSupport;
-import android.support.wear.ambient.AmbientModeSupport.AmbientCallback;
-import android.support.wear.ambient.AmbientModeSupport.AmbientCallbackProvider;
+import androidx.annotation.IntDef;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.wear.ambient.AmbientModeSupport;
+import androidx.wear.ambient.AmbientModeSupport.AmbientCallback;
+import androidx.wear.ambient.AmbientModeSupport.AmbientCallbackProvider;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import com.ginkage.wearmouse.R;
@@ -82,6 +82,12 @@ public class InputActivity extends FragmentActivity implements AmbientCallbackPr
                 .beginTransaction()
                 .add(R.id.fragment_container, getFragment(currentMode))
                 .commit();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        keyboardController.onResume();
     }
 
     @Override

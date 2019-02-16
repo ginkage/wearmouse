@@ -25,8 +25,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
-import android.support.annotation.MainThread;
-import android.support.annotation.WorkerThread;
+import androidx.annotation.MainThread;
+import androidx.annotation.WorkerThread;
 import android.util.ArraySet;
 import android.util.Log;
 import com.ginkage.wearmouse.bluetooth.HidDeviceProfile.ServiceStateListener;
@@ -161,11 +161,20 @@ public class HidDataSender
     }
 
     /**
+     * Check if there is any active connection present.
+     *
+     * @return {@code true} if HID Host is connected, {@code false} otherwise.
+     */
+    public boolean isConnected() {
+        return (connectedDevice != null);
+    }
+
+    /**
      * Initiate connection sequence for the specified HID Host. If another device is already
      * connected, it will be disconnected first. If the parameter is {@code null}, then the service
      * will only disconnect from the current device.
      *
-     * @param device New HID Host to connect to.
+     * @param device New HID Host to connect to or {@code null} to disconnect.
      */
     @MainThread
     public void requestConnect(BluetoothDevice device) {

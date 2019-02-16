@@ -16,7 +16,7 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">WearMouse</string>
-    <string name="please_wait">Harap tunggu...</string>
+    <string name="please_wait">Harap tunggu…</string>
     <string name="generic_disabled">NONAKTIF</string>
     <string name="pref_bluetooth">Perangkat disambungkan</string>
     <string name="pref_bluetoothAvailable">Perangkat yang tersedia</string>
@@ -26,14 +26,14 @@
     <string name="pref_bluetooth_disconnect">Putuskan sambungan</string>
     <string name="pref_bluetooth_unpair">Lepas sambungan</string>
     <string name="pref_bluetooth_select">Pilih</string>
-    <string name="pref_bluetooth_turningOn">Bluetooth diaktifkan...</string>
-    <string name="pref_bluetooth_turningOff">Bluetooth dinonaktifkan...</string>
+    <string name="pref_bluetooth_turningOn">Bluetooth diaktifkan…</string>
+    <string name="pref_bluetooth_turningOff">Bluetooth dinonaktifkan…</string>
     <string name="pref_bluetooth_available">Tersedia</string>
     <string name="pref_bluetooth_unavailable">Tidak Tersedia</string>
-    <string name="pref_bluetooth_pairing">Menyambungkan...</string>
+    <string name="pref_bluetooth_pairing">Menyambungkan…</string>
     <string name="pref_bluetooth_connecting">Menghubungkan…</string>
     <string name="pref_bluetooth_connected">Tersambung</string>
-    <string name="pref_bluetooth_disconnecting">Memutus sambungan...</string>
+    <string name="pref_bluetooth_disconnecting">Memutus sambungan…</string>
     <string name="pref_bluetooth_disconnected">Sambungan terputus</string>
     <string name="pref_bluetooth_forget">Lupakan</string>
     <string name="pref_appAbout">Tentang</string>

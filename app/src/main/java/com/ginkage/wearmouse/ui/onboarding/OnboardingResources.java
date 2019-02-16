@@ -18,8 +18,8 @@ package com.ginkage.wearmouse.ui.onboarding;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.StringRes;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
 import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.ui.onboarding.OnboardingController.ScreenKey;
 import com.google.common.collect.ImmutableMap;

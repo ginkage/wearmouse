@@ -23,9 +23,9 @@ import android.bluetooth.BluetoothHidDevice;
 import android.bluetooth.BluetoothProfile;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.BinderThread;
-import android.support.annotation.MainThread;
-import android.support.annotation.WorkerThread;
+import androidx.annotation.BinderThread;
+import androidx.annotation.MainThread;
+import androidx.annotation.WorkerThread;
 import android.util.Log;
 import javax.annotation.Nullable;
 

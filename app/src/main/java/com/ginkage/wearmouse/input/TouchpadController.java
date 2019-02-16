@@ -23,7 +23,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
-import android.support.annotation.MainThread;
+import androidx.annotation.MainThread;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
 import com.ginkage.wearmouse.input.MouseSensorListener.ButtonEvent;
 import com.ginkage.wearmouse.input.MouseSensorListener.MouseButton;

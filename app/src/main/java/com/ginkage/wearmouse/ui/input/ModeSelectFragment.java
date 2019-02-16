@@ -77,8 +77,9 @@ public class ModeSelectFragment extends PreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-        wakeLock.acquire();
+        wakeLock.acquire(500);
         wakeLock.release();
+        keyboardController.onResume();
     }
 
     @Override

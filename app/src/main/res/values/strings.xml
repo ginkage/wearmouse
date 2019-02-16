@@ -19,7 +19,7 @@
     <string name="app_name">WearMouse</string>
 
     <!-- Prompt to wait for Bluetooth to turn on. -->
-    <string name="please_wait">Please wait\u2026</string>
+    <string name="please_wait">Please wait…</string>
     <!-- Generic text to indicate that a setting is disabled. Should be in all caps. -->
     <string name="generic_disabled">OFF</string>
 
@@ -30,7 +30,7 @@
     <!-- Title of the list item to be clicked on when the user wants to trigger a new bluetooth device discovery process. -->
     <string name="pref_bluetoothScan">Scan for nearby devices</string>
     <!-- Message to be shown during the bluetooth device discovery process. -->
-    <string name="pref_bluetoothScan_scanning">Scanning for nearby devices\u2026</string>
+    <string name="pref_bluetoothScan_scanning">Scanning for nearby devices…</string>
     <!-- Action to connect to a paired Bluetooth device. -->
     <string name="pref_bluetooth_connect">Connect</string>
     <!-- Action to disconnect from a connected paired Bluetooth device. -->
@@ -40,21 +40,21 @@
     <!-- Action to select a connected paired Bluetooth device. -->
     <string name="pref_bluetooth_select">Select</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is enabling. -->
-    <string name="pref_bluetooth_turningOn">Bluetooth turning on\u2026</string>
+    <string name="pref_bluetooth_turningOn">Bluetooth turning on…</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is disabling. -->
-    <string name="pref_bluetooth_turningOff">Bluetooth turning off\u2026</string>
+    <string name="pref_bluetooth_turningOff">Bluetooth turning off…</string>
     <!-- The connection status of an unpaired remote bluetooth device. It means the device is available for pairing. -->
     <string name="pref_bluetooth_available">Available</string>
     <!-- The profile availability of the remote device. It means no shared profiles between the two devices. -->
     <string name="pref_bluetooth_unavailable">Unavailable</string>
     <!-- The connection status of a remote bluetooth device which is currently being paired with. -->
-    <string name="pref_bluetooth_pairing">Pairing\u2026</string>
+    <string name="pref_bluetooth_pairing">Pairing…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_connecting">Connecting\u2026</string>
+    <string name="pref_bluetooth_connecting">Connecting…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
     <string name="pref_bluetooth_connected">Connected</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnecting">Disconnecting\u2026</string>
+    <string name="pref_bluetooth_disconnecting">Disconnecting…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
     <string name="pref_bluetooth_disconnected">Disconnected</string>
     <!-- The ability to forget a shared bluetooth device. -->
@@ -124,6 +124,10 @@
     <string name="pref_settingReducedRate">Reduce data rate to 50 Hz</string>
     <!-- Description of the preference for reducing the mouse data rate -->
     <string name="pref_settingReducedRate_summary">Enable this if the mouse pointer can\'t keep up with motion</string>
+    <!-- Name of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected">Stay connected in the background</string>
+    <!-- Description of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized.</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
     <string name="pref_settingReplayTutorials">Repeat all tutorials</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->

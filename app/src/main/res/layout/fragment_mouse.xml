@@ -20,37 +20,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.wear.widget.drawer.WearableDrawerLayout
+    <androidx.wear.widget.drawer.WearableDrawerLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/content_frame">
 
-            <android.support.constraint.Guideline
+            <androidx.constraintlayout.widget.Guideline
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/left_guideline"
                 app:layout_constraintGuide_percent=".20"
                 android:orientation="vertical"/>
 
-            <android.support.constraint.Guideline
+            <androidx.constraintlayout.widget.Guideline
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/top_guideline"
                 app:layout_constraintGuide_percent=".20"
                 android:orientation="horizontal"/>
 
-            <android.support.constraint.Guideline
+            <androidx.constraintlayout.widget.Guideline
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/right_guideline"
                 app:layout_constraintGuide_percent=".67"
                 android:orientation="vertical"/>
 
-            <android.support.constraint.Guideline
+            <androidx.constraintlayout.widget.Guideline
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/bottom_guideline"
@@ -106,16 +106,16 @@
                 app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
                 app:layout_constraintTop_toTopOf="@id/top_guideline"/>
 
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <android.support.wear.widget.drawer.WearableNavigationDrawerView
+        <androidx.wear.widget.drawer.WearableNavigationDrawerView
             android:id="@+id/top_navigation_drawer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/dark_grey"
             app:navigationStyle="singlePage"/>
 
-        <android.support.wear.widget.drawer.WearableActionDrawerView
+        <androidx.wear.widget.drawer.WearableActionDrawerView
             android:id="@+id/bottom_action_drawer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -123,7 +123,7 @@
             app:actionMenu="@menu/action_drawer_menu"
             app:showOverflowInPeek="true"/>
 
-    </android.support.wear.widget.drawer.WearableDrawerLayout>
+    </androidx.wear.widget.drawer.WearableDrawerLayout>
 
     <FrameLayout
         android:id="@+id/mouse_hint"

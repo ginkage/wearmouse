@@ -25,7 +25,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.annotation.MainThread;
+import androidx.annotation.MainThread;
 import android.support.wearable.input.RemoteInputConstants;
 import android.support.wearable.input.RemoteInputIntent;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
@@ -108,6 +108,13 @@ public class KeyboardInputController {
      */
     public void onCreate(Context context) {
         hidDataSender.register(context, profileListener);
+    }
+
+    /** Should be called in the Activity's (or Fragment's) onResume() method. */
+    public void onResume() {
+        if (!hidDataSender.isConnected()) {
+            ui.onDeviceDisconnected();
+        }
     }
 
     /**

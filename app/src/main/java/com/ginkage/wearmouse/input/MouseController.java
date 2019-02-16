@@ -22,7 +22,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.provider.Settings;
-import android.support.annotation.MainThread;
+import androidx.annotation.MainThread;
 import android.view.MotionEvent;
 import android.view.Surface;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;

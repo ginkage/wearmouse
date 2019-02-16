@@ -23,6 +23,7 @@ import android.preference.PreferenceFragment;
 import android.preference.SwitchPreference;
 import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.input.SettingsUtil;
+import com.ginkage.wearmouse.input.SettingsUtil.SettingKey;
 import com.ginkage.wearmouse.ui.onboarding.OnboardingController;
 
 /** The main Settings fragment. */
@@ -47,6 +48,7 @@ public class InputSettingsFragment extends PreferenceFragment {
         initBooleanPref(SettingsUtil.STABILIZE);
         initBooleanPref(SettingsUtil.CURSOR_8_WAY);
         initBooleanPref(SettingsUtil.REDUCED_RATE);
+        initBooleanPref(SettingsUtil.STAY_CONNECTED);
 
         OnboardingController onboardingController = new OnboardingController(getActivity());
         Preference onboardingPref = findPreference(ONBOARDING_PREF);
@@ -61,7 +63,7 @@ public class InputSettingsFragment extends PreferenceFragment {
                 });
     }
 
-    private void initBooleanPref(final String key) {
+    private void initBooleanPref(@SettingKey final String key) {
         final SwitchPreference pref = (SwitchPreference) findPreference(key);
         pref.setChecked(settings.getBoolean(key));
         pref.setOnPreferenceChangeListener(

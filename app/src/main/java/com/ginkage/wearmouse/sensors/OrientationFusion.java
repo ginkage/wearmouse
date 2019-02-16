@@ -19,8 +19,8 @@ package com.ginkage.wearmouse.sensors;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import android.content.Context;
-import android.support.annotation.GuardedBy;
-import android.support.annotation.WorkerThread;
+import androidx.annotation.GuardedBy;
+import androidx.annotation.WorkerThread;
 import com.ginkage.wearmouse.sensors.SensorService.OrientationListener;
 import com.google.vr.ndk.base.GvrApi;
 import java.util.concurrent.ScheduledFuture;

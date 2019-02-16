@@ -31,7 +31,7 @@
     <string name="pref_bluetooth_available">Available</string>
     <string name="pref_bluetooth_unavailable">Unavailable</string>
     <string name="pref_bluetooth_pairing">Pairing…</string>
-    <string name="pref_bluetooth_connecting">Connecting …</string>
+    <string name="pref_bluetooth_connecting">Connecting…</string>
     <string name="pref_bluetooth_connected">Connected</string>
     <string name="pref_bluetooth_disconnecting">Disconnecting…</string>
     <string name="pref_bluetooth_disconnected">Disconnected</string>

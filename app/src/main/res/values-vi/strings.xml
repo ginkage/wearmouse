@@ -16,7 +16,7 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">WearMouse</string>
-    <string name="please_wait">Vui lòng đợi...</string>
+    <string name="please_wait">Vui lòng đợi…</string>
     <string name="generic_disabled">ĐÃ TẮT</string>
     <string name="pref_bluetooth">Thiết bị được ghép nối</string>
     <string name="pref_bluetoothAvailable">Thiết bị có sẵn</string>
@@ -26,8 +26,8 @@
     <string name="pref_bluetooth_disconnect">Ngắt kết nối</string>
     <string name="pref_bluetooth_unpair">Hủy ghép nối</string>
     <string name="pref_bluetooth_select">Chọn</string>
-    <string name="pref_bluetooth_turningOn">Đang bật Bluetooth...</string>
-    <string name="pref_bluetooth_turningOff">Đang tắt Bluetooth...</string>
+    <string name="pref_bluetooth_turningOn">Đang bật Bluetooth…</string>
+    <string name="pref_bluetooth_turningOff">Đang tắt Bluetooth…</string>
     <string name="pref_bluetooth_available">Khả dụng</string>
     <string name="pref_bluetooth_unavailable">Không khả dụng</string>
     <string name="pref_bluetooth_pairing">Đang ghép nối…</string>

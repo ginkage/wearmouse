@@ -31,6 +31,11 @@
         android:title="@string/pref_settingReducedRate"
         android:summary="@string/pref_settingReducedRate_summary"
         android:persistent="false"/>
+    <SwitchPreference
+        android:key="pref_settingStayConnected"
+        android:title="@string/pref_settingStayConnected"
+        android:summary="@string/pref_settingStayConnected_summary"
+        android:persistent="false"/>
     <Preference
         android:key="pref_settingReplayTutorials"
         android:title="@string/pref_settingReplayTutorials"

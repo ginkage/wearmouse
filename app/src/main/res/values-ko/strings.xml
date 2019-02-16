@@ -16,7 +16,7 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">WearMouse</string>
-    <string name="please_wait">잠시 기다려 주세요...</string>
+    <string name="please_wait">잠시 기다려 주세요…</string>
     <string name="generic_disabled">사용 안함</string>
     <string name="pref_bluetooth">페어링된 기기</string>
     <string name="pref_bluetoothAvailable">사용 가능한 기기</string>
@@ -26,14 +26,14 @@
     <string name="pref_bluetooth_disconnect">연결 해제</string>
     <string name="pref_bluetooth_unpair">페어링 해제</string>
     <string name="pref_bluetooth_select">선택</string>
-    <string name="pref_bluetooth_turningOn">블루투스 사용 설정 중...</string>
-    <string name="pref_bluetooth_turningOff">블루투스 사용 중지 중...</string>
+    <string name="pref_bluetooth_turningOn">블루투스 사용 설정 중…</string>
+    <string name="pref_bluetooth_turningOff">블루투스 사용 중지 중…</string>
     <string name="pref_bluetooth_available">사용 가능</string>
     <string name="pref_bluetooth_unavailable">사용할 수 없음</string>
-    <string name="pref_bluetooth_pairing">페어링 중...</string>
+    <string name="pref_bluetooth_pairing">페어링 중…</string>
     <string name="pref_bluetooth_connecting">연결 중…</string>
     <string name="pref_bluetooth_connected">연결됨</string>
-    <string name="pref_bluetooth_disconnecting">연결을 해제하는 중...</string>
+    <string name="pref_bluetooth_disconnecting">연결을 해제하는 중…</string>
     <string name="pref_bluetooth_disconnected">연결 해제됨</string>
     <string name="pref_bluetooth_forget">삭제</string>
     <string name="pref_appAbout">정보</string>

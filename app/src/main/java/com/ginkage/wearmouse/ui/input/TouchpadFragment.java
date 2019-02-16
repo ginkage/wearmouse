@@ -17,7 +17,7 @@
 package com.ginkage.wearmouse.ui.input;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.support.wearable.input.RotaryEncoder;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;

@@ -29,11 +29,12 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-            android:allowBackup="false"
+            android:name=".WearMouseApp"
+            android:label="@string/app_name"
             android:theme="@android:style/Theme.DeviceDefault"
             android:icon="@drawable/ic_launcher"
-            tools:ignore="GoogleAppIndexingWarning"
-            android:label="@string/app_name" >
+            android:allowBackup="false"
+            tools:ignore="GoogleAppIndexingWarning" >
 
         <meta-data android:name="com.google.android.wearable.standalone" android:value="true"/>
         <uses-library android:name="com.google.android.wearable" android:required="false" />

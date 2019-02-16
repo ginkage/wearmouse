@@ -18,7 +18,7 @@ package com.ginkage.wearmouse.input;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 import com.ginkage.wearmouse.bluetooth.MouseReport.MouseDataSender;
 import com.ginkage.wearmouse.sensors.SensorService;
 import java.lang.annotation.Retention;

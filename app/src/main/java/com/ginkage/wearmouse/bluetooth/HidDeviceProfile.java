@@ -24,7 +24,7 @@ import android.bluetooth.BluetoothHidDevice;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.os.ParcelUuid;
-import android.support.annotation.MainThread;
+import androidx.annotation.MainThread;
 import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;

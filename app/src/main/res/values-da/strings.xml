@@ -21,7 +21,7 @@
     <string name="pref_bluetooth">Parrede enheder</string>
     <string name="pref_bluetoothAvailable">Tilgængelige enheder</string>
     <string name="pref_bluetoothScan">Søg efter enheder i nærheden</string>
-    <string name="pref_bluetoothScan_scanning">Søger efter enheder i nærheden...</string>
+    <string name="pref_bluetoothScan_scanning">Søger efter enheder i nærheden…</string>
     <string name="pref_bluetooth_connect">Opret forbindelse</string>
     <string name="pref_bluetooth_disconnect">Afbryd</string>
     <string name="pref_bluetooth_unpair">Ophæv parring</string>
@@ -30,10 +30,10 @@
     <string name="pref_bluetooth_turningOff">Bluetooth deaktiveres…</string>
     <string name="pref_bluetooth_available">Tilgængelig</string>
     <string name="pref_bluetooth_unavailable">Ikke tilgængelig</string>
-    <string name="pref_bluetooth_pairing">Parrer...</string>
+    <string name="pref_bluetooth_pairing">Parrer…</string>
     <string name="pref_bluetooth_connecting">Tilslutter…</string>
     <string name="pref_bluetooth_connected">Tilsluttet</string>
-    <string name="pref_bluetooth_disconnecting">Afbryder...</string>
+    <string name="pref_bluetooth_disconnecting">Afbryder…</string>
     <string name="pref_bluetooth_disconnected">Afbrudt</string>
     <string name="pref_bluetooth_forget">Glem</string>
     <string name="pref_appAbout">Om</string>

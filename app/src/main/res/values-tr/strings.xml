@@ -26,8 +26,8 @@
     <string name="pref_bluetooth_disconnect">Bağlantıyı kes</string>
     <string name="pref_bluetooth_unpair">Eşlemeyi bitir</string>
     <string name="pref_bluetooth_select">Seç</string>
-    <string name="pref_bluetooth_turningOn">Bluetooth açılıyor...</string>
-    <string name="pref_bluetooth_turningOff">Bluetooth kapatılıyor...</string>
+    <string name="pref_bluetooth_turningOn">Bluetooth açılıyor…</string>
+    <string name="pref_bluetooth_turningOff">Bluetooth kapatılıyor…</string>
     <string name="pref_bluetooth_available">Kullanılabilir</string>
     <string name="pref_bluetooth_unavailable">Kullanılamıyor</string>
     <string name="pref_bluetooth_pairing">Eşleniyor…</string>

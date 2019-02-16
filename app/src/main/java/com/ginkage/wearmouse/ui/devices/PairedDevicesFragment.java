@@ -27,7 +27,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.support.annotation.MainThread;
+import androidx.annotation.MainThread;
 import android.support.wearable.preference.WearablePreferenceActivity;
 import android.util.Log;
 import com.ginkage.wearmouse.R;

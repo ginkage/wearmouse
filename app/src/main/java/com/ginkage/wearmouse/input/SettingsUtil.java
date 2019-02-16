@@ -20,8 +20,11 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import androidx.annotation.StringDef;
 import com.ginkage.wearmouse.input.MouseSensorListener.HandMode;
 import com.google.common.collect.ImmutableMap;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.util.Map;
 
 /** Helper class to wrap various Settings. */
@@ -29,18 +32,24 @@ public class SettingsUtil {
 
     private static final String SETTINGS_PREF = "com.ginkage.wearmouse.SETTINGS";
 
+    @Retention(RetentionPolicy.SOURCE)
+    @StringDef({MOUSE_HAND, CURSOR_8_WAY, REDUCED_RATE, STABILIZE, STAY_CONNECTED})
+    public @interface SettingKey {}
+
     /** These constants correspond to the various preferences in the Settings menu. */
     public static final String MOUSE_HAND = "pref_settingMouseHand";
 
     public static final String CURSOR_8_WAY = "pref_settingCursor8Way";
     public static final String REDUCED_RATE = "pref_settingReducedRate";
     public static final String STABILIZE = "pref_settingStabilize";
+    public static final String STAY_CONNECTED = "pref_settingStayConnected";
 
     private static final Map<String, Boolean> defaults =
             new ImmutableMap.Builder<String, Boolean>()
                     .put(CURSOR_8_WAY, false)
                     .put(REDUCED_RATE, false)
                     .put(STABILIZE, false)
+                    .put(STAY_CONNECTED, false)
                     .build();
 
     private final SharedPreferences sharedPref;
@@ -77,7 +86,7 @@ public class SettingsUtil {
      * @param key Key in the values map.
      * @return Value that corresponds to the key.
      */
-    public boolean getBoolean(String key) {
+    public boolean getBoolean(@SettingKey String key) {
         return sharedPref.getBoolean(key, defaults.get(key));
     }
 
@@ -87,7 +96,7 @@ public class SettingsUtil {
      * @param key Key in the values map.
      * @param enabled Value that corresponds to the key.
      */
-    public void setBoolean(String key, boolean enabled) {
+    public void setBoolean(@SettingKey String key, boolean enabled) {
         sharedPref.edit().putBoolean(key, enabled).apply();
     }
 }

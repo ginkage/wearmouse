@@ -21,7 +21,7 @@
     <string name="pref_bluetooth">配對裝置</string>
     <string name="pref_bluetoothAvailable">可用的裝置</string>
     <string name="pref_bluetoothScan">掃描附近的裝置</string>
-    <string name="pref_bluetoothScan_scanning">正在掃描附近的裝置...</string>
+    <string name="pref_bluetoothScan_scanning">正在掃描附近的裝置…</string>
     <string name="pref_bluetooth_connect">連線</string>
     <string name="pref_bluetooth_disconnect">中斷連線</string>
     <string name="pref_bluetooth_unpair">解除配對</string>
