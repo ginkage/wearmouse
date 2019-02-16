@@ -29,7 +29,7 @@
     <!-- Title of the list item to be clicked on when the user wants to trigger a new bluetooth device discovery process. -->
     <string name="pref_bluetoothScan">आस-पास के डिवाइस के लिए स्कैन करें</string>
     <!-- Message to be shown during the bluetooth device discovery process. -->
-    <string name="pref_bluetoothScan_scanning">आस-पास के डिवाइस के लिए स्कैन किया जा रहा है...</string>
+    <string name="pref_bluetoothScan_scanning">आस-पास के डिवाइस के लिए स्कैन किया जा रहा है…</string>
     <!-- Action to connect to a paired Bluetooth device. -->
     <string name="pref_bluetooth_connect">कनेक्ट करें</string>
     <!-- Action to disconnect from a connected paired Bluetooth device. -->
@@ -39,7 +39,7 @@
     <!-- Action to select a connected paired Bluetooth device. -->
     <string name="pref_bluetooth_select">चुनें</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is enabling. -->
-    <string name="pref_bluetooth_turningOn">ब्लूटूथ चालू हो रहा है...</string>
+    <string name="pref_bluetooth_turningOn">ब्लूटूथ चालू हो रहा है…</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is disabling. -->
     <string name="pref_bluetooth_turningOff">ब्लूटूथ बंद हो रहा है…</string>
     <!-- The connection status of an unpaired remote bluetooth device. It means the device is available for pairing. -->
@@ -49,11 +49,11 @@
     <!-- The connection status of a remote bluetooth device which is currently being paired with. -->
     <string name="pref_bluetooth_pairing">युग्‍मित कर रहा है…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_connecting">कनेक्ट हो रहा है...</string>
+    <string name="pref_bluetooth_connecting">कनेक्ट हो रहा है…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
     <string name="pref_bluetooth_connected">कनेक्ट हो गया</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnecting">डिसकनेक्ट हो रहा है...</string>
+    <string name="pref_bluetooth_disconnecting">डिसकनेक्ट हो रहा है…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
     <string name="pref_bluetooth_disconnected">डिसकनेक्ट किया गया</string>
     <!-- The ability to forget a shared bluetooth device. -->
@@ -114,6 +114,10 @@
     <string name="pref_settingReducedRate">डेटा दर को 50 Hz तक घटाएं</string>
     <!-- Description of the preference for reducing the mouse data rate -->
     <string name="pref_settingReducedRate_summary">माउस पॉइंटर के गति के साथ नहीं बने रह पाने पर इसे सक्षम करें</string>
+    <!-- Name of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected">Stay connected in the background</string>
+    <!-- Description of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized.</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
     <string name="pref_settingReplayTutorials">सभी ट्यूटोरियल दोहराएं</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->
