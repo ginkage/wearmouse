@@ -15,7 +15,7 @@
   limitations under the License.
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">WearMouse</string>
+    <string name="app_name">WearMouse - 腕上鼠标</string>
     <string name="please_wait">请稍候…</string>
     <string name="generic_disabled">关闭</string>
     <string name="pref_bluetooth">已配对的设备</string>
@@ -64,6 +64,8 @@
     <string name="pref_settingCursor8Way_summary">允许在键盘模式下进行对角移动</string>
     <string name="pref_settingReducedRate">将数据速率降至 50 Hz</string>
     <string name="pref_settingReducedRate_summary">如果鼠标指针无法跟上动作节奏，请启用此选项</string>
+    <string name="pref_settingStayConnected">在后台保持连接</string>
+    <string name="pref_settingStayConnected_summary">在应用最小化的情况下保持设备连接处于活动状态</string>
     <string name="pref_settingReplayTutorials">重复所有教程</string>
     <string name="pref_settingReplayTutorials_summary">当您进入每个模式时，再次显示该模式的帮助屏幕</string>
     <string name="onboarding_message_welcome">使用您的 Wear OS 智能手表作为蓝牙鼠标或键盘；请先将手表与其他设备配对。</string>

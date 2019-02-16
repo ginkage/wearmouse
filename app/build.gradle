@@ -8,8 +8,8 @@ android {
         applicationId "com.ginkage.wearmouse"
         minSdkVersion 28
         targetSdkVersion 28
-        versionCode 18
-        versionName "1.08"
+        versionCode 19
+        versionName "1.09"
     }
     buildTypes {
         release {
