@@ -19,77 +19,77 @@
     <!-- Name of the app in launcher. -->
     <string name="app_name">WearMouse</string>
     <!-- Prompt to wait for Bluetooth to turn on. -->
-    <string name="please_wait">Please wait\u2026</string>
+    <string name="please_wait">Harap tunggu…</string>
     <!-- Generic text to indicate that a setting is disabled. Should be in all caps. -->
-    <string name="generic_disabled">OFF</string>
+    <string name="generic_disabled">NONAKTIF</string>
     <!-- The title of the activity for managing paired bluetooth devices -->
-    <string name="pref_bluetooth">Paired devices</string>
+    <string name="pref_bluetooth">Perangkat disambungkan</string>
     <!-- The title of the category for unpaired bluetooth devices available to pair with. -->
-    <string name="pref_bluetoothAvailable">Available devices</string>
+    <string name="pref_bluetoothAvailable">Perangkat yang tersedia</string>
     <!-- Title of the list item to be clicked on when the user wants to trigger a new bluetooth device discovery process. -->
-    <string name="pref_bluetoothScan">Scan for nearby devices</string>
+    <string name="pref_bluetoothScan">Pindai perangkat di sekitar</string>
     <!-- Message to be shown during the bluetooth device discovery process. -->
-    <string name="pref_bluetoothScan_scanning">Scanning for nearby devices\u2026</string>
+    <string name="pref_bluetoothScan_scanning">Memindai perangkat di sekitar…</string>
     <!-- Action to connect to a paired Bluetooth device. -->
-    <string name="pref_bluetooth_connect">Connect</string>
+    <string name="pref_bluetooth_connect">Sambungkan</string>
     <!-- Action to disconnect from a connected paired Bluetooth device. -->
-    <string name="pref_bluetooth_disconnect">Disconnect</string>
+    <string name="pref_bluetooth_disconnect">Putuskan sambungan</string>
     <!-- Action to unpair a paired Bluetooth device. -->
-    <string name="pref_bluetooth_unpair">Unpair</string>
+    <string name="pref_bluetooth_unpair">Lepas sambungan</string>
     <!-- Action to select a connected paired Bluetooth device. -->
-    <string name="pref_bluetooth_select">Select</string>
+    <string name="pref_bluetooth_select">Pilih</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is enabling. -->
-    <string name="pref_bluetooth_turningOn">Bluetooth turning on\u2026</string>
+    <string name="pref_bluetooth_turningOn">Bluetooth diaktifkan…</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is disabling. -->
-    <string name="pref_bluetooth_turningOff">Bluetooth turning off\u2026</string>
+    <string name="pref_bluetooth_turningOff">Bluetooth dinonaktifkan…</string>
     <!-- The connection status of an unpaired remote bluetooth device. It means the device is available for pairing. -->
-    <string name="pref_bluetooth_available">Available</string>
+    <string name="pref_bluetooth_available">Tersedia</string>
     <!-- The profile availability of the remote device. It means no shared profiles between the two devices. -->
-    <string name="pref_bluetooth_unavailable">Unavailable</string>
+    <string name="pref_bluetooth_unavailable">Tidak Tersedia</string>
     <!-- The connection status of a remote bluetooth device which is currently being paired with. -->
-    <string name="pref_bluetooth_pairing">Pairing\u2026</string>
+    <string name="pref_bluetooth_pairing">Menyambungkan…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_connecting">Connecting\u2026</string>
+    <string name="pref_bluetooth_connecting">Menghubungkan…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_connected">Connected</string>
+    <string name="pref_bluetooth_connected">Tersambung</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnecting">Disconnecting\u2026</string>
+    <string name="pref_bluetooth_disconnecting">Memutus sambungan…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnected">Disconnected</string>
+    <string name="pref_bluetooth_disconnected">Sambungan terputus</string>
     <!-- The ability to forget a shared bluetooth device. -->
-    <string name="pref_bluetooth_forget">Forget</string>
+    <string name="pref_bluetooth_forget">Lupakan</string>
     <!-- Name of the menu entry for the About dialog. -->
-    <string name="pref_appAbout">About</string>
+    <string name="pref_appAbout">Tentang</string>
     <!-- Title of the button that shows the license. -->
-    <string name="pref_about_openSource">Open source license</string>
+    <string name="pref_about_openSource">Lisensi open source</string>
     <!-- Title at the top of the input mode selection -->
-    <string name="pref_mode_select">Input Mode</string>
+    <string name="pref_mode_select">Mode Masukan</string>
     <!-- Title of the Mouse emulation mode -->
     <string name="pref_inputMouse">Mouse</string>
     <!-- Single-letter left button label -->
-    <string name="left_button_label">L</string>
+    <string name="left_button_label">Ki</string>
     <!-- Single-letter right button label -->
-    <string name="right_button_label">R</string>
+    <string name="right_button_label">Ka</string>
     <!-- Name of the extra option to click and hold the left mouse button -->
-    <string name="click_and_hold">Left click and hold</string>
+    <string name="click_and_hold">Klik lama tombol kiri</string>
     <!-- Name of the extra option to click and hold the right mouse button -->
-    <string name="right_click_hold">Right click and hold</string>
+    <string name="right_click_hold">Klik lama tombol kanan</string>
     <!-- Name of the extra option to click the middle mouse button -->
-    <string name="middle_click">Middle click</string>
+    <string name="middle_click">Klik tombol tengah</string>
     <!-- Hint for the users about the way they can navigate in the mouse emulation mode (3 lines) -->
-    <string name="tap_to_click">Wave your hand to move pointer\nTap button to click\nPull from the top to switch hand</string>
+    <string name="tap_to_click">Lambaikan tangan untuk memindahkan pointer\nTap tombol untuk mengklik\nTarik dari atas untuk beralih tangan</string>
     <!-- Name of the left wrist mode (2 lines) -->
-    <string name="mouse_hand_left">Left Hand\n(Watch is on the left wrist)</string>
+    <string name="mouse_hand_left">Tangan Kiri\n(Jam tangan di pergelangan kiri)</string>
     <!-- Name of the hand-held mode (2 lines) -->
-    <string name="mouse_hand_center">Center\n(Watch is in your hand)</string>
+    <string name="mouse_hand_center">Tengah\n(Jam tangan berada di tangan)</string>
     <!-- Name of the right wrist mode (2 lines) -->
-    <string name="mouse_hand_right">Right Hand\n(Watch is on the right wrist)</string>
+    <string name="mouse_hand_right">Tangan Kanan\n(Jam tangan di pergelangan kanan)</string>
     <!-- Title of the Touchpad emulation mode -->
     <string name="pref_inputTouchpad">Touchpad</string>
     <!-- Title of the Keypad cursor emulation mode -->
-    <string name="pref_inputCursor">Cursor keys</string>
+    <string name="pref_inputCursor">Tombol kursor</string>
     <!-- Hint for the user to learn about the keypad mode interaction -->
-    <string name="keypad_hint">Double tap: Enter key\nLong press: Exit keypad mode\nSwipe from center for extra keys</string>
+    <string name="keypad_hint">Tap 2 kali: Masukkan tombol\nTekan lama: Keluar dari mode keypad\nGeser dari tengah untuk tombol tambahan</string>
     <!-- Name of the Escape key -->
     <string name="key_name_escape">Escape</string>
     <!-- Name of the Backspace key -->
@@ -97,31 +97,35 @@
     <!-- Name of the Tab key -->
     <string name="key_name_tab">Tab</string>
     <!-- Name of the Space key -->
-    <string name="key_name_space">Space</string>
+    <string name="key_name_space">Spasi</string>
     <!-- Title of the Keyboard text input emulation mode -->
-    <string name="pref_inputKeyboard">Keyboard input</string>
+    <string name="pref_inputKeyboard">Masukan keyboard</string>
     <!-- Title at the top of settings view -->
-    <string name="pref_inputSettings">Settings</string>
+    <string name="pref_inputSettings">Setelan</string>
     <!-- Name of the preference for stabilizing mouse pointer movements -->
-    <string name="pref_settingStabilize">Stabilize pointer movements</string>
+    <string name="pref_settingStabilize">Stabilkan pergerakan penunjuk</string>
     <!-- Description of the preference for stabilizing mouse pointer movements -->
-    <string name="pref_settingStabilize_summary">Makes it easier to point at small targets</string>
+    <string name="pref_settingStabilize_summary">Memudahkan untuk menunjuk target yang kecil</string>
     <!-- Name of the preference for enabling 8-way keypad instead of 4-way -->
-    <string name="pref_settingCursor8Way">8-directional cursor</string>
+    <string name="pref_settingCursor8Way">Kursor 8 arah</string>
     <!-- Description of the preference for enabling 8-way keypad instead of 4-way -->
-    <string name="pref_settingCursor8Way_summary">Allow diagonal movements in the keypad mode</string>
+    <string name="pref_settingCursor8Way_summary">Mengizinkan pergerakan diagonal di mode keypad</string>
     <!-- Name of the preference for reducing the mouse data rate -->
-    <string name="pref_settingReducedRate">Reduce data rate to 50 Hz</string>
+    <string name="pref_settingReducedRate">Kurangi kecepatan data ke 50 Hz</string>
     <!-- Description of the preference for reducing the mouse data rate -->
-    <string name="pref_settingReducedRate_summary">Enable this if the mouse pointer can\'t keep up with motion</string>
+    <string name="pref_settingReducedRate_summary">Aktifkan jika penunjuk mouse tidak dapat mengikuti gerakan</string>
+    <!-- Name of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected">Stay connected in the background</string>
+    <!-- Description of the preference for keeping the device connection in the background -->
+    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized.</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
-    <string name="pref_settingReplayTutorials">Repeat all tutorials</string>
+    <string name="pref_settingReplayTutorials">Ulangi semua tutorial</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->
-    <string name="pref_settingReplayTutorials_summary">Show help screens for every mode once again when you enter them</string>
+    <string name="pref_settingReplayTutorials_summary">Tampilkan layar bantuan sekali lagi untuk setiap mode saat Anda memasukinya</string>
     <!-- Tutorial text for the first launch of the application -->
-    <string name="onboarding_message_welcome">Use your Wear OS smartwatch as a Bluetooth mouse or keyboard; start by pairing to another device.</string>
+    <string name="onboarding_message_welcome">Gunakan smartwatch Wear OS sebagai mouse atau keyboard Bluetooth, mulai dengan menyambungkannya ke perangkat lain.</string>
     <!-- Tutorial text for the mouse mode -->
-    <string name="onboarding_message_mouse">Move your Wear OS device to move the mouse pointer on the screen.</string>
+    <string name="onboarding_message_mouse">Gerakkan perangkat Wear OS untuk menggerakkan kursor mouse di layar.</string>
     <!-- Tutorial text for the cursor keys mode -->
-    <string name="onboarding_message_keypad">Tap on the sides of the Wear OS device\'s screen to press arrow keys.</string>
+    <string name="onboarding_message_keypad">Tap pada sisi layar perangkat Wear OS untuk menekan tombol panah.</string>
 </resources>
