@@ -15,7 +15,7 @@
   limitations under the License.
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">WearMouse</string>
+    <string name="app_name">WearMouse - 腕上鼠标</string>
     <string name="please_wait">请稍候…</string>
     <string name="generic_disabled">关闭</string>
     <string name="pref_bluetooth">已配对的设备</string>
