@@ -64,6 +64,8 @@
     <string name="pref_settingCursor8Way_summary">允許在鍵盤模式執行對角移動</string>
     <string name="pref_settingReducedRate">將資料傳輸速率減至 50 Hz</string>
     <string name="pref_settingReducedRate_summary">如果滑鼠游標無法跟上動作，請啟用此功能</string>
+    <string name="pref_settingStayConnected">在後臺保持連接</string>
+    <string name="pref_settingStayConnected_summary">在應用最小化的情況下保持設備連接處於活動狀態</string>
     <string name="pref_settingReplayTutorials">重複所有教學課程</string>
     <string name="pref_settingReplayTutorials_summary">當您進入每個模式時，再次顯示該模式的說明畫面</string>
     <string name="onboarding_message_welcome">如要使用 Wear OS 智能手錶作為藍牙滑鼠或鍵盤，請先與其他裝置配對。</string>

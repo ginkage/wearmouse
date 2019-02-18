@@ -17,11 +17,10 @@
 package com.ginkage.wearmouse.ui.input;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.constraintlayout.widget.ConstraintLayout.LayoutParams;
-import androidx.fragment.app.Fragment;
 import android.support.wearable.view.DismissOverlayView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -30,6 +29,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.constraintlayout.widget.ConstraintLayout.LayoutParams;
 import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.input.KeyboardHelper;
 import com.ginkage.wearmouse.input.KeypadController;

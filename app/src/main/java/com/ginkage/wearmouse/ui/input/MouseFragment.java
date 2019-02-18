@@ -17,13 +17,11 @@
 package com.ginkage.wearmouse.ui.input;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.wear.widget.drawer.WearableActionDrawerView;
-import androidx.wear.widget.drawer.WearableNavigationDrawerView;
 import android.support.wearable.input.RotaryEncoder;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -33,6 +31,8 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import androidx.wear.widget.drawer.WearableActionDrawerView;
+import androidx.wear.widget.drawer.WearableNavigationDrawerView;
 import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.input.MouseController;
 import com.ginkage.wearmouse.input.MouseSensorListener;

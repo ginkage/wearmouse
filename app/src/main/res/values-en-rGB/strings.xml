@@ -64,6 +64,8 @@
     <string name="pref_settingCursor8Way_summary">Allow diagonal movements in the keypad mode</string>
     <string name="pref_settingReducedRate">Reduce data rate to 50 Hz</string>
     <string name="pref_settingReducedRate_summary">Enable this if the mouse pointer can\'t keep up with motion</string>
+    <string name="pref_settingStayConnected">Stay connected in the background</string>
+    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimised</string>
     <string name="pref_settingReplayTutorials">Repeat all tutorials</string>
     <string name="pref_settingReplayTutorials_summary">Show help screens once again for every mode entered.</string>
     <string name="onboarding_message_welcome">Use your Wear OS smartwatch as a Bluetooth mouse or keyboard; start by pairing to another device.</string>

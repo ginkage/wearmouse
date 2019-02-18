@@ -25,9 +25,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import androidx.annotation.MainThread;
 import android.support.wearable.input.RemoteInputConstants;
 import android.support.wearable.input.RemoteInputIntent;
+import androidx.annotation.MainThread;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
 import javax.annotation.Nullable;
 
