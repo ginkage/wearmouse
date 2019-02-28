@@ -33,6 +33,7 @@ public class KeyboardHelper {
 
     @Retention(RetentionPolicy.SOURCE)
     @IntDef({
+        Modifier.NONE,
         Modifier.LEFT_CTRL,
         Modifier.LEFT_SHIFT,
         Modifier.LEFT_ALT,
