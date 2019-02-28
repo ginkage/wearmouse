@@ -28,6 +28,7 @@ import androidx.annotation.MainThread;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
 import com.ginkage.wearmouse.input.MouseSensorListener.HandMode;
 import com.ginkage.wearmouse.input.MouseSensorListener.MouseButton;
+import com.ginkage.wearmouse.input.SettingsUtil.SettingKey;
 import com.ginkage.wearmouse.sensors.SensorService;
 import com.ginkage.wearmouse.sensors.SensorServiceConnection;
 
@@ -117,8 +118,7 @@ public class MouseController {
      */
     public void onTouch(MotionEvent event, boolean leftButton) {
         final int action = event.getActionMasked();
-        final @MouseButton int button =
-                leftButton ? MouseSensorListener.BUTTON_LEFT : MouseSensorListener.BUTTON_RIGHT;
+        final @MouseButton int button = leftButton ? MouseButton.LEFT : MouseButton.RIGHT;
         if (action == MotionEvent.ACTION_DOWN) {
             sendButtonEvent(button, true);
         } else if (action == MotionEvent.ACTION_UP) {
@@ -137,18 +137,18 @@ public class MouseController {
 
     /** Sends a Left Mouse Button "down" event. */
     public void leftClickAndHold() {
-        sendButtonEvent(MouseSensorListener.BUTTON_LEFT, true);
+        sendButtonEvent(MouseButton.LEFT, true);
     }
 
     /** Sends a Right Mouse Button "down" event. */
     public void rightClickAndHold() {
-        sendButtonEvent(MouseSensorListener.BUTTON_RIGHT, true);
+        sendButtonEvent(MouseButton.RIGHT, true);
     }
 
     /** Sends a Middle Mouse Button "down" event immediately followed by an "up" event. */
     public void middleClick() {
-        sendButtonEvent(MouseSensorListener.BUTTON_MIDDLE, true);
-        sendButtonEvent(MouseSensorListener.BUTTON_MIDDLE, false);
+        sendButtonEvent(MouseButton.MIDDLE, true);
+        sendButtonEvent(MouseButton.MIDDLE, false);
     }
 
     /**
@@ -175,8 +175,8 @@ public class MouseController {
     private void onServiceConnected(SensorService service) {
         sensorListener.setLefty(isLefty(service.getApplicationContext()));
         sensorListener.setHand(settings.getMouseHand());
-        sensorListener.setStabilize(settings.getBoolean(SettingsUtil.STABILIZE));
-        service.startInput(sensorListener, settings.getBoolean(SettingsUtil.REDUCED_RATE));
+        sensorListener.setStabilize(settings.getBoolean(SettingKey.STABILIZE));
+        service.startInput(sensorListener, settings.getBoolean(SettingKey.REDUCED_RATE));
     }
 
     private boolean isLefty(Context context) {

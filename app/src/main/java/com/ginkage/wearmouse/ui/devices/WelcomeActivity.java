@@ -19,7 +19,7 @@ package com.ginkage.wearmouse.ui.devices;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.wearable.preference.WearablePreferenceActivity;
-import com.ginkage.wearmouse.ui.onboarding.OnboardingController;
+import com.ginkage.wearmouse.ui.onboarding.OnboardingController.ScreenKey;
 import com.ginkage.wearmouse.ui.onboarding.OnboardingRequest;
 
 /** Main activity that is started from launcher. */
@@ -30,7 +30,7 @@ public class WelcomeActivity extends WearablePreferenceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        onboardingRequest = new OnboardingRequest(this, OnboardingController.OB_WELCOME);
+        onboardingRequest = new OnboardingRequest(this, ScreenKey.WELCOME);
         if (onboardingRequest.isComplete()) {
             startPreferenceFragment(new PairedDevicesFragment(), false);
         } else {

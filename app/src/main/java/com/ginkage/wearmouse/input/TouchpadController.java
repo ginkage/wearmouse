@@ -16,8 +16,6 @@
 
 package com.ginkage.wearmouse.input;
 
-import static com.ginkage.wearmouse.input.MouseSensorListener.BUTTON_LEFT;
-import static com.ginkage.wearmouse.input.MouseSensorListener.BUTTON_RIGHT;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import android.bluetooth.BluetoothDevice;
@@ -27,6 +25,7 @@ import androidx.annotation.MainThread;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
 import com.ginkage.wearmouse.input.MouseSensorListener.ButtonEvent;
 import com.ginkage.wearmouse.input.MouseSensorListener.MouseButton;
+import com.ginkage.wearmouse.input.SettingsUtil.SettingKey;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
@@ -100,7 +99,7 @@ public class TouchpadController {
         hidDataSender.register(context, profileListener);
 
         if (scheduledFuture == null) {
-            boolean reducedRate = new SettingsUtil(context).getBoolean(SettingsUtil.REDUCED_RATE);
+            boolean reducedRate = new SettingsUtil(context).getBoolean(SettingKey.REDUCED_RATE);
             long samplingPeriodUs = reducedRate ? DATA_RATE_LOW_US : DATA_RATE_HIGH_US;
             executor = new ScheduledThreadPoolExecutor(1);
             scheduledFuture =
@@ -140,22 +139,22 @@ public class TouchpadController {
     private class TouchpadGestureListener implements TouchpadGestureDetector.GestureListener {
         @Override
         public void onLeftDown() {
-            sendButtonEvent(BUTTON_LEFT, true);
+            sendButtonEvent(MouseButton.LEFT, true);
         }
 
         @Override
         public void onRightDown() {
-            sendButtonEvent(BUTTON_RIGHT, true);
+            sendButtonEvent(MouseButton.RIGHT, true);
         }
 
         @Override
         public void onLeftUp() {
-            sendButtonEvent(BUTTON_LEFT, false);
+            sendButtonEvent(MouseButton.LEFT, false);
         }
 
         @Override
         public void onRightUp() {
-            sendButtonEvent(BUTTON_RIGHT, false);
+            sendButtonEvent(MouseButton.RIGHT, false);
         }
 
         @Override
@@ -195,7 +194,7 @@ public class TouchpadController {
 
             if (!pendingEvents.isEmpty()) {
                 ButtonEvent event = pendingEvents.remove(0);
-                if (event.button == BUTTON_LEFT) {
+                if (event.button == MouseButton.LEFT) {
                     leftButton = event.state;
                 } else {
                     rightButton = event.state;

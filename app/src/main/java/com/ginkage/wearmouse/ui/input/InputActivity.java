@@ -34,12 +34,12 @@ public class InputActivity extends WearableActivity {
     public static final String EXTRA_INPUT_MODE = "input_mode";
 
     @Retention(RetentionPolicy.SOURCE)
-    @IntDef({MODE_MOUSE, MODE_KEYPAD, MODE_TOUCHPAD})
-    @interface InputMode {}
-
-    public static final int MODE_MOUSE = 1;
-    public static final int MODE_KEYPAD = 2;
-    public static final int MODE_TOUCHPAD = 3;
+    @IntDef({InputMode.MOUSE, InputMode.KEYPAD, InputMode.TOUCHPAD})
+    public @interface InputMode {
+        int MOUSE = 1;
+        int KEYPAD = 2;
+        int TOUCHPAD = 3;
+    }
 
     private static final int INPUT_REQUEST_CODE = 1;
 
@@ -55,7 +55,7 @@ public class InputActivity extends WearableActivity {
         keyboardController = new KeyboardInputController(this::finish);
         keyboardController.onCreate(this);
 
-        currentMode = MODE_MOUSE;
+        currentMode = InputMode.MOUSE;
         Intent intent = getIntent();
         if (intent != null) {
             int mode = intent.getIntExtra(EXTRA_INPUT_MODE, -1);
@@ -95,9 +95,11 @@ public class InputActivity extends WearableActivity {
         if (keyCode == KeyEvent.KEYCODE_STEM_1) {
             if (action == KeyEvent.ACTION_UP) {
                 flipCard(
-                        currentMode == MODE_MOUSE
-                                ? MODE_TOUCHPAD
-                                : currentMode == MODE_TOUCHPAD ? MODE_KEYPAD : MODE_MOUSE);
+                        currentMode == InputMode.MOUSE
+                                ? InputMode.TOUCHPAD
+                                : currentMode == InputMode.TOUCHPAD
+                                        ? InputMode.KEYPAD
+                                        : InputMode.MOUSE);
             }
             return true;
         } else if (keyCode == KeyEvent.KEYCODE_STEM_2) {
@@ -122,9 +124,9 @@ public class InputActivity extends WearableActivity {
 
     @Override
     public boolean onGenericMotionEvent(MotionEvent ev) {
-        return ((currentMode == MODE_MOUSE
+        return ((currentMode == InputMode.MOUSE
                                 && ((MouseFragment) getFragment()).onGenericMotionEvent(ev))
-                        || (currentMode == MODE_TOUCHPAD
+                        || (currentMode == InputMode.TOUCHPAD
                                 && ((TouchpadFragment) getFragment()).onGenericMotionEvent(ev)))
                 || super.onGenericMotionEvent(ev);
     }
@@ -143,8 +145,8 @@ public class InputActivity extends WearableActivity {
     }
 
     private Fragment getFragment(@InputMode int mode) {
-        return mode == MODE_KEYPAD
+        return mode == InputMode.KEYPAD
                 ? new KeypadFragment()
-                : mode == MODE_MOUSE ? new MouseFragment() : new TouchpadFragment();
+                : mode == InputMode.MOUSE ? new MouseFragment() : new TouchpadFragment();
     }
 }

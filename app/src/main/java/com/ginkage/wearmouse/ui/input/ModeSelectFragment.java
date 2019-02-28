@@ -29,6 +29,7 @@ import android.preference.PreferenceFragment;
 import android.support.wearable.preference.WearablePreferenceActivity;
 import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.input.KeyboardInputController;
+import com.ginkage.wearmouse.ui.input.InputActivity.InputMode;
 
 /** Main menu for choosing the input mode. Also handles the Keyboard Input mode. */
 public class ModeSelectFragment extends PreferenceFragment {
@@ -54,9 +55,9 @@ public class ModeSelectFragment extends PreferenceFragment {
                 powerManager.newWakeLock(
                         SCREEN_DIM_WAKE_LOCK | ACQUIRE_CAUSES_WAKEUP, "WearMouse:PokeScreen");
 
-        assignIntent(KEY_PREF_INPUT_MOUSE, InputActivity.MODE_MOUSE);
-        assignIntent(KEY_PREF_INPUT_TOUCHPAD, InputActivity.MODE_TOUCHPAD);
-        assignIntent(KEY_PREF_INPUT_CURSOR, InputActivity.MODE_KEYPAD);
+        assignIntent(KEY_PREF_INPUT_MOUSE, InputMode.MOUSE);
+        assignIntent(KEY_PREF_INPUT_TOUCHPAD, InputMode.TOUCHPAD);
+        assignIntent(KEY_PREF_INPUT_CURSOR, InputMode.KEYPAD);
 
         keyboardController = new KeyboardInputController(activity::finish);
         keyboardController.onCreate(getContext());

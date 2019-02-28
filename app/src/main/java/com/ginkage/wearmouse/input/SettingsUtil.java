@@ -32,24 +32,29 @@ public class SettingsUtil {
 
     private static final String SETTINGS_PREF = "com.ginkage.wearmouse.SETTINGS";
 
-    @Retention(RetentionPolicy.SOURCE)
-    @StringDef({MOUSE_HAND, CURSOR_8_WAY, REDUCED_RATE, STABILIZE, STAY_CONNECTED})
-    public @interface SettingKey {}
-
     /** These constants correspond to the various preferences in the Settings menu. */
-    public static final String MOUSE_HAND = "pref_settingMouseHand";
-
-    public static final String CURSOR_8_WAY = "pref_settingCursor8Way";
-    public static final String REDUCED_RATE = "pref_settingReducedRate";
-    public static final String STABILIZE = "pref_settingStabilize";
-    public static final String STAY_CONNECTED = "pref_settingStayConnected";
+    @Retention(RetentionPolicy.SOURCE)
+    @StringDef({
+        SettingKey.MOUSE_HAND,
+        SettingKey.CURSOR_8_WAY,
+        SettingKey.REDUCED_RATE,
+        SettingKey.STABILIZE,
+        SettingKey.STAY_CONNECTED
+    })
+    public @interface SettingKey {
+        String MOUSE_HAND = "pref_settingMouseHand";
+        String CURSOR_8_WAY = "pref_settingCursor8Way";
+        String REDUCED_RATE = "pref_settingReducedRate";
+        String STABILIZE = "pref_settingStabilize";
+        String STAY_CONNECTED = "pref_settingStayConnected";
+    }
 
     private static final Map<String, Boolean> defaults =
             new ImmutableMap.Builder<String, Boolean>()
-                    .put(CURSOR_8_WAY, false)
-                    .put(REDUCED_RATE, false)
-                    .put(STABILIZE, false)
-                    .put(STAY_CONNECTED, false)
+                    .put(SettingKey.CURSOR_8_WAY, false)
+                    .put(SettingKey.REDUCED_RATE, false)
+                    .put(SettingKey.STABILIZE, false)
+                    .put(SettingKey.STAY_CONNECTED, false)
                     .build();
 
     private final SharedPreferences sharedPref;
@@ -67,7 +72,7 @@ public class SettingsUtil {
      * @see MouseSensorListener
      */
     public @HandMode int getMouseHand() {
-        return sharedPref.getInt(MOUSE_HAND, 0);
+        return sharedPref.getInt(SettingKey.MOUSE_HAND, 0);
     }
 
     /**
@@ -77,7 +82,7 @@ public class SettingsUtil {
      * @see MouseSensorListener
      */
     public void putMouseHand(@HandMode int hand) {
-        sharedPref.edit().putInt(MOUSE_HAND, hand).apply();
+        sharedPref.edit().putInt(SettingKey.MOUSE_HAND, hand).apply();
     }
 
     /**

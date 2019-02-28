@@ -30,20 +30,20 @@ import java.util.List;
 public class MouseSensorListener implements SensorService.OrientationListener {
 
     @Retention(RetentionPolicy.SOURCE)
-    @IntDef({HAND_LEFT, HAND_CENTER, HAND_RIGHT})
-    @interface HandMode {}
-
-    public static final int HAND_LEFT = 0;
-    public static final int HAND_CENTER = 1;
-    public static final int HAND_RIGHT = 2;
+    @IntDef({HandMode.LEFT, HandMode.CENTER, HandMode.RIGHT})
+    public @interface HandMode {
+        int LEFT = 0;
+        int CENTER = 1;
+        int RIGHT = 2;
+    }
 
     @Retention(RetentionPolicy.SOURCE)
-    @IntDef({BUTTON_LEFT, BUTTON_RIGHT, BUTTON_MIDDLE})
-    @interface MouseButton {}
-
-    public static final int BUTTON_LEFT = 0;
-    public static final int BUTTON_RIGHT = 1;
-    public static final int BUTTON_MIDDLE = 2;
+    @IntDef({MouseButton.LEFT, MouseButton.RIGHT, MouseButton.MIDDLE})
+    public @interface MouseButton {
+        int LEFT = 0;
+        int RIGHT = 1;
+        int MIDDLE = 2;
+    }
 
     private static final double CURSOR_SPEED = 1024.0 / (Math.PI / 4);
     private static final double STABILIZE_BIAS = 16.0;
@@ -52,7 +52,7 @@ public class MouseSensorListener implements SensorService.OrientationListener {
         final @MouseButton int button;
         final boolean state;
 
-        ButtonEvent(int b, boolean s) {
+        ButtonEvent(@MouseButton int b, boolean s) {
             button = b;
             state = s;
         }
@@ -103,19 +103,19 @@ public class MouseSensorListener implements SensorService.OrientationListener {
             q2 = -q2;
         }
 
-        if (handMode == HAND_LEFT) {
+        if (handMode == HandMode.LEFT) {
             // Rotate 90 degrees counter-clockwise
             double x = q1;
             double y = q2;
             q1 = -y;
             q2 = x;
-        } else if (handMode == HAND_RIGHT) {
+        } else if (handMode == HandMode.RIGHT) {
             // Rotate 90 degrees clockwise
             double x = q1;
             double y = q2;
             q1 = y;
             q2 = -x;
-        } // else it's HAND_CENTER for which we do not need to rotate.
+        } // else it's CENTER for which we do not need to rotate.
 
         double yaw = Math.atan2(2 * (q0 * q3 - q1 * q2), (1 - 2 * (q1 * q1 + q3 * q3)));
         double pitch = Math.asin(2 * (q0 * q1 + q2 * q3));
@@ -160,7 +160,7 @@ public class MouseSensorListener implements SensorService.OrientationListener {
     /**
      * Enqueue a button press event.
      *
-     * @param button Button index. Can be one of BUTTON_LEFT, BUTTON_RIGHT, BUTTON_MIDDLE.
+     * @param button Button index. Can be one of LEFT, RIGHT, MIDDLE.
      * @param state {@code true} if the button is pressed, {@code false} otherwise.
      */
     void sendButtonEvent(@MouseButton int button, boolean state) {
@@ -185,7 +185,7 @@ public class MouseSensorListener implements SensorService.OrientationListener {
     /**
      * Sets the current watch location: left/right wrist, or in the hand.
      *
-     * @param hand Can be one of HAND_LEFT, HAND_CENTER, HAND_RIGHT.
+     * @param hand Can be one of LEFT, CENTER, RIGHT.
      */
     void setHand(@HandMode int hand) {
         handMode = hand;
@@ -297,11 +297,11 @@ public class MouseSensorListener implements SensorService.OrientationListener {
         synchronized (pendingEvents) {
             if (!pendingEvents.isEmpty()) {
                 ButtonEvent event = pendingEvents.remove(0);
-                if (event.button == BUTTON_LEFT) {
+                if (event.button == MouseButton.LEFT) {
                     leftButtonPressed = event.state;
-                } else if (event.button == BUTTON_RIGHT) {
+                } else if (event.button == MouseButton.RIGHT) {
                     rightButtonPressed = event.state;
-                } else if (event.button == BUTTON_MIDDLE) {
+                } else if (event.button == MouseButton.MIDDLE) {
                     middleButtonPressed = event.state;
                 }
             }

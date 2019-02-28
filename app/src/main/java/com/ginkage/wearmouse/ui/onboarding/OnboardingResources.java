@@ -34,19 +34,19 @@ class OnboardingResources {
     private static final ImmutableMap<String, OnboardingResources> RESOURCES_FOR_SCREEN =
             new ImmutableMap.Builder<String, OnboardingResources>()
                     .put(
-                            OnboardingController.OB_WELCOME,
+                            ScreenKey.WELCOME,
                             new OnboardingResources(
                                     R.drawable.ic_launcher,
                                     R.string.app_name,
                                     R.string.onboarding_message_welcome))
                     .put(
-                            OnboardingController.OB_MOUSE,
+                            ScreenKey.MOUSE,
                             new OnboardingResources(
                                     R.drawable.ic_ob_wrist_gesture,
                                     R.string.pref_inputMouse,
                                     R.string.onboarding_message_mouse))
                     .put(
-                            OnboardingController.OB_KEYPAD,
+                            ScreenKey.KEYPAD,
                             new OnboardingResources(
                                     R.drawable.ic_ob_keypad,
                                     R.string.pref_inputCursor,
@@ -57,7 +57,8 @@ class OnboardingResources {
     @StringRes final int titleResId;
     @StringRes final int messageResId;
 
-    OnboardingResources(@DrawableRes int icon, @StringRes int title, @StringRes int message) {
+    private OnboardingResources(
+            @DrawableRes int icon, @StringRes int title, @StringRes int message) {
         iconResId = icon;
         titleResId = title;
         messageResId = message;
