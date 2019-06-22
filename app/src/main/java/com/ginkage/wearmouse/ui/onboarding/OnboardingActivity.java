@@ -18,11 +18,11 @@ package com.ginkage.wearmouse.ui.onboarding;
 
 import android.app.Activity;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.Nullable;
 import com.ginkage.wearmouse.R;
 
 /** Simple tutorial activity that shows an icon, some hints and a big round button. */

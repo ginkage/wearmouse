@@ -31,12 +31,12 @@ public class OnboardingController {
     static final String EXTRA_KEY = "extra_onboarding_key";
 
     @Retention(RetentionPolicy.SOURCE)
-    @StringDef({OB_WELCOME, OB_MOUSE, OB_KEYPAD})
-    @interface ScreenKey {}
-
-    public static final String OB_WELCOME = "welcome";
-    public static final String OB_MOUSE = "mouse";
-    public static final String OB_KEYPAD = "keypad";
+    @StringDef({ScreenKey.WELCOME, ScreenKey.MOUSE, ScreenKey.KEYPAD})
+    public @interface ScreenKey {
+        String WELCOME = "welcome";
+        String MOUSE = "mouse";
+        String KEYPAD = "keypad";
+    }
 
     private final SharedPreferences sharedPref;
 
@@ -52,14 +52,16 @@ public class OnboardingController {
      * @return {@code true} if at least one tutorial was completed, {@code false} otherwise.
      */
     public boolean isAnyComplete() {
-        return isComplete(OB_WELCOME) || isComplete(OB_MOUSE) || isComplete(OB_KEYPAD);
+        return isComplete(ScreenKey.WELCOME)
+                || isComplete(ScreenKey.MOUSE)
+                || isComplete(ScreenKey.KEYPAD);
     }
 
     /** Forces all tutorials to the default state. */
     public void resetAll() {
-        reset(OB_WELCOME);
-        reset(OB_MOUSE);
-        reset(OB_KEYPAD);
+        reset(ScreenKey.WELCOME);
+        reset(ScreenKey.MOUSE);
+        reset(ScreenKey.KEYPAD);
     }
 
     boolean isComplete(@ScreenKey String key) {

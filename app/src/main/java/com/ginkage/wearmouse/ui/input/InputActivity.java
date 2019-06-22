@@ -17,32 +17,29 @@
 package com.ginkage.wearmouse.ui.input;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.IntDef;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.wear.ambient.AmbientModeSupport;
-import androidx.wear.ambient.AmbientModeSupport.AmbientCallback;
-import androidx.wear.ambient.AmbientModeSupport.AmbientCallbackProvider;
+import android.support.wearable.activity.WearableActivity;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
+import androidx.annotation.IntDef;
 import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.input.KeyboardInputController;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /** Implements a "card-flip" animation using custom fragment transactions. */
-public class InputActivity extends FragmentActivity implements AmbientCallbackProvider {
+public class InputActivity extends WearableActivity {
     public static final String EXTRA_INPUT_MODE = "input_mode";
 
     @Retention(RetentionPolicy.SOURCE)
-    @IntDef({MODE_MOUSE, MODE_KEYPAD, MODE_TOUCHPAD})
-    @interface InputMode {}
-
-    public static final int MODE_MOUSE = 1;
-    public static final int MODE_KEYPAD = 2;
-    public static final int MODE_TOUCHPAD = 3;
+    @IntDef({InputMode.MOUSE, InputMode.KEYPAD, InputMode.TOUCHPAD})
+    public @interface InputMode {
+        int MOUSE = 1;
+        int KEYPAD = 2;
+        int TOUCHPAD = 3;
+    }
 
     private static final int INPUT_REQUEST_CODE = 1;
 
@@ -50,26 +47,15 @@ public class InputActivity extends FragmentActivity implements AmbientCallbackPr
     private @InputMode int currentMode;
 
     @Override
-    public AmbientCallback getAmbientCallback() {
-        return new AmbientCallback() {
-            @Override
-            public void onEnterAmbient(Bundle ambientDetails) {
-                super.onEnterAmbient(ambientDetails);
-                finish();
-            }
-        };
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_flip);
-        AmbientModeSupport.attach(this);
+        setAmbientEnabled();
 
         keyboardController = new KeyboardInputController(this::finish);
         keyboardController.onCreate(this);
 
-        currentMode = MODE_MOUSE;
+        currentMode = InputMode.MOUSE;
         Intent intent = getIntent();
         if (intent != null) {
             int mode = intent.getIntExtra(EXTRA_INPUT_MODE, -1);
@@ -78,10 +64,16 @@ public class InputActivity extends FragmentActivity implements AmbientCallbackPr
             }
         }
 
-        getSupportFragmentManager()
+        getFragmentManager()
                 .beginTransaction()
                 .add(R.id.fragment_container, getFragment(currentMode))
                 .commit();
+    }
+
+    @Override
+    public void onEnterAmbient(Bundle ambientDetails) {
+        super.onEnterAmbient(ambientDetails);
+        finish();
     }
 
     @Override
@@ -103,9 +95,11 @@ public class InputActivity extends FragmentActivity implements AmbientCallbackPr
         if (keyCode == KeyEvent.KEYCODE_STEM_1) {
             if (action == KeyEvent.ACTION_UP) {
                 flipCard(
-                        currentMode == MODE_MOUSE
-                                ? MODE_TOUCHPAD
-                                : currentMode == MODE_TOUCHPAD ? MODE_KEYPAD : MODE_MOUSE);
+                        currentMode == InputMode.MOUSE
+                                ? InputMode.TOUCHPAD
+                                : currentMode == InputMode.TOUCHPAD
+                                        ? InputMode.KEYPAD
+                                        : InputMode.MOUSE);
             }
             return true;
         } else if (keyCode == KeyEvent.KEYCODE_STEM_2) {
@@ -130,20 +124,20 @@ public class InputActivity extends FragmentActivity implements AmbientCallbackPr
 
     @Override
     public boolean onGenericMotionEvent(MotionEvent ev) {
-        return ((currentMode == MODE_MOUSE
+        return ((currentMode == InputMode.MOUSE
                                 && ((MouseFragment) getFragment()).onGenericMotionEvent(ev))
-                        || (currentMode == MODE_TOUCHPAD
+                        || (currentMode == InputMode.TOUCHPAD
                                 && ((TouchpadFragment) getFragment()).onGenericMotionEvent(ev)))
                 || super.onGenericMotionEvent(ev);
     }
 
     private Fragment getFragment() {
-        return getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+        return getFragmentManager().findFragmentById(R.id.fragment_container);
     }
 
     private void flipCard(@InputMode int mode) {
         currentMode = mode;
-        getSupportFragmentManager()
+        getFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.animator.card_flip_right_in, R.animator.card_flip_right_out)
                 .replace(R.id.fragment_container, getFragment(currentMode))
@@ -151,8 +145,8 @@ public class InputActivity extends FragmentActivity implements AmbientCallbackPr
     }
 
     private Fragment getFragment(@InputMode int mode) {
-        return mode == MODE_KEYPAD
+        return mode == InputMode.KEYPAD
                 ? new KeypadFragment()
-                : mode == MODE_MOUSE ? new MouseFragment() : new TouchpadFragment();
+                : mode == InputMode.MOUSE ? new MouseFragment() : new TouchpadFragment();
     }
 }

@@ -21,11 +21,13 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.content.Intent;
 import android.os.IBinder;
 import android.text.TextUtils;
 import com.ginkage.wearmouse.R;
+import com.ginkage.wearmouse.bluetooth.HidDataSender;
 import javax.annotation.Nullable;
 
 /**
@@ -44,6 +46,23 @@ public class NotificationService extends Service {
 
     private boolean isForeground;
     private NotificationManager notificationManager;
+    private HidDataSender hidDataSender;
+
+    private final HidDataSender.ProfileListener profileListener =
+            new HidDataSender.ProfileListener() {
+                @Override
+                public void onDeviceStateChanged(BluetoothDevice device, int state) {
+                    if (state == BluetoothProfile.STATE_DISCONNECTED) {
+                        stopSelf();
+                    }
+                }
+
+                @Override
+                public void onAppUnregistered() {}
+
+                @Override
+                public void onServiceStateChanged(BluetoothProfile proxy) {}
+            };
 
     private final NotificationChannel notificationChannel =
             new NotificationChannel(
@@ -59,7 +78,7 @@ public class NotificationService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (ACTION_START.equals(intent.getAction())) {
+        if (ACTION_START.equals(intent.getAction()) && hidDataSender.isConnected()) {
             String device = intent.getStringExtra(EXTRA_DEVICE);
             int state = intent.getIntExtra(EXTRA_STATE, BluetoothProfile.STATE_DISCONNECTED);
             updateNotification(device, state);
@@ -71,6 +90,9 @@ public class NotificationService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        hidDataSender = HidDataSender.getInstance();
+        hidDataSender.register(this, profileListener);
 
         notificationManager = getSystemService(NotificationManager.class);
         if (notificationManager != null) {
@@ -84,6 +106,8 @@ public class NotificationService extends Service {
             stopForeground(true);
             isForeground = false;
         }
+
+        hidDataSender.unregister(this, profileListener);
 
         super.onDestroy();
     }

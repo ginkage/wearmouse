@@ -18,8 +18,11 @@ package com.ginkage.wearmouse.input;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import androidx.annotation.IntDef;
 import com.ginkage.wearmouse.bluetooth.KeyboardReport.KeyboardDataSender;
 import com.google.common.collect.ImmutableMap;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.util.Map;
 
 /**
@@ -28,24 +31,53 @@ import java.util.Map;
  */
 public class KeyboardHelper {
 
-    public static final int MOD_LEFT_CTRL = (1 << 0);
-    public static final int MOD_LEFT_SHIFT = (1 << 1);
-    public static final int MOD_LEFT_ALT = (1 << 2);
-    public static final int MOD_LEFT_GUI = (1 << 3);
-    public static final int MOD_RIGHT_CTRL = (1 << 4);
-    public static final int MOD_RIGHT_SHIFT = (1 << 5);
-    public static final int MOD_RIGHT_ALT = (1 << 6);
-    public static final int MOD_RIGHT_GUI = (1 << 7);
+    @Retention(RetentionPolicy.SOURCE)
+    @IntDef({
+        Modifier.NONE,
+        Modifier.LEFT_CTRL,
+        Modifier.LEFT_SHIFT,
+        Modifier.LEFT_ALT,
+        Modifier.LEFT_GUI,
+        Modifier.RIGHT_CTRL,
+        Modifier.RIGHT_SHIFT,
+        Modifier.RIGHT_ALT,
+        Modifier.RIGHT_GUI
+    })
+    public @interface Modifier {
+        int NONE = 0;
+        int LEFT_CTRL = (1 << 0);
+        int LEFT_SHIFT = (1 << 1);
+        int LEFT_ALT = (1 << 2);
+        int LEFT_GUI = (1 << 3);
+        int RIGHT_CTRL = (1 << 4);
+        int RIGHT_SHIFT = (1 << 5);
+        int RIGHT_ALT = (1 << 6);
+        int RIGHT_GUI = (1 << 7);
+    }
 
-    public static final int KEY_ENTER = 40;
-    public static final int KEY_ESCAPE = 41;
-    public static final int KEY_BACKSPACE = 42;
-    public static final int KEY_TAB = 43;
-    public static final int KEY_SPACE = 44;
-    public static final int KEY_RIGHT = 79;
-    public static final int KEY_LEFT = 80;
-    public static final int KEY_DOWN = 81;
-    public static final int KEY_UP = 82;
+    @Retention(RetentionPolicy.SOURCE)
+    @IntDef({
+        Key.ENTER,
+        Key.ESCAPE,
+        Key.BACKSPACE,
+        Key.TAB,
+        Key.SPACE,
+        Key.RIGHT,
+        Key.LEFT,
+        Key.DOWN,
+        Key.UP
+    })
+    public @interface Key {
+        int ENTER = 40;
+        int ESCAPE = 41;
+        int BACKSPACE = 42;
+        int TAB = 43;
+        int SPACE = 44;
+        int RIGHT = 79;
+        int LEFT = 80;
+        int DOWN = 81;
+        int UP = 82;
+    }
 
     private static final Map<Character, Integer> keyMap =
             new ImmutableMap.Builder<Character, Integer>()
@@ -167,7 +199,7 @@ public class KeyboardHelper {
      * @param key4 Scan code of the 4th button that is currently pressed (or 0 if none).
      * @param key5 Scan code of the 5th button that is currently pressed (or 0 if none).
      */
-    void sendKeysDown(int modifier, int key1, int key2, int key3, int key4, int key5) {
+    void sendKeysDown(@Modifier int modifier, int key1, int key2, int key3, int key4, int key5) {
         sendKeysDown(modifier, key1, key2, key3, key4, key5, 0);
     }
 
@@ -180,7 +212,7 @@ public class KeyboardHelper {
      * @param key3 Scan code of the 3rd button that is currently pressed (or 0 if none).
      * @param key4 Scan code of the 4th button that is currently pressed (or 0 if none).
      */
-    void sendKeysDown(int modifier, int key1, int key2, int key3, int key4) {
+    void sendKeysDown(@Modifier int modifier, int key1, int key2, int key3, int key4) {
         sendKeysDown(modifier, key1, key2, key3, key4, 0, 0);
     }
 
@@ -192,7 +224,7 @@ public class KeyboardHelper {
      * @param key2 Scan code of the 2nd button that is currently pressed (or 0 if none).
      * @param key3 Scan code of the 3rd button that is currently pressed (or 0 if none).
      */
-    void sendKeysDown(int modifier, int key1, int key2, int key3) {
+    void sendKeysDown(@Modifier int modifier, int key1, int key2, int key3) {
         sendKeysDown(modifier, key1, key2, key3, 0, 0, 0);
     }
 
@@ -203,7 +235,7 @@ public class KeyboardHelper {
      * @param key1 Scan code of the 1st button that is currently pressed (or 0 if none).
      * @param key2 Scan code of the 2nd button that is currently pressed (or 0 if none).
      */
-    void sendKeysDown(int modifier, int key1, int key2) {
+    void sendKeysDown(@Modifier int modifier, int key1, int key2) {
         sendKeysDown(modifier, key1, key2, 0, 0, 0, 0);
     }
 
@@ -213,7 +245,7 @@ public class KeyboardHelper {
      * @param modifier Modifier keys bit mask (Ctrl/Shift/Alt/GUI).
      * @param key Scan code of the button that is currently pressed (or 0 if none).
      */
-    void sendKeyDown(int modifier, int key) {
+    void sendKeyDown(@Modifier int modifier, int key) {
         sendKeysDown(modifier, key, 0, 0, 0, 0, 0);
     }
 
@@ -222,7 +254,7 @@ public class KeyboardHelper {
      *
      * @param modifier Modifier keys bit mask (Ctrl/Shift/Alt/GUI).
      */
-    void sendKeysUp(int modifier) {
+    void sendKeysUp(@Modifier int modifier) {
         sendKeysDown(modifier, 0, 0, 0, 0, 0, 0);
     }
 
@@ -242,12 +274,12 @@ public class KeyboardHelper {
             }
         }
 
-        sendKeyDown(shift ? MOD_LEFT_SHIFT : 0, code);
-        sendKeysUp(0);
+        sendKeyDown(shift ? Modifier.LEFT_SHIFT : 0, code);
+        sendKeysUp(Modifier.NONE);
     }
 
     private void sendKeysDown(
-            int modifier, int key1, int key2, int key3, int key4, int key5, int key6) {
+            @Modifier int modifier, int key1, int key2, int key3, int key4, int key5, int key6) {
         dataSender.sendKeyboard(modifier, key1, key2, key3, key4, key5, key6);
     }
 }

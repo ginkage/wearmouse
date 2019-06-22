@@ -17,11 +17,10 @@
 package com.ginkage.wearmouse.ui.input;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.constraintlayout.widget.ConstraintLayout.LayoutParams;
-import androidx.fragment.app.Fragment;
 import android.support.wearable.view.DismissOverlayView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -30,11 +29,12 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.constraintlayout.widget.ConstraintLayout.LayoutParams;
 import com.ginkage.wearmouse.R;
-import com.ginkage.wearmouse.input.KeyboardHelper;
+import com.ginkage.wearmouse.input.KeyboardHelper.Key;
 import com.ginkage.wearmouse.input.KeypadController;
 import com.ginkage.wearmouse.input.KeypadGestureDetector;
-import com.ginkage.wearmouse.ui.onboarding.OnboardingController;
+import com.ginkage.wearmouse.ui.onboarding.OnboardingController.ScreenKey;
 import com.ginkage.wearmouse.ui.onboarding.OnboardingRequest;
 import com.google.common.collect.ImmutableMap;
 import java.util.Map;
@@ -66,7 +66,7 @@ public class KeypadFragment extends Fragment {
         controller = new KeypadController(context, new KeypadUi(), new DefaultKeyNameProvider());
         gestureListener = controller.onCreate(context);
 
-        onboardingRequest = new OnboardingRequest(getActivity(), OnboardingController.OB_KEYPAD);
+        onboardingRequest = new OnboardingRequest(getActivity(), ScreenKey.KEYPAD);
         if (!onboardingRequest.isComplete()) {
             onboardingRequest.start(this);
         }
@@ -194,10 +194,10 @@ public class KeypadFragment extends Fragment {
     private class DefaultKeyNameProvider implements KeypadController.KeyNameProvider {
         private final Map<Integer, String> swipeName =
                 new ImmutableMap.Builder<Integer, String>()
-                        .put(KeyboardHelper.KEY_ESCAPE, getString(R.string.key_name_escape))
-                        .put(KeyboardHelper.KEY_BACKSPACE, getString(R.string.key_name_backspace))
-                        .put(KeyboardHelper.KEY_TAB, getString(R.string.key_name_tab))
-                        .put(KeyboardHelper.KEY_SPACE, getString(R.string.key_name_space))
+                        .put(Key.ESCAPE, getString(R.string.key_name_escape))
+                        .put(Key.BACKSPACE, getString(R.string.key_name_backspace))
+                        .put(Key.TAB, getString(R.string.key_name_tab))
+                        .put(Key.SPACE, getString(R.string.key_name_space))
                         .build();
 
         @Override

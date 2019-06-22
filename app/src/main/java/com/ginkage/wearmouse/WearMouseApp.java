@@ -23,6 +23,7 @@ import androidx.lifecycle.OnLifecycleEvent;
 import androidx.lifecycle.ProcessLifecycleOwner;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
 import com.ginkage.wearmouse.input.SettingsUtil;
+import com.ginkage.wearmouse.input.SettingsUtil.SettingKey;
 
 public class WearMouseApp extends Application {
 
@@ -33,7 +34,7 @@ public class WearMouseApp extends Application {
             new LifecycleObserver() {
                 @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
                 public void onMoveToBackground() {
-                    if (!settingsUtil.getBoolean(SettingsUtil.STAY_CONNECTED)) {
+                    if (!settingsUtil.getBoolean(SettingKey.STAY_CONNECTED)) {
                         hidDataSender.requestConnect(null);
                     }
                 }

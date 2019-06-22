@@ -17,13 +17,11 @@
 package com.ginkage.wearmouse.ui.input;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.wear.widget.drawer.WearableActionDrawerView;
-import androidx.wear.widget.drawer.WearableNavigationDrawerView;
 import android.support.wearable.input.RotaryEncoder;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -33,10 +31,12 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import androidx.wear.widget.drawer.WearableActionDrawerView;
+import androidx.wear.widget.drawer.WearableNavigationDrawerView;
 import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.input.MouseController;
-import com.ginkage.wearmouse.input.MouseSensorListener;
-import com.ginkage.wearmouse.ui.onboarding.OnboardingController;
+import com.ginkage.wearmouse.input.MouseSensorListener.HandMode;
+import com.ginkage.wearmouse.ui.onboarding.OnboardingController.ScreenKey;
 import com.ginkage.wearmouse.ui.onboarding.OnboardingRequest;
 import java.util.ArrayList;
 import java.util.List;
@@ -63,7 +63,7 @@ public class MouseFragment extends Fragment {
         controller = new MouseController(context, () -> getActivity().finish());
         controller.onCreate(context);
 
-        onboardingRequest = new OnboardingRequest(getActivity(), OnboardingController.OB_MOUSE);
+        onboardingRequest = new OnboardingRequest(getActivity(), ScreenKey.MOUSE);
         if (!onboardingRequest.isComplete()) {
             onboardingRequest.start(this);
         }
@@ -195,13 +195,13 @@ public class MouseFragment extends Fragment {
 
     private void setPointerRotation(int hand) {
         switch (hand) {
-            case MouseSensorListener.HAND_LEFT:
+            case HandMode.LEFT:
                 pointerImage.setRotation(90);
                 break;
-            case MouseSensorListener.HAND_CENTER:
+            case HandMode.CENTER:
                 pointerImage.setRotation(0);
                 break;
-            case MouseSensorListener.HAND_RIGHT:
+            case HandMode.RIGHT:
                 pointerImage.setRotation(-90);
                 break;
             default:
@@ -229,11 +229,11 @@ public class MouseFragment extends Fragment {
         public Drawable getItemDrawable(int i) {
             Context context = getContext();
             switch (i) {
-                case MouseSensorListener.HAND_LEFT:
+                case HandMode.LEFT:
                     return context.getDrawable(R.drawable.ic_am_hand_left);
-                case MouseSensorListener.HAND_CENTER:
+                case HandMode.CENTER:
                     return context.getDrawable(R.drawable.ic_am_hand_center);
-                case MouseSensorListener.HAND_RIGHT:
+                case HandMode.RIGHT:
                     return context.getDrawable(R.drawable.ic_am_hand_right);
                 default:
                     break;

@@ -45,10 +45,10 @@ public class InputSettingsFragment extends PreferenceFragment {
 
         settings = new SettingsUtil(getActivity());
 
-        initBooleanPref(SettingsUtil.STABILIZE);
-        initBooleanPref(SettingsUtil.CURSOR_8_WAY);
-        initBooleanPref(SettingsUtil.REDUCED_RATE);
-        initBooleanPref(SettingsUtil.STAY_CONNECTED);
+        initBooleanPref(SettingKey.STABILIZE);
+        initBooleanPref(SettingKey.CURSOR_8_WAY);
+        initBooleanPref(SettingKey.REDUCED_RATE);
+        initBooleanPref(SettingKey.STAY_CONNECTED);
 
         OnboardingController onboardingController = new OnboardingController(getActivity());
         Preference onboardingPref = findPreference(ONBOARDING_PREF);

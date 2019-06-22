@@ -27,9 +27,9 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import androidx.annotation.MainThread;
 import android.support.wearable.preference.WearablePreferenceActivity;
 import android.util.Log;
+import androidx.annotation.MainThread;
 import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
 import com.ginkage.wearmouse.bluetooth.HidDeviceProfile;
@@ -196,9 +196,7 @@ public class PairedDevicesFragment extends PreferenceFragment {
                     updatePreferenceBondState(device);
 
                     Context context = getContext();
-                    if (state == BluetoothProfile.STATE_DISCONNECTED) {
-                        context.stopService(new Intent(context, NotificationService.class));
-                    } else {
+                    if (state != BluetoothProfile.STATE_DISCONNECTED) {
                         Intent intent = NotificationService.buildIntent(device.getName(), state);
                         intent.setClass(context, NotificationService.class);
                         context.startService(intent);

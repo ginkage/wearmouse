@@ -23,6 +23,8 @@ import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import androidx.annotation.MainThread;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
+import com.ginkage.wearmouse.input.KeyboardHelper.Key;
+import com.ginkage.wearmouse.input.SettingsUtil.SettingKey;
 
 /** Controls the 4-way or 8-way cursor Keypad input behaviour for the corresponding UI. */
 public class KeypadController {
@@ -43,20 +45,10 @@ public class KeypadController {
     private static final int[] eightWay = {-1, 0, 3, -1, -1, 1, 0, -1, -1, 2, 1, -1, -1, 3, 2, -1};
 
     // Zones are mapped in the order "top", "left", "bottom", "right".
-    private static final int[] pressKey = {
-        KeyboardHelper.KEY_UP,
-        KeyboardHelper.KEY_LEFT,
-        KeyboardHelper.KEY_DOWN,
-        KeyboardHelper.KEY_RIGHT
-    };
+    private static final int[] pressKey = {Key.UP, Key.LEFT, Key.DOWN, Key.RIGHT};
 
     // Key to press on a swipe from center.
-    private static final int[] swipeKey = {
-        KeyboardHelper.KEY_ESCAPE,
-        KeyboardHelper.KEY_BACKSPACE,
-        KeyboardHelper.KEY_TAB,
-        KeyboardHelper.KEY_SPACE
-    };
+    private static final int[] swipeKey = {Key.ESCAPE, Key.BACKSPACE, Key.TAB, Key.SPACE};
 
     /** Callback for the UI. */
     public interface Ui {
@@ -157,7 +149,7 @@ public class KeypadController {
 
     /** Should be called in the Activity's (or Fragment's) onResume() method. */
     public void onResume() {
-        m8Way = settings.getBoolean(SettingsUtil.CURSOR_8_WAY);
+        m8Way = settings.getBoolean(SettingKey.CURSOR_8_WAY);
         ui.setCenterText("", m8Way);
         touchArea = CENTER_AREA;
         swipeArea = CENTER_AREA;
@@ -212,7 +204,7 @@ public class KeypadController {
 
         @Override
         public void onCenterDoubleTap() {
-            sendKeyPress(KeyboardHelper.KEY_ENTER);
+            sendKeyPress(Key.ENTER);
         }
 
         @Override

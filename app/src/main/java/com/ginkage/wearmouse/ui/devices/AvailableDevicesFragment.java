@@ -30,11 +30,11 @@ import android.os.StrictMode;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
-import androidx.annotation.MainThread;
 import android.util.Log;
-import com.ginkage.wearmouse.bluetooth.HidDeviceProfile;
+import androidx.annotation.MainThread;
 import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
+import com.ginkage.wearmouse.bluetooth.HidDeviceProfile;
 import com.google.common.base.Preconditions;
 
 /**
