@@ -43,7 +43,7 @@ public class HidDeviceApp
          * Callback that receives the new device connection state.
          *
          * @param device Device that was connected or disconnected.
-         * @param state New connection state, see {@link BluetoothProfile.EXTRA_STATE}.
+         * @param state New connection state, see {@link BluetoothProfile#EXTRA_STATE}.
          */
         @MainThread
         void onDeviceStateChanged(BluetoothDevice device, int state);

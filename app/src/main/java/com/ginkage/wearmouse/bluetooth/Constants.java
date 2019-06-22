@@ -22,6 +22,7 @@ import android.bluetooth.BluetoothHidDeviceAppSdpSettings;
 
 /** Handy constants for the HID Report Descriptor and SDP configuration. */
 class Constants {
+
     static final byte ID_KEYBOARD = 1;
     static final byte ID_MOUSE = 2;
     static final byte ID_BATTERY = 32;

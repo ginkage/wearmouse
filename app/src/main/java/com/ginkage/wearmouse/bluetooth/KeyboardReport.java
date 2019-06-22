@@ -20,6 +20,7 @@ import java.util.Arrays;
 
 /** Helper class to store the keyboard state and retrieve the binary report. */
 public class KeyboardReport {
+
     private final byte[] keyboardData = "M0ABCDEF".getBytes();
 
     KeyboardReport() {

@@ -20,6 +20,7 @@ import java.util.Arrays;
 
 /** Helper class to store the mouse state and retrieve the binary report. */
 public class MouseReport {
+
     private final byte[] mouseData = "BXYW".getBytes();
 
     MouseReport() {

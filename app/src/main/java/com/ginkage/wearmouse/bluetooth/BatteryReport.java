@@ -18,6 +18,7 @@ package com.ginkage.wearmouse.bluetooth;
 
 /** Helper class to store the battery state and retrieve the binary report. */
 class BatteryReport {
+
     private final byte[] batteryData = new byte[] {0};
 
     /**
