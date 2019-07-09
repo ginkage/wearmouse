@@ -43,7 +43,9 @@ class BluetoothDevicePreference extends WearableDialogPreference {
     private int connectionState;
 
     BluetoothDevicePreference(
-            Context context, final BluetoothDevice device, final HidDeviceProfile hidDeviceProfile) {
+            Context context,
+            final BluetoothDevice device,
+            final HidDeviceProfile hidDeviceProfile) {
         super(context);
         this.device = checkNotNull(device);
         this.hidDeviceProfile = checkNotNull(hidDeviceProfile);

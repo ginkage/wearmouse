@@ -80,9 +80,7 @@ public class TouchpadController {
     @Nullable private ScheduledFuture<?> scheduledFuture;
     private ScheduledThreadPoolExecutor executor;
 
-    /**
-     * @param ui Callback for receiving the UI updates.
-     */
+    /** @param ui Callback for receiving the UI updates. */
     public TouchpadController(Ui ui) {
         this.ui = checkNotNull(ui);
         this.hidDataSender = HidDataSender.getInstance();

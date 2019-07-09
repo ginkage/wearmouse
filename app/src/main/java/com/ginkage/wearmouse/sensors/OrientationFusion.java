@@ -43,9 +43,7 @@ class OrientationFusion {
     @Nullable
     private Tracker tracker;
 
-    /**
-     * @param context Context for creating a GVR API instance
-     */
+    /** @param context Context for creating a GVR API instance */
     OrientationFusion(Context context) {
         this.context = checkNotNull(context);
     }
@@ -59,11 +57,12 @@ class OrientationFusion {
     void start(OrientationListener listener, long samplingPeriodNs) {
         synchronized (lock) {
             if (tracker == null) {
-                tracker = new Tracker(
-                        listener,
-                        samplingPeriodNs,
-                        new GvrApi(context, null),
-                        new ScheduledThreadPoolExecutor(1));
+                tracker =
+                        new Tracker(
+                                listener,
+                                samplingPeriodNs,
+                                new GvrApi(context, null),
+                                new ScheduledThreadPoolExecutor(1));
                 tracker.schedule(this::processOrientation);
             }
         }
@@ -96,8 +95,7 @@ class OrientationFusion {
         private final float[] mat = new float[16];
         private final float[] quat = new float[4];
 
-        @Nullable
-        private ScheduledFuture<?> scheduledFuture;
+        @Nullable private ScheduledFuture<?> scheduledFuture;
 
         private Tracker(
                 OrientationListener orientationListener,
@@ -112,11 +110,9 @@ class OrientationFusion {
 
         void schedule(Runnable command) {
             if (scheduledFuture == null) {
-                scheduledFuture = executor.scheduleAtFixedRate(
-                        command,
-                        0,
-                        samplingPeriodNs,
-                        TimeUnit.NANOSECONDS);
+                scheduledFuture =
+                        executor.scheduleAtFixedRate(
+                                command, 0, samplingPeriodNs, TimeUnit.NANOSECONDS);
             }
         }
 

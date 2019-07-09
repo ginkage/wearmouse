@@ -52,12 +52,9 @@ public class TouchpadFragment extends Fragment {
 
         scrollFactor = -ViewConfiguration.get(getContext()).getScaledVerticalScrollFactor() / 5.0f;
 
-        gestureDetector =
-                new TouchpadGestureDetector(
-                        getContext(),
-                        gestureListener);
-        root.findViewById(R.id.container).setOnTouchListener(
-                (view, motionEvent) -> onTouchEvent(motionEvent));
+        gestureDetector = new TouchpadGestureDetector(getContext(), gestureListener);
+        root.findViewById(R.id.container)
+                .setOnTouchListener((view, motionEvent) -> onTouchEvent(motionEvent));
 
         swipeDismissLayout = getActivity().findViewById(android.R.id.content);
 
