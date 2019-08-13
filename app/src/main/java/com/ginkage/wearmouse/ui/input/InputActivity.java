@@ -16,10 +16,19 @@
 
 package com.ginkage.wearmouse.ui.input;
 
+import static android.content.Intent.ACTION_SCREEN_OFF;
+import static android.os.PowerManager.ACQUIRE_CAUSES_WAKEUP;
+import static android.os.PowerManager.SCREEN_DIM_WAKE_LOCK;
+
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.os.PowerManager.WakeLock;
 import android.support.wearable.activity.WearableActivity;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -45,12 +54,28 @@ public class InputActivity extends WearableActivity {
 
     private KeyboardInputController keyboardController;
     private @InputMode int currentMode;
+    private WakeLock wakeLock;
+
+    private final BroadcastReceiver screenReceiver =
+            new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    if (ACTION_SCREEN_OFF.equals(intent.getAction())) {
+                        wakeUpAndFinish();
+                    }
+                }
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_flip);
         setAmbientEnabled();
+
+        PowerManager powerManager = getSystemService(PowerManager.class);
+        wakeLock =
+                powerManager.newWakeLock(
+                        SCREEN_DIM_WAKE_LOCK | ACQUIRE_CAUSES_WAKEUP, "WearMouse:PokeScreen");
 
         keyboardController = new KeyboardInputController(this::finish);
         keyboardController.onCreate(this);
@@ -68,12 +93,14 @@ public class InputActivity extends WearableActivity {
                 .beginTransaction()
                 .add(R.id.fragment_container, getFragment(currentMode))
                 .commit();
+
+        registerReceiver(screenReceiver, new IntentFilter(ACTION_SCREEN_OFF));
     }
 
     @Override
     public void onEnterAmbient(Bundle ambientDetails) {
         super.onEnterAmbient(ambientDetails);
-        finish();
+        wakeUpAndFinish();
     }
 
     @Override
@@ -84,6 +111,7 @@ public class InputActivity extends WearableActivity {
 
     @Override
     protected void onDestroy() {
+        unregisterReceiver(screenReceiver);
         keyboardController.onDestroy(this);
         super.onDestroy();
     }
@@ -148,5 +176,11 @@ public class InputActivity extends WearableActivity {
         return mode == InputMode.KEYPAD
                 ? new KeypadFragment()
                 : mode == InputMode.MOUSE ? new MouseFragment() : new TouchpadFragment();
+    }
+
+    private void wakeUpAndFinish() {
+        wakeLock.acquire(500);
+        wakeLock.release();
+        finish();
     }
 }

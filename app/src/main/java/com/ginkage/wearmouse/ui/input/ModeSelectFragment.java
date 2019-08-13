@@ -16,14 +16,9 @@
 
 package com.ginkage.wearmouse.ui.input;
 
-import static android.os.PowerManager.ACQUIRE_CAUSES_WAKEUP;
-import static android.os.PowerManager.SCREEN_DIM_WAKE_LOCK;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PowerManager;
-import android.os.PowerManager.WakeLock;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.support.wearable.preference.WearablePreferenceActivity;
@@ -41,7 +36,6 @@ public class ModeSelectFragment extends PreferenceFragment {
     private static final int INPUT_REQUEST_CODE = 1;
 
     private KeyboardInputController keyboardController;
-    private WakeLock wakeLock;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,10 +44,6 @@ public class ModeSelectFragment extends PreferenceFragment {
 
         WearablePreferenceActivity activity = ((WearablePreferenceActivity) getActivity());
         activity.setAmbientEnabled();
-        PowerManager powerManager = activity.getSystemService(PowerManager.class);
-        wakeLock =
-                powerManager.newWakeLock(
-                        SCREEN_DIM_WAKE_LOCK | ACQUIRE_CAUSES_WAKEUP, "WearMouse:PokeScreen");
 
         assignIntent(KEY_PREF_INPUT_MOUSE, InputMode.MOUSE);
         assignIntent(KEY_PREF_INPUT_TOUCHPAD, InputMode.TOUCHPAD);
@@ -78,8 +68,6 @@ public class ModeSelectFragment extends PreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-        wakeLock.acquire(500);
-        wakeLock.release();
         keyboardController.onResume();
     }
 
