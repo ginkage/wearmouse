@@ -238,6 +238,12 @@ public class HidDataSender
                             // must be an incoming one. In that case, we shouldn't try to disconnect
                             // from it.
                             waitingForDevice = device;
+                        } else if (state == BluetoothProfile.STATE_DISCONNECTED) {
+                            // If we are disconnected from a device we are waiting to connect to, we
+                            // ran into a timeout and should no longer try to connect.
+                            if (device == waitingForDevice) {
+                                waitingForDevice = null;
+                            }
                         }
                         updateDeviceList();
                         for (ProfileListener listener : listeners) {
