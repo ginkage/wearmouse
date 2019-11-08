@@ -58,6 +58,10 @@
     <string name="key_name_space">BARRA SPAZIATRICE</string>
     <string name="pref_inputKeyboard">Immiss. tastiera</string>
     <string name="pref_inputSettings">Impostazioni</string>
+    <string name="pref_settingCalibration">Calibra i sensori</string>
+    <string name="pref_settingCalibration_summary">Usa questa opzione se puntatore del mouse cambia direzione</string>
+    <string name="setting_recalibrate">Ricalibra i sensori</string>
+    <string name="setting_calibration_running">Calibrazione…</string>
     <string name="pref_settingStabilize">Stabilizza movimenti puntatore</string>
     <string name="pref_settingStabilize_summary">Facilita il posizionamento del puntatore su piccoli target</string>
     <string name="pref_settingCursor8Way">Cursore a otto direzioni</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Usa il tuo smartwatch Wear OS come tastiera o mouse Bluetooth. Inizia eseguendo l\'accoppiamento con un altro dispositivo.</string>
     <string name="onboarding_message_mouse">Muovi il dispositivo Wear OS per spostare il puntatore del mouse sullo schermo.</string>
     <string name="onboarding_message_keypad">Tocca i lati dello schermo del dispositivo Wear OS per premere i tasti freccia.</string>
+    <string name="onboarding_message_calibration">Appoggia il dispositivo Wear OS su una superficie dura che sia piana e perfettamente stabile.</string>
 </resources>

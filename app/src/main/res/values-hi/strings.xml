@@ -58,6 +58,10 @@
     <string name="key_name_space">Space</string>
     <string name="pref_inputKeyboard">कीबोर्ड इनपुट</string>
     <string name="pref_inputSettings">सेटिंग</string>
+    <string name="pref_settingCalibration">सेंसर कैलिब्रेट करें</string>
+    <string name="pref_settingCalibration_summary">माउस पॉइंटर के ड्रिफ़्ट होने पर इस विकल्प का उपयोग करें</string>
+    <string name="setting_recalibrate">सेंसर को फिर से कैलिब्रेट करें</string>
+    <string name="setting_calibration_running">कैलिब्रेट कर रहा है…</string>
     <string name="pref_settingStabilize">पॉइंटर गतियों को स्थिर करें</string>
     <string name="pref_settingStabilize_summary">छोटे लक्ष्यों की ओर इंगित करना आसान बनाता है</string>
     <string name="pref_settingCursor8Way">8-दिशाओं वाला कर्सर</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">अपनी Wear OS स्मार्टवॉच को ब्लूटूथ माउस या कीबोर्ड की तरह इस्तेमाल करें. दूसरे डिवाइस के साथ जोड़कर शुरुआत करें.</string>
     <string name="onboarding_message_mouse">अपने Wear OS डिवाइस को हिलाकर, स्क्रीन पर कर्सर को एक जगह से दूसरी जगह पर ले जाएं.</string>
     <string name="onboarding_message_keypad">तीर के निशान वाले बटनों को दबाने के लिए Wear OS डिवाइस की स्क्रीन के किनारे वाले हिस्सों पर टैप करें.</string>
+    <string name="onboarding_message_calibration">अपने Wear OS डिवाइस को किसी ठोस और सपाट जगह पर रखें और पक्का करें कि वह हिल नहीं रहा हो.</string>
 </resources>

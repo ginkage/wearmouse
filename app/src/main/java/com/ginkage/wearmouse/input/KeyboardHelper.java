@@ -274,7 +274,7 @@ public class KeyboardHelper {
             }
         }
 
-        sendKeyDown(shift ? Modifier.LEFT_SHIFT : 0, code);
+        sendKeyDown(shift ? Modifier.LEFT_SHIFT : Modifier.NONE, code);
         sendKeysUp(Modifier.NONE);
     }
 

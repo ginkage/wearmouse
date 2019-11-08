@@ -58,6 +58,10 @@
     <string name="key_name_space">Espace</string>
     <string name="pref_inputKeyboard">Saisie au clavier</string>
     <string name="pref_inputSettings">Paramètres</string>
+    <string name="pref_settingCalibration">Calibrer les capteurs</string>
+    <string name="pref_settingCalibration_summary">Utiliser cette option si le curseur de la souris dérive</string>
+    <string name="setting_recalibrate">Recalibrer les capteurs</string>
+    <string name="setting_calibration_running">Calibration…</string>
     <string name="pref_settingStabilize">Stabiliser mouvements du curseur</string>
     <string name="pref_settingStabilize_summary">Visez plus facilement de petites cibles</string>
     <string name="pref_settingCursor8Way">Curseur 8 directions</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Utilisez votre montre connectée Wear OS en tant que souris ou clavier Bluetooth. Pour cela, commencez par l\'associer à un autre appareil.</string>
     <string name="onboarding_message_mouse">Faites bouger votre appareil Wear OS pour déplacer le curseur de la souris sur l\'écran.</string>
     <string name="onboarding_message_keypad">Appuyez sur les côtés de l\'écran de l\'appareil Wear OS pour appuyer sur les touches fléchées.</string>
+    <string name="onboarding_message_calibration">Placez votre appareil Wear OS sur une surface solide et plane, puis assurez-vous qu\'il est complètement immobile.</string>
 </resources>

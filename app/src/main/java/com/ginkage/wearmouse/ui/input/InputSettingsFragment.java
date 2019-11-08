@@ -16,6 +16,8 @@
 
 package com.ginkage.wearmouse.ui.input;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.preference.Preference;
@@ -25,12 +27,17 @@ import com.ginkage.wearmouse.R;
 import com.ginkage.wearmouse.input.SettingsUtil;
 import com.ginkage.wearmouse.input.SettingsUtil.SettingKey;
 import com.ginkage.wearmouse.ui.onboarding.OnboardingController;
+import com.ginkage.wearmouse.ui.onboarding.OnboardingController.ScreenKey;
+import com.ginkage.wearmouse.ui.onboarding.OnboardingRequest;
 
 /** The main Settings fragment. */
 public class InputSettingsFragment extends PreferenceFragment {
     private static final String ONBOARDING_PREF = "pref_settingReplayTutorials";
+    private static final int CALIBRATION_REQUEST_CODE = 1;
 
     private SettingsUtil settings;
+    private SwitchPreference calibrationPref;
+    private OnboardingRequest onboardingRequest;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,11 +51,21 @@ public class InputSettingsFragment extends PreferenceFragment {
         }
 
         settings = new SettingsUtil(getActivity());
+        onboardingRequest = new OnboardingRequest(getActivity(), ScreenKey.CALIBRATION);
+        calibrationPref = (SwitchPreference) findPreference(SettingKey.CALIBRATION);
 
         initBooleanPref(SettingKey.STABILIZE);
         initBooleanPref(SettingKey.CURSOR_8_WAY);
         initBooleanPref(SettingKey.REDUCED_RATE);
         initBooleanPref(SettingKey.STAY_CONNECTED);
+
+        updateCalibrationPref();
+        calibrationPref.setOnPreferenceChangeListener(
+                (p, newVal) -> {
+                    settings.setBoolean(SettingKey.CALIBRATION, false);
+                    onboardingRequest.start(this);
+                    return true;
+                });
 
         OnboardingController onboardingController = new OnboardingController(getActivity());
         Preference onboardingPref = findPreference(ONBOARDING_PREF);
@@ -71,5 +88,24 @@ public class InputSettingsFragment extends PreferenceFragment {
                     settings.setBoolean(p.getKey(), ((Boolean) newVal));
                     return true;
                 });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (onboardingRequest.isMyResult(requestCode, data) && resultCode == Activity.RESULT_OK) {
+            startActivityForResult(
+                    new Intent(getActivity(), CalibrationActivity.class), CALIBRATION_REQUEST_CODE);
+        } else if (requestCode == CALIBRATION_REQUEST_CODE) {
+            settings.setBoolean(SettingKey.CALIBRATION, resultCode == Activity.RESULT_OK);
+        }
+        updateCalibrationPref();
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void updateCalibrationPref() {
+        boolean calibrated = settings.getBoolean(SettingKey.CALIBRATION);
+        calibrationPref.setChecked(calibrated);
+        calibrationPref.setTitle(
+                calibrated ? R.string.setting_recalibrate : R.string.pref_settingCalibration);
     }
 }

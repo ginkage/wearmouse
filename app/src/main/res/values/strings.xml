@@ -112,6 +112,14 @@
     <!-- Title at the top of settings view -->
     <string name="pref_inputSettings">Settings</string>
 
+    <!-- Name of the preference for gyroscope calibration [CHAR_LIMIT=40] -->
+    <string name="pref_settingCalibration">Calibrate sensors</string>
+    <!-- Description of the preference for gyroscope calibration [CHAR_LIMIT=80] -->
+    <string name="pref_settingCalibration_summary">Use this option if the mouse pointer is drifting</string>
+    <!-- Name of the preference for gyroscope re-calibration [CHAR_LIMIT=40] -->
+    <string name="setting_recalibrate">Recalibrate sensors</string>
+    <!-- Prompt for the user to wait while the gyroscope calibration is running [CHAR_LIMIT=24] -->
+    <string name="setting_calibration_running">Calibrating\u2026</string>
     <!-- Name of the preference for stabilizing mouse pointer movements -->
     <string name="pref_settingStabilize">Stabilize pointer movements</string>
     <!-- Description of the preference for stabilizing mouse pointer movements -->
@@ -139,4 +147,6 @@
     <string name="onboarding_message_mouse">Move your Wear OS device to move the mouse pointer on the screen.</string>
     <!-- Tutorial text for the cursor keys mode -->
     <string name="onboarding_message_keypad">Tap on the sides of the Wear OS device\'s screen to press arrow keys.</string>
+    <!-- Tutorial text for the calibration process [CHAR_LIMIT=300] -->
+    <string name="onboarding_message_calibration">Place your Wear OS device on a solid, level surface and make sure it is completely still.</string>
 </resources>

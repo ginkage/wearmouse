@@ -58,6 +58,10 @@
     <string name="key_name_space">Leertaste</string>
     <string name="pref_inputKeyboard">Tastatureingabe</string>
     <string name="pref_inputSettings">Einstellungen</string>
+    <string name="pref_settingCalibration">Sensoren kalibrieren</string>
+    <string name="pref_settingCalibration_summary">Diese Option verwenden, wenn der Mauszeiger driftet</string>
+    <string name="setting_recalibrate">Sensoren neu kalibrieren</string>
+    <string name="setting_calibration_running">Wird kalibriert…</string>
     <string name="pref_settingStabilize">Zeigerbewegungen stabilisieren</string>
     <string name="pref_settingStabilize_summary">Vereinfacht das Zeigen auf kleine Elemente</string>
     <string name="pref_settingCursor8Way">Cursor für 8 Richtungen</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Du kannst deine Wear OS-Smartwatch als Bluetooth-Maus oder -Tastatur verwenden. Dazu musst du sie als Erstes mit einem anderen Gerät koppeln.</string>
     <string name="onboarding_message_mouse">Damit sich der Mauszeiger auf dem Bildschirm bewegt, musst du dein Wear OS-Gerät entsprechend bewegen.</string>
     <string name="onboarding_message_keypad">Um die Pfeiltasten zu drücken, musst du auf die entsprechenden Seiten des Wear OS-Gerätebildschirms tippen.</string>
+    <string name="onboarding_message_calibration">Leg dein Wear OS-Gerät auf eine feste, ebene Oberfläche und achte darauf, dass es sich nicht bewegt.</string>
 </resources>

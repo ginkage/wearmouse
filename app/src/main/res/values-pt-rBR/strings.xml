@@ -58,6 +58,10 @@
     <string name="key_name_space">Espaço</string>
     <string name="pref_inputKeyboard">Entrada do teclado</string>
     <string name="pref_inputSettings">Configurações</string>
+    <string name="pref_settingCalibration">Calibrar sensores</string>
+    <string name="pref_settingCalibration_summary">Use esta opção se o cursor do mouse estiver flutuando</string>
+    <string name="setting_recalibrate">Recalibrar sensores</string>
+    <string name="setting_calibration_running">Calibrando…</string>
     <string name="pref_settingStabilize">Estabilizar movimentos do cursor</string>
     <string name="pref_settingStabilize_summary">Facilita apontar para alvos pequenos</string>
     <string name="pref_settingCursor8Way">Cursor de oito direções</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Use seu smartwatch com Wear OS como um mouse ou teclado Bluetooth. Comece pareando-o com outro dispositivo.</string>
     <string name="onboarding_message_mouse">Mova o dispositivo com Wear OS para movimentar o ponteiro do mouse na tela.</string>
     <string name="onboarding_message_keypad">Toque nas laterais da tela do dispositivo com Wear OS para pressionar as teclas de seta.</string>
+    <string name="onboarding_message_calibration">Coloque o dispositivo com Wear OS em uma superfície firme e nivelada e verifique se ele está completamente imóvel.</string>
 </resources>

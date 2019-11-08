@@ -31,11 +31,12 @@ public class OnboardingController {
     static final String EXTRA_KEY = "extra_onboarding_key";
 
     @Retention(RetentionPolicy.SOURCE)
-    @StringDef({ScreenKey.WELCOME, ScreenKey.MOUSE, ScreenKey.KEYPAD})
+    @StringDef({ScreenKey.WELCOME, ScreenKey.MOUSE, ScreenKey.KEYPAD, ScreenKey.CALIBRATION})
     public @interface ScreenKey {
         String WELCOME = "welcome";
         String MOUSE = "mouse";
         String KEYPAD = "keypad";
+        String CALIBRATION = "calibration";
     }
 
     private final SharedPreferences sharedPref;

@@ -58,6 +58,10 @@
     <string name="key_name_space">空格</string>
     <string name="pref_inputKeyboard">键盘输入</string>
     <string name="pref_inputSettings">设置</string>
+    <string name="pref_settingCalibration">校准传感器</string>
+    <string name="pref_settingCalibration_summary">如果鼠标指针偏移了，请使用此选项</string>
+    <string name="setting_recalibrate">重新校准传感器</string>
+    <string name="setting_calibration_running">正在校准…</string>
     <string name="pref_settingStabilize">稳定指针的移动</string>
     <string name="pref_settingStabilize_summary">让您更轻松地指向小目标</string>
     <string name="pref_settingCursor8Way">8 方向光标</string>
@@ -71,4 +75,5 @@
     <string name="onboarding_message_welcome">使用您的 Wear OS 智能手表作为蓝牙鼠标或键盘；请先将手表与其他设备配对。</string>
     <string name="onboarding_message_mouse">移动您的 Wear OS 设备即可在屏幕上移动鼠标指针。</string>
     <string name="onboarding_message_keypad">点按 Wear OS 设备屏幕的两侧即可按下箭头键。</string>
+    <string name="onboarding_message_calibration">将 Wear OS 设备放在稳固的水平面上，并确保其完全静止不动。</string>
 </resources>

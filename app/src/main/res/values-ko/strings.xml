@@ -58,6 +58,10 @@
     <string name="key_name_space">스페이스바</string>
     <string name="pref_inputKeyboard">키보드 입력</string>
     <string name="pref_inputSettings">설정</string>
+    <string name="pref_settingCalibration">센서 보정</string>
+    <string name="pref_settingCalibration_summary">마우스 포인터가 의도치 않게 움직인다면 이 옵션을 사용하세요.</string>
+    <string name="setting_recalibrate">센서 재보정</string>
+    <string name="setting_calibration_running">보정 중...</string>
     <string name="pref_settingStabilize">포인터 이동 안정화</string>
     <string name="pref_settingStabilize_summary">작은 대상을 가리키기가 더 쉬워집니다.</string>
     <string name="pref_settingCursor8Way">8방향 커서</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Wear OS 스마트시계를 다른 기기와 페어링하여 블루투스 마우스나 키보드로 사용하세요.</string>
     <string name="onboarding_message_mouse">Wear OS 기기를 움직여서 화면의 마우스 포인터를 움직이세요.</string>
     <string name="onboarding_message_keypad">Wear OS 기기 화면의 측면을 탭하여 화살표 키를 누르세요.</string>
+    <string name="onboarding_message_calibration">Wear OS 기기를 단단하고 평평한 곳에 놓고 움직이지 않게 하세요.</string>
 </resources>

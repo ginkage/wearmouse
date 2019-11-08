@@ -51,6 +51,12 @@ class OnboardingResources {
                                     R.drawable.ic_ob_keypad,
                                     R.string.pref_inputCursor,
                                     R.string.onboarding_message_keypad))
+                    .put(
+                            ScreenKey.CALIBRATION,
+                            new OnboardingResources(
+                                    R.drawable.ic_ob_calibration,
+                                    R.string.pref_settingCalibration,
+                                    R.string.onboarding_message_calibration))
                     .build();
 
     @DrawableRes final int iconResId;

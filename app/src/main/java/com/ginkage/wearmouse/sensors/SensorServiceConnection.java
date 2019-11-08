@@ -70,6 +70,15 @@ public class SensorServiceConnection {
         this.listener = checkNotNull(listener);
     }
 
+    /**
+     * Gets the service object instance.
+     *
+     * @return Service instance.
+     */
+    @Nullable public SensorService getService() {
+        return service;
+    }
+
     /** Connects the activity to the service, starting it if required. */
     public void bind() {
         if (!bound) {

@@ -58,6 +58,10 @@
     <string name="key_name_space">Mellemrum</string>
     <string name="pref_inputKeyboard">Tastaturinput</string>
     <string name="pref_inputSettings">Indstillinger</string>
+    <string name="pref_settingCalibration">Kalibrer sensorer</string>
+    <string name="pref_settingCalibration_summary">Brug denne valgmulighed, hvis markøren glider af sig selv</string>
+    <string name="setting_recalibrate">Kalibrer sensorer igen</string>
+    <string name="setting_calibration_running">Kalibrerer…</string>
     <string name="pref_settingStabilize">Stabiliser markørbevægelser</string>
     <string name="pref_settingStabilize_summary">Det gør det nemmere at pege på små genstande</string>
     <string name="pref_settingCursor8Way">Markør med otte retninger</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Brug dit Wear OS-smart-ur som Bluetooth-mus eller tastatur. Start med at knytte det til en anden enhed.</string>
     <string name="onboarding_message_mouse">Flyt din Wear OS-enhed for at flytte musemarkøren på skærmen.</string>
     <string name="onboarding_message_keypad">Tryk på siderne af Wear OS-enhedens skærm for at trykke på piletasterne.</string>
+    <string name="onboarding_message_calibration">Læg din Wear OS-enhed på en solid, jævn overflade, og sørg for, at den ligger helt stille.</string>
 </resources>

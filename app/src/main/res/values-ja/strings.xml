@@ -58,6 +58,10 @@
     <string name="key_name_space">Space</string>
     <string name="pref_inputKeyboard">キーボード入力</string>
     <string name="pref_inputSettings">設定</string>
+    <string name="pref_settingCalibration">センサーの調整</string>
+    <string name="pref_settingCalibration_summary">マウスのポインタがブレる場合は、このオプションを使用します</string>
+    <string name="setting_recalibrate">センサーの再調整</string>
+    <string name="setting_calibration_running">調整しています…</string>
     <string name="pref_settingStabilize">ポインタの動きの補正</string>
     <string name="pref_settingStabilize_summary">小さい項目にポインタを合わせやすくします</string>
     <string name="pref_settingCursor8Way">8 方向カーソル</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Wear OS 時計を Bluetooth マウスまたはキーボードとして使用します。まず、他の端末とペア設定します。</string>
     <string name="onboarding_message_mouse">Wear OS 端末を動かして、画面上のマウスポインタを動かします。</string>
     <string name="onboarding_message_keypad">Wear OS 端末の画面側面をタップし、矢印キーを押します。</string>
+    <string name="onboarding_message_calibration">Wear OS 端末を固くて平らな場所に置き、完全に静止していることを確認します。</string>
 </resources>

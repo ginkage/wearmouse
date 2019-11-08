@@ -17,10 +17,16 @@
 package com.ginkage.wearmouse.sensors;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Binder;
 import android.os.IBinder;
-import java.util.concurrent.TimeUnit;
+import android.util.Log;
+import javax.annotation.Nullable;
 
 /** Service that listens to the sensors events and handles the data. */
 public class SensorService extends Service {
@@ -52,8 +58,52 @@ public class SensorService extends Service {
         void onOrientation(float[] quaternion);
     }
 
+    /** Callback to be notified of the calibration completion. */
+    public interface CalibrationListener {
+        /**
+         * Called when we have collected enough sensor data for gyroscope calibration.
+         *
+         * @param success {@code true} if calibration completed successfully, {@code false}
+         *     otherwise.
+         */
+        void onCalibrationComplete(boolean success);
+    }
+
     private final IBinder binder = new LocalBinder();
+
+    private final SensorEventListener sensorEventListener =
+            new SensorEventListener() {
+                @Override
+                public void onSensorChanged(SensorEvent event) {
+                    if (!registered) {
+                        return;
+                    }
+
+                    switch (event.sensor.getType()) {
+                        case Sensor.TYPE_GYROSCOPE:
+                        case Sensor.TYPE_GYROSCOPE_UNCALIBRATED:
+                            if (calibrating && calibrationData.add(event.values)) {
+                                if (calibrationListener != null) {
+                                    calibrationListener.onCalibrationComplete(true);
+                                }
+                                stopInput();
+                            }
+                            break;
+                        default: // fall out
+                    }
+                }
+
+                @Override
+                public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+            };
+
+    private SensorManager sensorManager;
     private OrientationFusion orientation;
+
+    private boolean calibrating;
+    private boolean registered;
+    private CalibrationData calibrationData;
+    @Nullable private CalibrationListener calibrationListener;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -63,13 +113,47 @@ public class SensorService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        orientation = new OrientationFusion(this);
+
+        registered = false;
+        calibrating = false;
+        calibrationData = new CalibrationData(this);
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+
+        orientation = new OrientationFusion();
     }
 
     @Override
     public void onDestroy() {
         stopInput();
         super.onDestroy();
+    }
+
+    /**
+     * Starts collecting the gyroscope data for calibration.
+     *
+     * @param listener Callback to be notified when the calibration is complete.
+     */
+    public void startCalibration(CalibrationListener listener) {
+        stopInput();
+
+        calibrationListener = listener;
+
+        Sensor sensorGyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE_UNCALIBRATED);
+        if (sensorGyroscope == null) {
+            sensorGyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+        }
+        if (sensorGyroscope == null
+                || !sensorManager.registerListener(sensorEventListener, sensorGyroscope, 10000)) {
+            Log.e(TAG, "Failed to register listener for Gyroscope: " + sensorGyroscope);
+            if (listener != null) {
+                listener.onCalibrationComplete(false);
+            }
+            return;
+        }
+
+        calibrationData.reset();
+        calibrating = true;
+        registered = true;
     }
 
     /**
@@ -81,12 +165,20 @@ public class SensorService extends Service {
      */
     public void startInput(OrientationListener listener, boolean reducedRate) {
         stopInput();
-        long samplingPeriodUs = reducedRate ? DATA_RATE_LOW_US : DATA_RATE_HIGH_US;
-        orientation.start(listener, TimeUnit.MICROSECONDS.toNanos(samplingPeriodUs));
+        int samplingPeriodUs = reducedRate ? DATA_RATE_LOW_US : DATA_RATE_HIGH_US;
+        orientation.start(listener, samplingPeriodUs, calibrationData.getMedian());
     }
 
     /** Stops all sensors interactions. */
     public void stopInput() {
+        if (registered) {
+            registered = false;
+            calibrating = false;
+            sensorManager.unregisterListener(sensorEventListener);
+        }
+
         orientation.stop();
+
+        calibrationListener = null;
     }
 }

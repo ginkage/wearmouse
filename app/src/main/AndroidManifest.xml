@@ -59,6 +59,8 @@
 
         <activity android:name=".ui.input.InputActivity" />
 
+        <activity android:name=".ui.input.CalibrationActivity" />
+
         <activity android:name=".ui.onboarding.OnboardingActivity" />
 
     </application>

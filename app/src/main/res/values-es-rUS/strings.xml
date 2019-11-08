@@ -58,6 +58,10 @@
     <string name="key_name_space">Espacio</string>
     <string name="pref_inputKeyboard">Teclado: entrada</string>
     <string name="pref_inputSettings">Configuración</string>
+    <string name="pref_settingCalibration">Sensores de calibración</string>
+    <string name="pref_settingCalibration_summary">Usa esta opción si el puntero del mouse está desviado</string>
+    <string name="setting_recalibrate">Recalibrar sensores</string>
+    <string name="setting_calibration_running">Calibrando…</string>
     <string name="pref_settingStabilize">Estabilizar el puntero</string>
     <string name="pref_settingStabilize_summary">Hace que sea más fácil apuntar a objetivos pequeños</string>
     <string name="pref_settingCursor8Way">Cursor de 8 direcciones</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Usa el reloj inteligente Wear OS como mouse o teclado Bluetooth. Para comenzar, sincronízalo con otro dispositivo.</string>
     <string name="onboarding_message_mouse">Mueve el dispositivo Wear OS para que se desplace el puntero del mouse por la pantalla.</string>
     <string name="onboarding_message_keypad">Para usar las teclas de dirección, presiona los costados de la pantalla del dispositivo Wear OS.</string>
+    <string name="onboarding_message_calibration">Coloca el dispositivo Wear OS sobre una superficie firme y lisa, y asegúrate de que no se mueva.</string>
 </resources>

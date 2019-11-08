@@ -58,6 +58,10 @@
     <string name="key_name_space">cách</string>
     <string name="pref_inputKeyboard">Nhập qua b.phím</string>
     <string name="pref_inputSettings">Cài đặt</string>
+    <string name="pref_settingCalibration">Hiệu chỉnh cảm biến</string>
+    <string name="pref_settingCalibration_summary">Sử dụng tùy chọn này nếu con trỏ chuột đang trôi</string>
+    <string name="setting_recalibrate">Hiệu chỉnh lại cảm biến</string>
+    <string name="setting_calibration_running">Đang hiệu chỉnh…</string>
     <string name="pref_settingStabilize">Ổn định chuyển động của con trỏ</string>
     <string name="pref_settingStabilize_summary">Dễ dàng trỏ tới các mục tiêu nhỏ hơn</string>
     <string name="pref_settingCursor8Way">Con trỏ 8 hướng</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Sử dụng đồng hồ thông minh chạy Wear OS làm chuột hoặc bàn phím Bluetooth; bắt đầu bằng cách ghép nối với một thiết bị khác.</string>
     <string name="onboarding_message_mouse">Di chuyển thiết bị chạy Wear OS của bạn để di chuyển con trỏ chuột trên màn hình.</string>
     <string name="onboarding_message_keypad">Nhấn vào các cạnh màn hình của thiết bị chạy Wear OS để nhấn các phím mũi tên.</string>
+    <string name="onboarding_message_calibration">Đặt thiết bị chạy Wear OS của bạn trên một bề mặt cứng, bằng phẳng và đảm bảo thiết bị hoàn toàn đứng yên.</string>
 </resources>

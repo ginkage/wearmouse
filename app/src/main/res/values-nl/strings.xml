@@ -58,6 +58,10 @@
     <string name="key_name_space">Spatiebalk</string>
     <string name="pref_inputKeyboard">Toetsenbordinvoer</string>
     <string name="pref_inputSettings">Instellingen</string>
+    <string name="pref_settingCalibration">Sensoren kalibreren</string>
+    <string name="pref_settingCalibration_summary">Gebruik deze optie als de muisaanwijzer afwijkt</string>
+    <string name="setting_recalibrate">Sensoren opnieuw kalibreren</string>
+    <string name="setting_calibration_running">Kalibreren…</string>
     <string name="pref_settingStabilize">Aanwijzerbewegingen stabiliseren</string>
     <string name="pref_settingStabilize_summary">Maakt het gemakkelijker om kleine doelen aan te wijzen</string>
     <string name="pref_settingCursor8Way">8-wegscursor</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Gebruik je Wear OS-smartwatch als Bluetooth-muis of -toetsenbord. Koppel de smartwatch eerst aan een ander apparaat.</string>
     <string name="onboarding_message_mouse">Beweeg je Wear OS-apparaat om de muisaanwijzer op het scherm te verplaatsen.</string>
     <string name="onboarding_message_keypad">Tik op de zijkanten van het scherm van het Wear OS-apparaat om op de pijltoetsen te drukken.</string>
+    <string name="onboarding_message_calibration">Plaats het Wear OS-apparaat op een stevige, vlakke ondergrond en zorg ervoor dat dit helemaal stil ligt.</string>
 </resources>

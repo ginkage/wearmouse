@@ -58,6 +58,10 @@
     <string name="key_name_space">Espacio</string>
     <string name="pref_inputKeyboard">Entrada de tecla</string>
     <string name="pref_inputSettings">Ajustes</string>
+    <string name="pref_settingCalibration">Calibrar sensores</string>
+    <string name="pref_settingCalibration_summary">Usa esta opción si el puntero del ratón se mueve solo</string>
+    <string name="setting_recalibrate">Recalibrar sensores</string>
+    <string name="setting_calibration_running">Calibrando…</string>
     <string name="pref_settingStabilize">Estabilizar el puntero</string>
     <string name="pref_settingStabilize_summary">Hace que resulte más fácil seleccionar elementos pequeños</string>
     <string name="pref_settingCursor8Way">Cursor de 8 direcciones</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Utiliza tu smartwatch Wear OS como teclado o ratón Bluetooth. Para empezar, vincúlalo con otro dispositivo.</string>
     <string name="onboarding_message_mouse">Mueve tu dispositivo Wear OS para mover el puntero del ratón por la pantalla.</string>
     <string name="onboarding_message_keypad">Toca los lados de la pantalla del dispositivo Wear OS para pulsar las teclas de flecha.</string>
+    <string name="onboarding_message_calibration">Coloca tu dispositivo Wear OS en una superficie plana y asegúrate de que no se mueva.</string>
 </resources>

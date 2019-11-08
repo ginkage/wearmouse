@@ -41,7 +41,7 @@ public class MouseReport {
     }
 
     /** Interface to send the Mouse data with. */
-    public static interface MouseDataSender {
+    public interface MouseDataSender {
         /**
          * Send the Mouse data to the connected HID Host device.
          *

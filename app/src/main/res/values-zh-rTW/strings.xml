@@ -58,6 +58,10 @@
     <string name="key_name_space">空格</string>
     <string name="pref_inputKeyboard">鍵盤輸入</string>
     <string name="pref_inputSettings">設定</string>
+    <string name="pref_settingCalibration">校正感應器</string>
+    <string name="pref_settingCalibration_summary">如果滑鼠游標偏移，請使用這個選項</string>
+    <string name="setting_recalibrate">重新校正感應器</string>
+    <string name="setting_calibration_running">校正中…</string>
     <string name="pref_settingStabilize">穩定游標移動方式</string>
     <string name="pref_settingStabilize_summary">可以更輕鬆地將游標移至小型目標</string>
     <string name="pref_settingCursor8Way">8 向游標</string>
@@ -71,4 +75,5 @@
     <string name="onboarding_message_welcome">如要使用 Wear OS 智慧型手錶做為藍牙滑鼠或鍵盤，請先與其他裝置進行配對。</string>
     <string name="onboarding_message_mouse">移動你的 Wear OS 裝置，即可移動畫面上的滑鼠游標。</string>
     <string name="onboarding_message_keypad">輕觸 Wear OS 裝置的螢幕兩側，即可按下方向鍵。</string>
+    <string name="onboarding_message_calibration">將 Wear OS 裝置放在穩固且水平的表面上，並確保裝置完全靜止不動。</string>
 </resources>

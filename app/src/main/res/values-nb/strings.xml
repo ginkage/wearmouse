@@ -58,6 +58,10 @@
     <string name="key_name_space">Mellomromstasten</string>
     <string name="pref_inputKeyboard">Tastaturinndata</string>
     <string name="pref_inputSettings">Innstillinger</string>
+    <string name="pref_settingCalibration">Kalibrer sensorer</string>
+    <string name="pref_settingCalibration_summary">Bruk dette alternativet hvis musepekeren glir avgårde</string>
+    <string name="setting_recalibrate">Rekalibrer sensorene</string>
+    <string name="setting_calibration_running">Kalibrerer …</string>
     <string name="pref_settingStabilize">Stabiliser pekerbevegelser</string>
     <string name="pref_settingStabilize_summary">Gjør det enklere å peke på små mål</string>
     <string name="pref_settingCursor8Way">Markør med åtte retninger</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Bruk Wear OS-smartklokken din som en Bluetooth-mus eller et Bluetooth-tastatur – start med å koble til en annen enhet.</string>
     <string name="onboarding_message_mouse">Flytt Wear OS-enheten din for å bevege musepekeren på skjermen.</string>
     <string name="onboarding_message_keypad">Trykk på sidene av skjermen til Wear OS-enheten for å trykke på piltastene.</string>
+    <string name="onboarding_message_calibration">Legg Wear OS-enheten på en fast, jevn overflate, og sørg for at den ligger helt i ro.</string>
 </resources>

@@ -58,6 +58,10 @@
     <string name="key_name_space">Mezerník</string>
     <string name="pref_inputKeyboard">Klávesnice</string>
     <string name="pref_inputSettings">Nastavení</string>
+    <string name="pref_settingCalibration">Kalibrovat senzory</string>
+    <string name="pref_settingCalibration_summary">Tuto možnost použijte, pokud se ukazatel myši pohybuje</string>
+    <string name="setting_recalibrate">Znovu kalibrovat senzory</string>
+    <string name="setting_calibration_running">Kalibrace…</string>
     <string name="pref_settingStabilize">Stabilizovat pohyby ukazatele</string>
     <string name="pref_settingStabilize_summary">Usnadňuje ukázání na malé cíle</string>
     <string name="pref_settingCursor8Way">Osmisměrný kurzor</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Použijte chytré hodinky Wear OS jako myš nebo klávesnici Bluetooth. Začněte tím, že je spárujete s dalším zařízením.</string>
     <string name="onboarding_message_mouse">Pohybem zařízení Wear OS pohybujte ukazatelem myši na obrazovce.</string>
     <string name="onboarding_message_keypad">Klepáním na okraje obrazovky zařízení Wear OS stisknete tlačítka se šipkami.</string>
+    <string name="onboarding_message_calibration">Umístěte zařízení Wear OS na pevný rovný povrch a zajistěte, aby se nepohybovalo.</string>
 </resources>

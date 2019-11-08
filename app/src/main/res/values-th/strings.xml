@@ -58,6 +58,10 @@
     <string name="key_name_space">Space</string>
     <string name="pref_inputKeyboard">ใช้แป้นพิมพ์ป้อนข้อความ</string>
     <string name="pref_inputSettings">การตั้งค่า</string>
+    <string name="pref_settingCalibration">ปรับเทียบเซ็นเซอร์</string>
+    <string name="pref_settingCalibration_summary">ใช้ตัวเลือกนี้ถ้าตัวชี้เมาส์ไม่ตรงตำแหน่ง</string>
+    <string name="setting_recalibrate">ปรับเทียบเซ็นเซอร์อีกครั้ง</string>
+    <string name="setting_calibration_running">กำลังปรับเทียบ…</string>
     <string name="pref_settingStabilize">ปรับให้ตัวชี้เคลื่อนไหวคงที่</string>
     <string name="pref_settingStabilize_summary">ช่วยให้ชี้ไปที่เป้าหมายขนาดเล็กได้ง่ายขึ้น</string>
     <string name="pref_settingCursor8Way">เคอร์เซอร์ 8 ทิศทาง</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">ใช้สมาร์ทวอทช์ Wear OS เป็นเมาส์หรือแป้นพิมพ์บลูทูธ โดยเริ่มจากการจับคู่กับอุปกรณ์อื่นก่อน</string>
     <string name="onboarding_message_mouse">เลื่อนอุปกรณ์ Wear OS เพื่อเลื่อนตัวชี้เมาส์บนหน้าจอ</string>
     <string name="onboarding_message_keypad">แตะที่ด้านข้างของหน้าจออุปกรณ์ Wear OS เพื่อกดปุ่มลูกศร</string>
+    <string name="onboarding_message_calibration">วางอุปกรณ์ Wear OS บนพื้นผิวเรียบแข็งและมั่นคง</string>
 </resources>

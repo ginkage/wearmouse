@@ -58,6 +58,10 @@
     <string name="key_name_space">Пробел</string>
     <string name="pref_inputKeyboard">Ввод с клавиатуры</string>
     <string name="pref_inputSettings">Настройки</string>
+    <string name="pref_settingCalibration">Калибровка датчиков</string>
+    <string name="pref_settingCalibration_summary">Используйте эту настройку, если указатель мыши \"плавает\"</string>
+    <string name="setting_recalibrate">Повторная калибровка</string>
+    <string name="setting_calibration_running">Калибровка…</string>
     <string name="pref_settingStabilize">Стабилизация указателя</string>
     <string name="pref_settingStabilize_summary">Используйте эту настройку, чтобы повысить точность указателя</string>
     <string name="pref_settingCursor8Way">Перемещение в 8 направлениях</string>
@@ -71,4 +75,5 @@
     <string name="onboarding_message_welcome">Используйте часы с Wear OS как мышь или клавиатуру Bluetooth. Для начала подключите часы к другому устройству.</string>
     <string name="onboarding_message_mouse">Чтобы управлять указателем мыши, двигайте устройство с Wear OS.</string>
     <string name="onboarding_message_keypad">Чтобы использовать устройство с Wear OS как клавиши со стрелками, нажимайте на края его экрана.</string>
+    <string name="onboarding_message_calibration">Положите устройство с Wear OS на ровную твердую поверхность и не двигайте его некоторое время.</string>
 </resources>

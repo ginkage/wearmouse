@@ -58,6 +58,10 @@
     <string name="key_name_space">Spasi</string>
     <string name="pref_inputKeyboard">Masukan keyboard</string>
     <string name="pref_inputSettings">Setelan</string>
+    <string name="pref_settingCalibration">Kalibrasi sensor</string>
+    <string name="pref_settingCalibration_summary">Gunakan opsi ini jika penunjuk mouse menyimpang</string>
+    <string name="setting_recalibrate">Kalibrasi ulang sensor</string>
+    <string name="setting_calibration_running">Mengalibrasi…</string>
     <string name="pref_settingStabilize">Stabilkan pergerakan penunjuk</string>
     <string name="pref_settingStabilize_summary">Memudahkan untuk menunjuk target yang kecil</string>
     <string name="pref_settingCursor8Way">Kursor 8 arah</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Gunakan smartwatch Wear OS sebagai mouse atau keyboard Bluetooth, mulai dengan menyambungkannya ke perangkat lain.</string>
     <string name="onboarding_message_mouse">Gerakkan perangkat Wear OS untuk menggerakkan kursor mouse di layar.</string>
     <string name="onboarding_message_keypad">Tap pada sisi layar perangkat Wear OS untuk menekan tombol panah.</string>
+    <string name="onboarding_message_calibration">Letakkan perangkat Wear OS di permukaan yang keras dan rata, serta pastikan perangkat tidak bergeser.</string>
 </resources>

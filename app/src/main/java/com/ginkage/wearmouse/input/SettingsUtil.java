@@ -35,6 +35,7 @@ public class SettingsUtil {
     /** These constants correspond to the various preferences in the Settings menu. */
     @Retention(RetentionPolicy.SOURCE)
     @StringDef({
+        SettingKey.CALIBRATION,
         SettingKey.MOUSE_HAND,
         SettingKey.CURSOR_8_WAY,
         SettingKey.REDUCED_RATE,
@@ -42,6 +43,7 @@ public class SettingsUtil {
         SettingKey.STAY_CONNECTED
     })
     public @interface SettingKey {
+        String CALIBRATION = "pref_settingCalibration";
         String MOUSE_HAND = "pref_settingMouseHand";
         String CURSOR_8_WAY = "pref_settingCursor8Way";
         String REDUCED_RATE = "pref_settingReducedRate";
@@ -51,6 +53,7 @@ public class SettingsUtil {
 
     private static final Map<String, Boolean> defaults =
             new ImmutableMap.Builder<String, Boolean>()
+                    .put(SettingKey.CALIBRATION, false)
                     .put(SettingKey.CURSOR_8_WAY, false)
                     .put(SettingKey.REDUCED_RATE, false)
                     .put(SettingKey.STABILIZE, false)

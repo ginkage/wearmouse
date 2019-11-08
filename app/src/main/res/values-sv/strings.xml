@@ -58,6 +58,10 @@
     <string name="key_name_space">Blanksteg</string>
     <string name="pref_inputKeyboard">Tangentbordsinmatning</string>
     <string name="pref_inputSettings">Inställningar</string>
+    <string name="pref_settingCalibration">Kalibrera sensorer</string>
+    <string name="pref_settingCalibration_summary">Använd det här alternativet om muspekaren glider</string>
+    <string name="setting_recalibrate">Omkalibrera sensorer</string>
+    <string name="setting_calibration_running">Kalibrerar …</string>
     <string name="pref_settingStabilize">Stabilisera pekarrörelser</string>
     <string name="pref_settingStabilize_summary">Detta gör det lättare att peka på små mål</string>
     <string name="pref_settingCursor8Way">Åttariktad markör</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Parkoppla din Wear OS-smartklocka till en annan enhet via Bluetooth så kan du använda den som mus eller tangentbord.</string>
     <string name="onboarding_message_mouse">Markören på skärmen rör på sig när du flyttar Wear OS-enheten.</string>
     <string name="onboarding_message_keypad">Tryck på piltangenterna genom att trycka på sidorna av Wear OS-enhetens skärm.</string>
+    <string name="onboarding_message_calibration">Placera Wear OS-enheten på en stadig, plan yta och se till att den ligger helt stilla.</string>
 </resources>

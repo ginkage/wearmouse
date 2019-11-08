@@ -58,6 +58,10 @@
     <string name="key_name_space">Spacja</string>
     <string name="pref_inputKeyboard">Klawiatura</string>
     <string name="pref_inputSettings">Ustawienia</string>
+    <string name="pref_settingCalibration">Skalibruj czujniki</string>
+    <string name="pref_settingCalibration_summary">Użyj tej opcji, jeśli kursor myszy dryfuje po ekranie</string>
+    <string name="setting_recalibrate">Ponownie skalibruj czujniki</string>
+    <string name="setting_calibration_running">Kalibruję…</string>
     <string name="pref_settingStabilize">Ustabilizuj ruch kursora</string>
     <string name="pref_settingStabilize_summary">Ułatwia wybieranie małych elementów</string>
     <string name="pref_settingCursor8Way">Kursor ośmiokierunkowy</string>
@@ -69,4 +73,5 @@
     <string name="onboarding_message_welcome">Używaj zegarka z Wear OS jako myszy lub klawiatury Bluetooth. Najpierw sparuj go z drugim urządzeniem.</string>
     <string name="onboarding_message_mouse">Poruszaj urządzeniem z Wear OS, by sterować wskaźnikiem myszy na ekranie.</string>
     <string name="onboarding_message_keypad">Dotykaj boków ekranu urządzenia z Wear OS, by naciskać klawisze strzałek.</string>
+    <string name="onboarding_message_calibration">Umieść urządzenie z Wear OS na stabilnej, poziomej powierzchni, by pozostawało w całkowitym bezruchu.</string>
 </resources>
