@@ -55,9 +55,9 @@ class OrientationFusion {
                                 TimeUnit.MICROSECONDS.toNanos(samplingPeriodUs),
                                 new SensorFusionJni(
                                         new float[] {
-                                                (float) calibrationData.x,
-                                                (float) calibrationData.y,
-                                                (float) calibrationData.z
+                                            (float) calibrationData.x,
+                                            (float) calibrationData.y,
+                                            (float) calibrationData.z
                                         },
                                         samplingPeriodUs),
                                 new ScheduledThreadPoolExecutor(1));

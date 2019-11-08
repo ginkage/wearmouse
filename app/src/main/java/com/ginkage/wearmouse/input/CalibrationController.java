@@ -26,57 +26,57 @@ import javax.annotation.Nullable;
 /** Controls the calibration sequence handling for the corresponding UI. */
 public class CalibrationController {
 
-  /** Callback for the UI. */
-  public interface Ui extends SensorService.CalibrationListener {}
+    /** Callback for the UI. */
+    public interface Ui extends SensorService.CalibrationListener {}
 
-  private final Ui ui;
-  private final SensorServiceConnection connection;
-  private boolean scheduledCalibration;
+    private final Ui ui;
+    private final SensorServiceConnection connection;
+    private boolean scheduledCalibration;
 
-  /**
-   * @param context Activity the this controller is bound to.
-   * @param ui Callback for receiving the UI updates.
-   */
-  public CalibrationController(Context context, Ui ui) {
-    this.ui = checkNotNull(ui);
-    this.connection =
-        new SensorServiceConnection(
-            checkNotNull(context),
-            service -> {
-              if (scheduledCalibration) {
-                service.startCalibration(this.ui);
-              }
-            });
-  }
-
-  /** Should be called in the Activity's (or Fragment's) onCreate() method. */
-  public void onCreate() {
-    connection.bind();
-  }
-
-  /** Should be called in the Activity's (or Fragment's) onDestroy() method. */
-  public void onDestroy() {
-    connection.unbind();
-  }
-
-  /**
-   * Start the calibration sequence if the sensor service is bound, or schedule it to start when it
-   * is available.
-   */
-  public void startCalibration() {
-    @Nullable SensorService service = connection.getService();
-    if (service != null) {
-      service.startCalibration(ui);
-    } else {
-      scheduledCalibration = true;
+    /**
+     * @param context Activity the this controller is bound to.
+     * @param ui Callback for receiving the UI updates.
+     */
+    public CalibrationController(Context context, Ui ui) {
+        this.ui = checkNotNull(ui);
+        this.connection =
+                new SensorServiceConnection(
+                        checkNotNull(context),
+                        service -> {
+                            if (scheduledCalibration) {
+                                service.startCalibration(this.ui);
+                            }
+                        });
     }
-  }
 
-  public void stopCalibration() {
-    @Nullable SensorService service = connection.getService();
-    if (service != null) {
-      service.stopInput();
+    /** Should be called in the Activity's (or Fragment's) onCreate() method. */
+    public void onCreate() {
+        connection.bind();
     }
-    scheduledCalibration = false;
-  }
+
+    /** Should be called in the Activity's (or Fragment's) onDestroy() method. */
+    public void onDestroy() {
+        connection.unbind();
+    }
+
+    /**
+     * Start the calibration sequence if the sensor service is bound, or schedule it to start when
+     * it is available.
+     */
+    public void startCalibration() {
+        @Nullable SensorService service = connection.getService();
+        if (service != null) {
+            service.startCalibration(ui);
+        } else {
+            scheduledCalibration = true;
+        }
+    }
+
+    public void stopCalibration() {
+        @Nullable SensorService service = connection.getService();
+        if (service != null) {
+            service.stopInput();
+        }
+        scheduledCalibration = false;
+    }
 }

@@ -75,7 +75,8 @@ public class SensorServiceConnection {
      *
      * @return Service instance.
      */
-    @Nullable public SensorService getService() {
+    @Nullable
+    public SensorService getService() {
         return service;
     }
 
