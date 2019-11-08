@@ -22,12 +22,14 @@
 
 namespace cardboard {
 
-OrientationTracker::OrientationTracker(const Vector3& calibration, const int sampling_period_us)
+OrientationTracker::OrientationTracker(const Vector3& calibration,
+                                       const int sampling_period_us)
     : calibration_(calibration),
       is_tracking_(false),
       sensor_fusion_(new SensorFusionEkf()),
       latest_gyroscope_data_({0, 0, Vector3::Zero()}),
-      accel_sensor_(new SensorEventProducer<AccelerometerData>(sampling_period_us)),
+      accel_sensor_(
+          new SensorEventProducer<AccelerometerData>(sampling_period_us)),
       gyro_sensor_(new SensorEventProducer<GyroscopeData>(sampling_period_us)) {
   sensor_fusion_->SetBiasEstimationEnabled(/*kGyroBiasEstimationEnabled*/ true);
   on_accel_callback_ = [&](const AccelerometerData& event) {
@@ -98,11 +100,9 @@ void OrientationTracker::OnGyroscopeData(const GyroscopeData& event) {
     return;
   }
 
-  const GyroscopeData data = {
-      .data = event.data - calibration_,
-      .system_timestamp = event.system_timestamp,
-      .sensor_timestamp_ns = event.sensor_timestamp_ns
-  };
+  const GyroscopeData data = {.data = event.data - calibration_,
+                              .system_timestamp = event.system_timestamp,
+                              .sensor_timestamp_ns = event.sensor_timestamp_ns};
 
   latest_gyroscope_data_ = data;
   sensor_fusion_->ProcessGyroscopeSample(data);

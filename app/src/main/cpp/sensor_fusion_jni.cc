@@ -43,7 +43,7 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved) {
 
 JNI_METHOD(jlong, nativeInit)
 (JNIEnv* env, jobject obj, jfloatArray calibration, jint sampling_period_us) {
-  float *tmp = env->GetFloatArrayElements(calibration, nullptr);
+  float* tmp = env->GetFloatArrayElements(calibration, nullptr);
   const cardboard::Vector3 bias(tmp[0], tmp[1], tmp[2]);
   env->ReleaseFloatArrayElements(calibration, tmp, 0);
 
@@ -54,14 +54,15 @@ JNI_METHOD(jlong, nativeInit)
 
 JNI_METHOD(void, nativeDestroy)
 (JNIEnv* env, jobject obj, jlong native_app) {
-    cardboard::OrientationTracker* tracker = native(native_app);
-    tracker->Pause();
-    delete tracker;
+  cardboard::OrientationTracker* tracker = native(native_app);
+  tracker->Pause();
+  delete tracker;
 }
 
 JNI_METHOD(void, nativeGetOrientation)
-(JNIEnv* env, jobject obj, jlong native_app, jfloatArray orientation, jlong timestamp_ns) {
-  float *out = env->GetFloatArrayElements(orientation, nullptr);
+(JNIEnv* env, jobject obj, jlong native_app, jfloatArray orientation,
+ jlong timestamp_ns) {
+  float* out = env->GetFloatArrayElements(orientation, nullptr);
   cardboard::Vector4 quat = native(native_app)->GetPose(timestamp_ns);
   out[0] = static_cast<float>(-quat[0]);
   out[1] = static_cast<float>(-quat[1]);

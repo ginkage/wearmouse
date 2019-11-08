@@ -137,8 +137,7 @@ class SensorEventQueueReader {
 
 // This struct holds android gyroscope specific sensor information.
 struct DeviceGyroscopeSensor::SensorInfo {
-  SensorInfo()
-      : sensor_manager(nullptr), sensor(nullptr) {}
+  SensorInfo() : sensor_manager(nullptr), sensor(nullptr) {}
   ASensorManager* sensor_manager;
   const ASensor* sensor;
   std::unique_ptr<SensorEventQueueReader> reader;
@@ -146,8 +145,7 @@ struct DeviceGyroscopeSensor::SensorInfo {
 
 namespace {
 
-bool ParseGyroEvent(const ASensorEvent& event,
-                    GyroscopeData* sample) {
+bool ParseGyroEvent(const ASensorEvent& event, GyroscopeData* sample) {
   if (event.type == ASENSOR_TYPE_ADDITIONAL_INFO) {
     CARDBOARD_LOGI("ParseGyroEvent discarding additional info sensor event");
     return false;
@@ -158,8 +156,8 @@ bool ParseGyroEvent(const ASensorEvent& event,
   // The event values in ASensorEvent (event, acceleration and
   // magnetic) are all in the same union type so they can be
   // accessed by event.
-  if (event.type == ASENSOR_TYPE_GYROSCOPE
-      || event.type == ASENSOR_TYPE_GYROSCOPE_UNCALIBRATED) {
+  if (event.type == ASENSOR_TYPE_GYROSCOPE ||
+      event.type == ASENSOR_TYPE_GYROSCOPE_UNCALIBRATED) {
     sample->data = {event.vector.x, event.vector.y, event.vector.z};
     return true;
   } else {

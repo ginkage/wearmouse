@@ -71,7 +71,8 @@ void SensorEventProducer<DataType>::StartSensorPollingLocked() {
     return;
   }
 
-  event_producer_->thread.reset(new std::thread([&]() { WorkFn(sampling_period_us_); }));
+  event_producer_->thread.reset(
+      new std::thread([&]() { WorkFn(sampling_period_us_); }));
 }
 
 template <typename DataType>
@@ -89,7 +90,8 @@ void SensorEventProducer<DataType>::StopSensorPollingLocked() {
 }
 
 template <>
-void SensorEventProducer<AccelerometerData>::WorkFn(const int sampling_period_us) {
+void SensorEventProducer<AccelerometerData>::WorkFn(
+    const int sampling_period_us) {
   DeviceAccelerometerSensor sensor;
 
   if (!sensor.Start(sampling_period_us)) {
