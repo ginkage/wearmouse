@@ -91,7 +91,7 @@ public class MouseSensorListener implements SensorService.OrientationListener {
     }
 
     @Override
-    public void onOrientation(float[] quaternion) {
+    public void onOrientation(double[] quaternion) {
         double q1 = quaternion[0]; // X * sin(T/2)
         double q2 = quaternion[1]; // Y * sin(T/2)
         double q3 = quaternion[2]; // Z * sin(T/2)

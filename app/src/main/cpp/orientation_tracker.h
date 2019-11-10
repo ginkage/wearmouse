@@ -24,6 +24,7 @@
 #include "sensors/gyroscope_data.h"
 #include "sensors/sensor_event_producer.h"
 #include "sensors/sensor_fusion_ekf.h"
+#include "sensors/sensor_thread_callbacks.h"
 #include "util/rotation.h"
 
 namespace cardboard {
@@ -33,7 +34,8 @@ namespace cardboard {
 // This pose tracker reports poses in display space.
 class OrientationTracker {
  public:
-  OrientationTracker(const Vector3& calibration, const int sampling_period_us);
+  OrientationTracker(const Vector3& calibration, const int sampling_period_us,
+                     SensorThreadCallbacks* callbacks);
   virtual ~OrientationTracker();
 
   // Pauses tracking and sensors.
@@ -43,7 +45,7 @@ class OrientationTracker {
   void Resume();
 
   // Gets the predicted pose for a given timestamp.
-  const Vector4& GetPose(int64_t timestamp_ns) const;
+  Vector4 GetPose(int64_t timestamp_ns) const;
 
  private:
   // Function called when receiving AccelerometerData.
@@ -65,7 +67,9 @@ class OrientationTracker {
   // polling for data.
   void UnregisterCallbacks();
 
+  long sampling_period_ns_;
   Vector3 calibration_;
+  std::unique_ptr<SensorThreadCallbacks> thread_callbacks_;
 
   std::atomic<bool> is_tracking_;
   // Sensor Fusion object that stores the internal state of the filter.
@@ -85,4 +89,4 @@ class OrientationTracker {
 
 }  // namespace cardboard
 
-#endif  // CARDBOARD_SDK_HEAD_TRACKER_H_
+#endif  // CARDBOARD_SDK_ORIENTATION_TRACKER_H_

@@ -40,9 +40,11 @@ struct SensorEventProducer<DataType>::EventProducer {
 };
 
 template <typename DataType>
-SensorEventProducer<DataType>::SensorEventProducer(const int sampling_period_us)
+SensorEventProducer<DataType>::SensorEventProducer(
+    const int sampling_period_us, SensorThreadCallbacks* thread_callbacks)
     : event_producer_(new EventProducer()),
-      sampling_period_us_(sampling_period_us) {}
+      sampling_period_us_(sampling_period_us),
+      thread_callbacks_(thread_callbacks) {}
 
 template <typename DataType>
 SensorEventProducer<DataType>::~SensorEventProducer() {
@@ -71,8 +73,17 @@ void SensorEventProducer<DataType>::StartSensorPollingLocked() {
     return;
   }
 
-  event_producer_->thread.reset(
-      new std::thread([&]() { WorkFn(sampling_period_us_); }));
+  event_producer_->thread.reset(new std::thread([&]() {
+    if (thread_callbacks_) {
+      thread_callbacks_->onThreadStart();
+    }
+
+    WorkFn();
+
+    if (thread_callbacks_) {
+      thread_callbacks_->onThreadStop();
+    }
+  }));
 }
 
 template <typename DataType>
@@ -90,11 +101,10 @@ void SensorEventProducer<DataType>::StopSensorPollingLocked() {
 }
 
 template <>
-void SensorEventProducer<AccelerometerData>::WorkFn(
-    const int sampling_period_us) {
+void SensorEventProducer<AccelerometerData>::WorkFn() {
   DeviceAccelerometerSensor sensor;
 
-  if (!sensor.Start(sampling_period_us)) {
+  if (!sensor.Start(sampling_period_us_)) {
     return;
   }
 
@@ -116,10 +126,10 @@ void SensorEventProducer<AccelerometerData>::WorkFn(
 }
 
 template <>
-void SensorEventProducer<GyroscopeData>::WorkFn(const int sampling_period_us) {
+void SensorEventProducer<GyroscopeData>::WorkFn() {
   DeviceGyroscopeSensor sensor;
 
-  if (!sensor.Start(sampling_period_us)) {
+  if (!sensor.Start(sampling_period_us_)) {
     return;
   }
 

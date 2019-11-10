@@ -55,7 +55,7 @@ public class SensorService extends Service {
          *
          * @param quaternion Device orientation.
          */
-        void onOrientation(float[] quaternion);
+        void onOrientation(double[] quaternion);
     }
 
     /** Callback to be notified of the calibration completion. */

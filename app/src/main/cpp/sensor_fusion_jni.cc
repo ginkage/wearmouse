@@ -33,6 +33,51 @@ inline cardboard::OrientationTracker* native(jlong ptr) {
   return reinterpret_cast<cardboard::OrientationTracker*>(ptr);
 }
 
+class JNIThreadCallbacks : public cardboard::SensorThreadCallbacks {
+ public:
+  JNIThreadCallbacks(JNIEnv* env, jobject obj) {
+    env->GetJavaVM(&jvm_);
+    obj_ = env->NewGlobalRef(obj);
+
+    jclass clazz =
+        env->FindClass("com/ginkage/wearmouse/sensors/SensorFusionJni");
+    method_on_orientation_ = env->GetMethodID(clazz, "onOrientation", "()V");
+    field_orientation_ = env->GetFieldID(clazz, "orientation", "[D");
+  }
+
+  void onThreadStart() override {
+    JavaVMAttachArgs args = {
+        .version = JNI_VERSION_1_6, .name = nullptr, .group = nullptr};
+    jvm_->AttachCurrentThread(&env_, &args);
+    dst_orientation_ = reinterpret_cast<jdoubleArray>(
+        env_->GetObjectField(obj_, field_orientation_));
+    running_ = true;
+  }
+
+  void onOrientation(const cardboard::Vector4& quat) override {
+    if (running_) {
+      env_->SetDoubleArrayRegion(dst_orientation_, 0, 4,
+                                 reinterpret_cast<const jdouble*>(&quat));
+      env_->CallVoidMethod(obj_, method_on_orientation_);
+    }
+  }
+
+  void onThreadStop() override {
+    running_ = false;
+    env_->DeleteGlobalRef(obj_);
+    jvm_->DetachCurrentThread();
+  }
+
+ private:
+  bool running_ = false;
+  JavaVM* jvm_ = nullptr;
+  JNIEnv* env_ = nullptr;
+  jdoubleArray dst_orientation_ = nullptr;
+  jmethodID method_on_orientation_;
+  jfieldID field_orientation_;
+  jobject obj_;
+};
+
 }  // anonymous namespace
 
 extern "C" {
@@ -42,12 +87,13 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved) {
 }
 
 JNI_METHOD(jlong, nativeInit)
-(JNIEnv* env, jobject obj, jfloatArray calibration, jint sampling_period_us) {
-  float* tmp = env->GetFloatArrayElements(calibration, nullptr);
-  const cardboard::Vector3 bias(tmp[0], tmp[1], tmp[2]);
-  env->ReleaseFloatArrayElements(calibration, tmp, 0);
+(JNIEnv* env, jobject obj, jdoubleArray calibration, jint sampling_period_us) {
+  cardboard::Vector3 bias;
+  env->GetDoubleArrayRegion(calibration, 0, 3,
+                            reinterpret_cast<jdouble*>(&bias));
 
-  auto tracker = new cardboard::OrientationTracker(bias, sampling_period_us);
+  auto tracker = new cardboard::OrientationTracker(
+      bias, sampling_period_us, new JNIThreadCallbacks(env, obj));
   tracker->Resume();
   return jptr(tracker);
 }
@@ -57,18 +103,6 @@ JNI_METHOD(void, nativeDestroy)
   cardboard::OrientationTracker* tracker = native(native_app);
   tracker->Pause();
   delete tracker;
-}
-
-JNI_METHOD(void, nativeGetOrientation)
-(JNIEnv* env, jobject obj, jlong native_app, jfloatArray orientation,
- jlong timestamp_ns) {
-  float* out = env->GetFloatArrayElements(orientation, nullptr);
-  cardboard::Vector4 quat = native(native_app)->GetPose(timestamp_ns);
-  out[0] = static_cast<float>(-quat[0]);
-  out[1] = static_cast<float>(-quat[1]);
-  out[2] = static_cast<float>(-quat[2]);
-  out[3] = static_cast<float>(quat[3]);
-  env->ReleaseFloatArrayElements(orientation, out, 0);
 }
 
 }  // extern "C"

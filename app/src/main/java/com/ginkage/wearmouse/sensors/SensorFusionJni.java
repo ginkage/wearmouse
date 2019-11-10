@@ -16,39 +16,38 @@
 
 package com.ginkage.wearmouse.sensors;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
+import com.ginkage.wearmouse.sensors.SensorService.OrientationListener;
+
 /** JNI for accessing the native sensor fusion implementation. */
 class SensorFusionJni {
 
     private final long nativeSensorFusionPtr;
+    private final OrientationListener listener;
+    private final double[] orientation = new double[4];
 
     static {
         System.loadLibrary("sensor_fusion_jni");
     }
 
     /** Initializes the native sensor fusion. Must be called before this object can be used. */
-    SensorFusionJni(float[] calibration, int samplingPeriodUs) {
+    SensorFusionJni(double[] calibration, int samplingPeriodUs, OrientationListener listener) {
         nativeSensorFusionPtr = nativeInit(calibration, samplingPeriodUs);
+        this.listener = checkNotNull(listener);
     }
 
     /** De-initializes the native sensor fusion. Must be called before releasing this object. */
-    synchronized void destroy() {
+    void destroy() {
         nativeDestroy(nativeSensorFusionPtr);
     }
 
-    /**
-     * Retrieves the sensor-fused device orientation.
-     *
-     * @param orientation the output as a quaternion (x, y, z, w)
-     * @param timestampNs timestamp of the orientation to predict at
-     */
-    synchronized void getOrientation(float[] orientation, long timestampNs) {
-        nativeGetOrientation(nativeSensorFusionPtr, orientation, timestampNs);
+    /** Called from the native thread whenever new gyroscope sensor data is available. */
+    void onOrientation() {
+        listener.onOrientation(orientation);
     }
 
-    private native long nativeInit(float[] calibration, int samplingPeriodUs);
+    private native long nativeInit(double[] calibration, int samplingPeriodUs);
 
     private native void nativeDestroy(long nativeSensorFusionPtr);
-
-    private native void nativeGetOrientation(
-            long sensorFusionNativePtr, float[] orientation, long timestampNs);
 }

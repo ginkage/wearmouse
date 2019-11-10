@@ -19,6 +19,8 @@
 #include <functional>
 #include <memory>
 
+#include "sensors/sensor_thread_callbacks.h"
+
 namespace cardboard {
 
 // Stream publisher that reads sensor data from the device sensors.
@@ -33,7 +35,8 @@ class SensorEventProducer {
   // Constructs a sensor publisher based on the sensor_name that is passed in.
   // It will fall back to the default sensor if the specified sensor cannot be
   // found.
-  SensorEventProducer(const int sampling_period_us);
+  SensorEventProducer(const int sampling_period_us,
+                      SensorThreadCallbacks* callbacks);
 
   ~SensorEventProducer();
 
@@ -59,12 +62,13 @@ class SensorEventProducer {
   // Worker method that polls for sensor data and executes OnSensor. This may
   // bind to a thread or be used as a callback for a task loop depending on the
   // implementation.
-  void WorkFn(const int sampling_period_us);
+  void WorkFn();
 
   // The implementation of device sensors differs between iOS and Android.
   struct EventProducer;
   std::unique_ptr<EventProducer> event_producer_;
   int sampling_period_us_;
+  SensorThreadCallbacks* thread_callbacks_;
 
   // Maximum waiting time for sensor events.
   static const int kMaxWaitMilliseconds = 100;

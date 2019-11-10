@@ -10,3 +10,11 @@
 -keep class com.ginkage.wearmouse.ui.devices.AvailableDevicesFragment {}
 -keep class com.ginkage.wearmouse.ui.devices.AboutFragment {}
 -keep class com.ginkage.wearmouse.ui.input.InputSettingsFragment {}
+
+-keepclasseswithmembers class * {
+    native <methods>;
+}
+
+-keepclasseswithmembers class com.ginkage.wearmouse.sensors.SensorFusionJni {
+    *;
+}

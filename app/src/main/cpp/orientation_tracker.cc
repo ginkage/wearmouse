@@ -23,14 +23,18 @@
 namespace cardboard {
 
 OrientationTracker::OrientationTracker(const Vector3& calibration,
-                                       const int sampling_period_us)
-    : calibration_(calibration),
+                                       const int sampling_period_us,
+                                       SensorThreadCallbacks* thread_callbacks)
+    : sampling_period_ns_(sampling_period_us * 1000l),
+      calibration_(calibration),
+      thread_callbacks_(thread_callbacks),
       is_tracking_(false),
       sensor_fusion_(new SensorFusionEkf()),
       latest_gyroscope_data_({0, 0, Vector3::Zero()}),
-      accel_sensor_(
-          new SensorEventProducer<AccelerometerData>(sampling_period_us)),
-      gyro_sensor_(new SensorEventProducer<GyroscopeData>(sampling_period_us)) {
+      accel_sensor_(new SensorEventProducer<AccelerometerData>(
+          sampling_period_us, nullptr)),
+      gyro_sensor_(new SensorEventProducer<GyroscopeData>(sampling_period_us,
+                                                          thread_callbacks)) {
   sensor_fusion_->SetBiasEstimationEnabled(/*kGyroBiasEstimationEnabled*/ true);
   on_accel_callback_ = [&](const AccelerometerData& event) {
     OnAccelerometerData(event);
@@ -64,18 +68,18 @@ void OrientationTracker::Resume() {
   RegisterCallbacks();
 }
 
-const Vector4& OrientationTracker::GetPose(int64_t timestamp_ns) const {
+Vector4 OrientationTracker::GetPose(int64_t timestamp_ns) const {
   Rotation predicted_rotation;
   const PoseState pose_state = sensor_fusion_->GetLatestPoseState();
   if (!sensor_fusion_->IsFullyInitialized()) {
     CARDBOARD_LOGI(
-        "Orientation Tracker not fully initialized yet. Using pose prediction only.");
+        "Tracker not fully initialized yet. Using pose prediction only.");
     predicted_rotation = pose_prediction::PredictPose(timestamp_ns, pose_state);
   } else {
     predicted_rotation = pose_state.sensor_from_start_rotation;
   }
 
-  return predicted_rotation.GetQuaternion();
+  return (-predicted_rotation).GetQuaternion();
 }
 
 void OrientationTracker::RegisterCallbacks() {
@@ -106,6 +110,9 @@ void OrientationTracker::OnGyroscopeData(const GyroscopeData& event) {
 
   latest_gyroscope_data_ = data;
   sensor_fusion_->ProcessGyroscopeSample(data);
+
+  thread_callbacks_->onOrientation(OrientationTracker::GetPose(
+      data.sensor_timestamp_ns + sampling_period_ns_));
 }
 
 }  // namespace cardboard
