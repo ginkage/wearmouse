@@ -25,7 +25,6 @@ class SensorFusionJni {
 
     private final long nativeSensorFusionPtr;
     private final OrientationListener listener;
-    private final double[] orientation = new double[4];
 
     static {
         System.loadLibrary("sensor_fusion_jni");
@@ -43,7 +42,8 @@ class SensorFusionJni {
     }
 
     /** Called from the native thread whenever new gyroscope sensor data is available. */
-    void onOrientation() {
+    @SuppressWarnings("unused")
+    void onOrientation(double[] orientation) {
         listener.onOrientation(orientation);
     }
 
