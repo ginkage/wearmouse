@@ -68,9 +68,14 @@ public class MouseSensorListener implements SensorService.OrientationListener {
 
     private double yaw;
     private double pitch;
+    private double roll;
     private double dYaw;
     private double dPitch;
     private double dWheel;
+    private double leftThreshold;
+    // private double rightThreshold; // not yet used
+    private boolean isRollLeftOn;
+    private boolean isRollLeftOff;
 
     /**
      * Whether this is the very first event we received after starting to listen or changing the
@@ -119,9 +124,13 @@ public class MouseSensorListener implements SensorService.OrientationListener {
 
         double yaw = Math.atan2(2 * (q0 * q3 - q1 * q2), (1 - 2 * (q1 * q1 + q3 * q3)));
         double pitch = Math.asin(2 * (q0 * q1 + q2 * q3));
+        double roll = Math.atan2(2 * (q0 * q2 - q1 * q3), (1 - 2 * (q1 * q1 + q2 * q2)));
         // double roll = Math.atan2(2 * (q0 * q2 - q1 * q3), (1 - 2 * (q1 * q1 + q2 * q2)));
 
-        if (Double.isNaN(yaw) || Double.isNaN(pitch)) {
+        double leftThreshold = -0.8; // Should probably be the equivalent of -45° or similar
+        // double rightThreshold = 0.8; // As above
+
+        if (Double.isNaN(yaw) || Double.isNaN(pitch) || Double.isNaN(roll)) {
             // NaN case, skip it
             return;
         }
@@ -129,15 +138,22 @@ public class MouseSensorListener implements SensorService.OrientationListener {
         if (firstRead) {
             this.yaw = yaw;
             this.pitch = pitch;
+            this.roll = roll;
             firstRead = false;
         } else {
             final double newYaw = highpass(this.yaw, yaw);
             final double newPitch = highpass(this.pitch, pitch);
+            final double newRoll = highpass(this.roll, roll);
 
             double dYaw = clamp(this.yaw - newYaw);
             double dPitch = this.pitch - newPitch;
+
+            boolean isRollLeftOn = (newRoll > leftThreshold) && (this.roll < leftThreshold);
+            boolean isRollLeftOff = (newRoll < leftThreshold) && (this.roll > leftThreshold);
+
             this.yaw = newYaw;
             this.pitch = newPitch;
+            this.roll = newRoll;
 
             // Accumulate the error locally.
             this.dYaw += dYaw;
@@ -153,6 +169,7 @@ public class MouseSensorListener implements SensorService.OrientationListener {
         firstRead = true;
         yaw = 0;
         pitch = 0;
+        roll = 0;
         dYaw = 0;
         dPitch = 0;
     }
@@ -289,6 +306,14 @@ public class MouseSensorListener implements SensorService.OrientationListener {
         if (z != 0) {
             dWheel -= z;
         }
+
+        if (isRollLeftOn) {
+            sendButtonEvent(0, true); // 0 should probably be replaced with BUTTON_LEFT
+        }
+        if (isRollLeftOff) {
+            sendButtonEvent(0, false); // same here, replace 0 with BUTTON_LEFT
+        }
+
 
         return overflow;
     }
