@@ -38,19 +38,18 @@ class JNIThreadCallbacks : public cardboard::SensorThreadCallbacks {
   JNIThreadCallbacks(JNIEnv* env, jobject obj) {
     env->GetJavaVM(&jvm_);
     obj_ = env->NewGlobalRef(obj);
+    dst_orientation_ = reinterpret_cast<jdoubleArray>(
+        env->NewGlobalRef(env->NewDoubleArray(4)));
 
     jclass clazz =
         env->FindClass("com/ginkage/wearmouse/sensors/SensorFusionJni");
-    method_on_orientation_ = env->GetMethodID(clazz, "onOrientation", "()V");
-    field_orientation_ = env->GetFieldID(clazz, "orientation", "[D");
+    method_on_orientation_ = env->GetMethodID(clazz, "onOrientation", "([D)V");
   }
 
   void onThreadStart() override {
     JavaVMAttachArgs args = {
         .version = JNI_VERSION_1_6, .name = nullptr, .group = nullptr};
     jvm_->AttachCurrentThread(&env_, &args);
-    dst_orientation_ = reinterpret_cast<jdoubleArray>(
-        env_->GetObjectField(obj_, field_orientation_));
     running_ = true;
   }
 
@@ -58,12 +57,13 @@ class JNIThreadCallbacks : public cardboard::SensorThreadCallbacks {
     if (running_) {
       env_->SetDoubleArrayRegion(dst_orientation_, 0, 4,
                                  reinterpret_cast<const jdouble*>(&quat));
-      env_->CallVoidMethod(obj_, method_on_orientation_);
+      env_->CallVoidMethod(obj_, method_on_orientation_, dst_orientation_);
     }
   }
 
   void onThreadStop() override {
     running_ = false;
+    env_->DeleteGlobalRef(dst_orientation_);
     env_->DeleteGlobalRef(obj_);
     jvm_->DetachCurrentThread();
   }
@@ -72,9 +72,8 @@ class JNIThreadCallbacks : public cardboard::SensorThreadCallbacks {
   bool running_ = false;
   JavaVM* jvm_ = nullptr;
   JNIEnv* env_ = nullptr;
-  jdoubleArray dst_orientation_ = nullptr;
+  jdoubleArray dst_orientation_;
   jmethodID method_on_orientation_;
-  jfieldID field_orientation_;
   jobject obj_;
 };
 
