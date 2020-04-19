@@ -46,11 +46,11 @@ public class HidDeviceApp
          * @param state New connection state, see {@link BluetoothProfile#EXTRA_STATE}.
          */
         @MainThread
-        void onDeviceStateChanged(BluetoothDevice device, int state);
+        void onConnectionStateChanged(BluetoothDevice device, int state);
 
         /** Callback that receives the app unregister event. */
         @MainThread
-        void onAppUnregistered();
+        void onAppStatusChanged(boolean registered);
     }
 
     private final MouseReport mouseReport = new MouseReport();
@@ -201,14 +201,20 @@ public class HidDeviceApp
 
     @BinderThread
     private void onConnectionStateChanged(BluetoothDevice device, int state) {
-        mainThreadHandler.post(() -> onDeviceStateChanged(device, state));
+        mainThreadHandler.post(() -> {
+            if (deviceStateListener != null) {
+                deviceStateListener.onConnectionStateChanged(device, state);
+            }
+        });
     }
 
     @BinderThread
     private void onAppStatusChanged(boolean registered) {
-        if (!registered) {
-            mainThreadHandler.post(this::onAppUnregistered);
-        }
+        mainThreadHandler.post(() -> {
+            if (deviceStateListener != null) {
+                deviceStateListener.onAppStatusChanged(registered);
+            }
+        });
     }
 
     @BinderThread
@@ -242,19 +248,5 @@ public class HidDeviceApp
 
         Log.e(TAG, "Invalid report ID requested: " + id);
         return null;
-    }
-
-    @MainThread
-    private void onDeviceStateChanged(BluetoothDevice device, int state) {
-        if (deviceStateListener != null) {
-            deviceStateListener.onDeviceStateChanged(device, state);
-        }
-    }
-
-    @MainThread
-    private void onAppUnregistered() {
-        if (deviceStateListener != null) {
-            deviceStateListener.onAppUnregistered();
-        }
     }
 }

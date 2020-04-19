@@ -76,6 +76,9 @@ public class HidDataSender
     @Nullable
     private BluetoothDevice waitingForDevice;
 
+    @GuardedBy("lock")
+    private boolean isAppRegistered;
+
     /**
      * @param hidDeviceApp HID Device App interface.
      * @param hidDeviceProfile Interface to manage paired HID Host devices.
@@ -180,13 +183,17 @@ public class HidDataSender
     public void requestConnect(BluetoothDevice device) {
         synchronized (lock) {
             waitingForDevice = device;
-            connectedDevice = null;
+            if (!isAppRegistered) {
+                // Request will be fulfilled as soon the as app becomes registered.
+                return;
+            }
 
+            connectedDevice = null;
             updateDeviceList();
 
             if (device != null && device.equals(connectedDevice)) {
                 for (ProfileListener listener : listeners) {
-                    listener.onDeviceStateChanged(device, BluetoothProfile.STATE_CONNECTED);
+                    listener.onConnectionStateChanged(device, BluetoothProfile.STATE_CONNECTED);
                 }
             }
         }
@@ -219,7 +226,13 @@ public class HidDataSender
                 @MainThread
                 public void onServiceStateChanged(BluetoothProfile proxy) {
                     synchronized (lock) {
-                        if (proxy != null) {
+                        if (proxy == null) {
+                            if (isAppRegistered) {
+                                // Service has disconnected before we could unregister the app.
+                                // Notify listeners, update the UI and internal state.
+                                onAppStatusChanged(false);
+                            }
+                        } else {
                             hidDeviceApp.registerApp(proxy);
                         }
                         updateDeviceList();
@@ -231,7 +244,7 @@ public class HidDataSender
 
                 @Override
                 @MainThread
-                public void onDeviceStateChanged(BluetoothDevice device, int state) {
+                public void onConnectionStateChanged(BluetoothDevice device, int state) {
                     synchronized (lock) {
                         if (state == BluetoothProfile.STATE_CONNECTED) {
                             // A new connection was established. If we weren't expecting that, it
@@ -247,17 +260,27 @@ public class HidDataSender
                         }
                         updateDeviceList();
                         for (ProfileListener listener : listeners) {
-                            listener.onDeviceStateChanged(device, state);
+                            listener.onConnectionStateChanged(device, state);
                         }
                     }
                 }
 
                 @Override
                 @MainThread
-                public void onAppUnregistered() {
+                public void onAppStatusChanged(boolean registered) {
                     synchronized (lock) {
+                        if (isAppRegistered == registered) {
+                            // We are already in the correct state.
+                            return;
+                        }
+                        isAppRegistered = registered;
+
                         for (ProfileListener listener : listeners) {
-                            listener.onAppUnregistered();
+                            listener.onAppStatusChanged(registered);
+                        }
+                        if (registered && waitingForDevice != null) {
+                            // Fulfill the postponed request to connect.
+                            requestConnect(waitingForDevice);
                         }
                     }
                 }

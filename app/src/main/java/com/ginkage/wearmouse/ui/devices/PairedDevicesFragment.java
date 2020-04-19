@@ -192,7 +192,7 @@ public class PairedDevicesFragment extends PreferenceFragment {
 
                 @Override
                 @MainThread
-                public void onDeviceStateChanged(BluetoothDevice device, int state) {
+                public void onConnectionStateChanged(BluetoothDevice device, int state) {
                     updatePreferenceBondState(device);
 
                     Context context = getContext();
@@ -210,8 +210,10 @@ public class PairedDevicesFragment extends PreferenceFragment {
 
                 @Override
                 @MainThread
-                public void onAppUnregistered() {
-                    getActivity().finish();
+                public void onAppStatusChanged(boolean registered) {
+                    if (!registered) {
+                        getActivity().finish();
+                    }
                 }
             };
 

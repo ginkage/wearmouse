@@ -51,14 +51,14 @@ public class NotificationService extends Service {
     private final HidDataSender.ProfileListener profileListener =
             new HidDataSender.ProfileListener() {
                 @Override
-                public void onDeviceStateChanged(BluetoothDevice device, int state) {
+                public void onConnectionStateChanged(BluetoothDevice device, int state) {
                     if (state == BluetoothProfile.STATE_DISCONNECTED) {
                         stopSelf();
                     }
                 }
 
                 @Override
-                public void onAppUnregistered() {}
+                public void onAppStatusChanged(boolean registered) {}
 
                 @Override
                 public void onServiceStateChanged(BluetoothProfile proxy) {}

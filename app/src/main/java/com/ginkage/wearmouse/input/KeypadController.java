@@ -95,7 +95,7 @@ public class KeypadController {
             new HidDataSender.ProfileListener() {
                 @Override
                 @MainThread
-                public void onDeviceStateChanged(BluetoothDevice device, int state) {
+                public void onConnectionStateChanged(BluetoothDevice device, int state) {
                     if (state == BluetoothProfile.STATE_DISCONNECTED) {
                         ui.onDeviceDisconnected();
                     }
@@ -103,8 +103,10 @@ public class KeypadController {
 
                 @Override
                 @MainThread
-                public void onAppUnregistered() {
-                    ui.onDeviceDisconnected();
+                public void onAppStatusChanged(boolean registered) {
+                    if (!registered) {
+                        ui.onDeviceDisconnected();
+                    }
                 }
 
                 @Override

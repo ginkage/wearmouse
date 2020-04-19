@@ -320,15 +320,17 @@ public class AvailableDevicesFragment extends PreferenceFragment {
 
                 @Override
                 @MainThread
-                public void onDeviceStateChanged(BluetoothDevice device, int state) {
+                public void onConnectionStateChanged(BluetoothDevice device, int state) {
                     final BluetoothDevicePreference pref = findOrAllocateDevicePreference(device);
                     pref.updateProfileConnectionState();
                 }
 
                 @Override
                 @MainThread
-                public void onAppUnregistered() {
-                    getActivity().finish();
+                public void onAppStatusChanged(boolean registered) {
+                    if (!registered) {
+                        getActivity().finish();
+                    }
                 }
             };
 
