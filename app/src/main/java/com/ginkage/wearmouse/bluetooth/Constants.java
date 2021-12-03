@@ -47,10 +47,10 @@ class Constants {
         (byte) 0x75, (byte) 0x08, //       Report size (8)
         (byte) 0x95, (byte) 0x06, //       Report count (6)
         (byte) 0x15, (byte) 0x00, //       Logical Minimum (0)
-        (byte) 0x25, (byte) 0x65, //       Logical Maximum (101)
+        (byte) 0x26, (byte) 0xFF, (byte) 0x00, // Logical maximum (255)
         (byte) 0x05, (byte) 0x07, //       Usage page (Key Codes)
         (byte) 0x19, (byte) 0x00, //       Usage Minimum (0)
-        (byte) 0x29, (byte) 0x65, //       Usage Maximum (101)
+        (byte) 0x26, (byte) 0xFF, (byte) 0x00, // Logical maximum (255)
         (byte) 0x81, (byte) 0x00, //       Input (Data, Array)              ; Key array (6 keys)
         (byte) 0xC0,              // End Collection
 
@@ -95,7 +95,7 @@ class Constants {
         (byte) 0x05, (byte) 0x06, //       Usage page (Generic Device Controls)
         (byte) 0x09, (byte) 0x20, //       Usage (Battery Strength)
         (byte) 0x15, (byte) 0x00, //       Logical minimum (0)
-        (byte) 0x26, (byte) 0xff, (byte) 0x00, // Logical maximum (255)
+        (byte) 0x26, (byte) 0xFF, (byte) 0x00, // Logical maximum (255)
         (byte) 0x75, (byte) 0x08, //       Report size (8)
         (byte) 0x95, (byte) 0x01, //       Report count (3)
         (byte) 0x81, (byte) 0x02, //       Input (Data, Variable, Absolute)

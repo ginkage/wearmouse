@@ -65,7 +65,11 @@ public class KeyboardHelper {
         Key.RIGHT,
         Key.LEFT,
         Key.DOWN,
-        Key.UP
+        Key.UP,
+        Key.BACK,
+        Key.PLAY_PAUSE,
+        Key.MENU,
+        Key.HOME
     })
     public @interface Key {
         int ENTER = 40;
@@ -77,6 +81,10 @@ public class KeyboardHelper {
         int LEFT = 80;
         int DOWN = 81;
         int UP = 82;
+        int BACK = 241;
+        int PLAY_PAUSE = 232;
+        int MENU = 101;
+        int HOME = 74;
     }
 
     private static final Map<Character, Integer> keyMap =

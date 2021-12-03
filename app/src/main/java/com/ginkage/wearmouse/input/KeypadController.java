@@ -24,6 +24,7 @@ import android.content.Context;
 import androidx.annotation.MainThread;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
 import com.ginkage.wearmouse.input.KeyboardHelper.Key;
+import com.ginkage.wearmouse.input.KeyboardHelper.Modifier;
 import com.ginkage.wearmouse.input.SettingsUtil.SettingKey;
 
 /** Controls the 4-way or 8-way cursor Keypad input behaviour for the corresponding UI. */
@@ -48,7 +49,7 @@ public class KeypadController {
     private static final int[] pressKey = {Key.UP, Key.LEFT, Key.DOWN, Key.RIGHT};
 
     // Key to press on a swipe from center.
-    private static final int[] swipeKey = {Key.ESCAPE, Key.BACKSPACE, Key.TAB, Key.SPACE};
+    private static final int[] swipeKey = {Key.PLAY_PAUSE, Key.BACK, Key.HOME, Key.MENU};
 
     /** Callback for the UI. */
     public interface Ui {
@@ -171,9 +172,9 @@ public class KeypadController {
         return swipeKey[fourWay[swipeArea]];
     }
 
-    private void sendKeyPress(int key) {
-        keyboardHelper.sendKeyDown(0, key);
-        keyboardHelper.sendKeysUp(0);
+    private void sendKeyPress(@Modifier int modifier, int key) {
+        keyboardHelper.sendKeyDown(modifier, key);
+        keyboardHelper.sendKeysUp(Modifier.NONE);
     }
 
     private void sendKeyState() {
@@ -190,7 +191,7 @@ public class KeypadController {
             keyState[index++] = NONE;
         }
 
-        keyboardHelper.sendKeysDown(0, keyState[0], keyState[1]);
+        keyboardHelper.sendKeysDown(Modifier.NONE, keyState[0], keyState[1]);
     }
 
     private class KeypadGestureListener implements KeypadGestureDetector.GestureListener {
@@ -206,7 +207,7 @@ public class KeypadController {
 
         @Override
         public void onCenterDoubleTap() {
-            sendKeyPress(Key.ENTER);
+            sendKeyPress(Modifier.NONE, Key.ENTER);
         }
 
         @Override
@@ -233,7 +234,27 @@ public class KeypadController {
         @Override
         public void onTouchUp() {
             if (swipeArea != CENTER_AREA) {
-                sendKeyPress(getSwipeKey());
+                int modifier = Modifier.NONE;
+                int key = getSwipeKey();
+
+                switch (key) {
+//                    case Key.BACK:
+//                        key = Key.BACKSPACE;
+//                        modifier = Modifier.LEFT_GUI;
+//                        break;
+                    case Key.HOME:
+                        key = Key.ENTER;
+                        modifier = Modifier.LEFT_GUI;
+                        break;
+//                    case Key.MENU:
+//                        key = Key.ESCAPE;
+//                        modifier = Modifier.LEFT_CTRL;
+//                        break;
+                    default:
+                        break;
+                }
+
+                sendKeyPress(modifier, key);
             } else {
                 touchArea = CENTER_AREA;
                 sendKeyState();

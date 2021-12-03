@@ -198,6 +198,10 @@ public class KeypadFragment extends Fragment {
                         .put(Key.BACKSPACE, getString(R.string.key_name_backspace))
                         .put(Key.TAB, getString(R.string.key_name_tab))
                         .put(Key.SPACE, getString(R.string.key_name_space))
+                        .put(Key.BACK, "Back")
+                        .put(Key.HOME, "Home")
+                        .put(Key.MENU, "Menu")
+                        .put(Key.PLAY_PAUSE, "Play/Pause")
                         .build();
 
         @Override
