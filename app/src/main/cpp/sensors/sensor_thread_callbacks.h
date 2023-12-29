@@ -21,13 +21,13 @@
 namespace cardboard {
 
 class SensorThreadCallbacks {
- public:
-  virtual ~SensorThreadCallbacks(){};
-  virtual void onThreadStart() = 0;
-  virtual void onOrientation(const Vector4& quat) = 0;
-  virtual void onThreadStop() = 0;
+public:
+    virtual ~SensorThreadCallbacks() {};
+    virtual void onThreadStart() = 0;
+    virtual void onOrientation(const Vector4& quat) = 0;
+    virtual void onThreadStop() = 0;
 };
 
 }  // namespace cardboard
 
-#endif  // CARDBOARD_SDK_SENSORS_SENSOR_THREAD_CALLBACKS_H
+#endif //CARDBOARD_SDK_SENSORS_SENSOR_THREAD_CALLBACKS_H

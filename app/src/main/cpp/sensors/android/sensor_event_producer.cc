@@ -40,8 +40,8 @@ struct SensorEventProducer<DataType>::EventProducer {
 };
 
 template <typename DataType>
-SensorEventProducer<DataType>::SensorEventProducer(
-    const int sampling_period_us, SensorThreadCallbacks* thread_callbacks)
+SensorEventProducer<DataType>::SensorEventProducer(const int sampling_period_us,
+                                                   SensorThreadCallbacks* thread_callbacks)
     : event_producer_(new EventProducer()),
       sampling_period_us_(sampling_period_us),
       thread_callbacks_(thread_callbacks) {}
@@ -73,17 +73,18 @@ void SensorEventProducer<DataType>::StartSensorPollingLocked() {
     return;
   }
 
-  event_producer_->thread.reset(new std::thread([&]() {
-    if (thread_callbacks_) {
-      thread_callbacks_->onThreadStart();
-    }
+  event_producer_->thread.reset(
+      new std::thread([&]() {
+          if (thread_callbacks_) {
+            thread_callbacks_->onThreadStart();
+          }
 
-    WorkFn();
+          WorkFn();
 
-    if (thread_callbacks_) {
-      thread_callbacks_->onThreadStop();
-    }
-  }));
+          if (thread_callbacks_) {
+            thread_callbacks_->onThreadStop();
+          }
+      }));
 }
 
 template <typename DataType>

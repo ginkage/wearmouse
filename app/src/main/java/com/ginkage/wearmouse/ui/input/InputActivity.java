@@ -155,7 +155,9 @@ public class InputActivity extends WearableActivity {
         return ((currentMode == InputMode.MOUSE
                                 && ((MouseFragment) getFragment()).onGenericMotionEvent(ev))
                         || (currentMode == InputMode.TOUCHPAD
-                                && ((TouchpadFragment) getFragment()).onGenericMotionEvent(ev)))
+                                && ((TouchpadFragment) getFragment()).onGenericMotionEvent(ev))
+                        || (currentMode == InputMode.KEYPAD
+                                && ((KeypadFragment) getFragment()).onGenericMotionEvent(ev)))
                 || super.onGenericMotionEvent(ev);
     }
 

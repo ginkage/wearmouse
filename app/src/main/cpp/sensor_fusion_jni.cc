@@ -34,46 +34,44 @@ inline cardboard::OrientationTracker* native(jlong ptr) {
 }
 
 class JNIThreadCallbacks : public cardboard::SensorThreadCallbacks {
- public:
+public:
   JNIThreadCallbacks(JNIEnv* env, jobject obj) {
     env->GetJavaVM(&jvm_);
     obj_ = env->NewGlobalRef(obj);
-    dst_orientation_ = reinterpret_cast<jdoubleArray>(
-        env->NewGlobalRef(env->NewDoubleArray(4)));
 
-    jclass clazz =
-        env->FindClass("com/ginkage/wearmouse/sensors/SensorFusionJni");
-    method_on_orientation_ = env->GetMethodID(clazz, "onOrientation", "([D)V");
+    jclass clazz = env->FindClass("com/ginkage/wearmouse/sensors/SensorFusionJni");
+    method_on_orientation_ = env->GetMethodID(clazz, "onOrientation", "()V");
+    field_orientation_ = env->GetFieldID(clazz, "orientation", "[D");
   }
 
   void onThreadStart() override {
-    JavaVMAttachArgs args = {
-        .version = JNI_VERSION_1_6, .name = nullptr, .group = nullptr};
+    JavaVMAttachArgs args = {.version = JNI_VERSION_1_6, .name = nullptr, .group = nullptr};
     jvm_->AttachCurrentThread(&env_, &args);
+    dst_orientation_ =
+        reinterpret_cast<jdoubleArray>(env_->GetObjectField(obj_, field_orientation_));
     running_ = true;
   }
 
   void onOrientation(const cardboard::Vector4& quat) override {
     if (running_) {
-      env_->SetDoubleArrayRegion(dst_orientation_, 0, 4,
-                                 reinterpret_cast<const jdouble*>(&quat));
-      env_->CallVoidMethod(obj_, method_on_orientation_, dst_orientation_);
+      env_->SetDoubleArrayRegion(dst_orientation_, 0, 4, reinterpret_cast<const jdouble *>(&quat));
+      env_->CallVoidMethod(obj_, method_on_orientation_);
     }
   }
 
   void onThreadStop() override {
     running_ = false;
-    env_->DeleteGlobalRef(dst_orientation_);
     env_->DeleteGlobalRef(obj_);
     jvm_->DetachCurrentThread();
   }
 
- private:
+private:
   bool running_ = false;
   JavaVM* jvm_ = nullptr;
   JNIEnv* env_ = nullptr;
-  jdoubleArray dst_orientation_;
+  jdoubleArray dst_orientation_ = nullptr;
   jmethodID method_on_orientation_;
+  jfieldID field_orientation_;
   jobject obj_;
 };
 
@@ -88,10 +86,10 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved) {
 JNI_METHOD(jlong, nativeInit)
 (JNIEnv* env, jobject obj, jdoubleArray calibration, jint sampling_period_us) {
   cardboard::Vector3 bias;
-  env->GetDoubleArrayRegion(calibration, 0, 3,
-                            reinterpret_cast<jdouble*>(&bias));
+  env->GetDoubleArrayRegion(calibration, 0, 3, reinterpret_cast<jdouble*>(&bias));
 
-  auto tracker = new cardboard::OrientationTracker(
+  auto tracker =
+    new cardboard::OrientationTracker(
       bias, sampling_period_us, new JNIThreadCallbacks(env, obj));
   tracker->Resume();
   return jptr(tracker);

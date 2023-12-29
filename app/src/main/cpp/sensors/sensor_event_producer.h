@@ -35,8 +35,7 @@ class SensorEventProducer {
   // Constructs a sensor publisher based on the sensor_name that is passed in.
   // It will fall back to the default sensor if the specified sensor cannot be
   // found.
-  SensorEventProducer(const int sampling_period_us,
-                      SensorThreadCallbacks* callbacks);
+  SensorEventProducer(const int sampling_period_us, SensorThreadCallbacks *callbacks);
 
   ~SensorEventProducer();
 
@@ -68,7 +67,7 @@ class SensorEventProducer {
   struct EventProducer;
   std::unique_ptr<EventProducer> event_producer_;
   int sampling_period_us_;
-  SensorThreadCallbacks* thread_callbacks_;
+  SensorThreadCallbacks *thread_callbacks_;
 
   // Maximum waiting time for sensor events.
   static const int kMaxWaitMilliseconds = 100;

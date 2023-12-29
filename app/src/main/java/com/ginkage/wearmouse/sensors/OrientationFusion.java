@@ -37,10 +37,10 @@ class OrientationFusion {
     void start(OrientationListener listener, int samplingPeriodUs, Vector calibrationData) {
         if (tracker == null) {
             tracker =
-                    new SensorFusionJni(
-                            new double[] {calibrationData.x, calibrationData.y, calibrationData.z},
-                            samplingPeriodUs,
-                            listener);
+                new SensorFusionJni(
+                    new double[]{ calibrationData.x, calibrationData.y, calibrationData.z },
+                    samplingPeriodUs,
+                    listener);
         }
     }
 

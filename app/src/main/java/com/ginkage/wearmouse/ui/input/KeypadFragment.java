@@ -21,10 +21,12 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.wearable.input.RotaryEncoder;
 import android.support.wearable.view.DismissOverlayView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -57,6 +59,7 @@ public class KeypadFragment extends Fragment {
     private int frameHeight;
     private int pointerWidth;
     private int pointerHeight;
+    private float scrollFactor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -98,6 +101,8 @@ public class KeypadFragment extends Fragment {
                             }
                         });
 
+        scrollFactor = -ViewConfiguration.get(getContext()).getScaledVerticalScrollFactor() / 5.0f;
+
         swipeName = root.findViewById(R.id.swipe_name);
         pointerView = root.findViewById(R.id.pointer_image);
         crossView = root.findViewById(R.id.cross);
@@ -138,6 +143,14 @@ public class KeypadFragment extends Fragment {
     public void onDestroy() {
         controller.onDestroy(getContext());
         super.onDestroy();
+    }
+
+    public boolean onGenericMotionEvent(MotionEvent ev) {
+        if (ev.getAction() == MotionEvent.ACTION_SCROLL && RotaryEncoder.isFromRotaryEncoder(ev)) {
+            controller.onRotaryInput(RotaryEncoder.getRotaryAxisValue(ev) * scrollFactor);
+            return true;
+        }
+        return false;
     }
 
     public boolean onTouchEvent(MotionEvent e) {

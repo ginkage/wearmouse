@@ -167,6 +167,15 @@ public class KeypadController {
         hidDataSender.unregister(context, profileListener);
     }
 
+    /**
+     * Should be called when an RSB event is detected.
+     *
+     * @param delta Movement of the Mouse Wheel.
+     */
+    public void onRotaryInput(float delta) {
+        hidDataSender.sendMouse(false, false, false, 0, 0, (int) delta);
+    }
+
     private int getSwipeKey() {
         return swipeKey[fourWay[swipeArea]];
     }

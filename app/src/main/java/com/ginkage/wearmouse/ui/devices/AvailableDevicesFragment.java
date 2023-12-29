@@ -16,7 +16,11 @@
 
 package com.ginkage.wearmouse.ui.devices;
 
+import static android.os.PowerManager.ACQUIRE_CAUSES_WAKEUP;
+import static android.os.PowerManager.FULL_WAKE_LOCK;
+
 import android.Manifest;
+import android.Manifest.permission;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
@@ -26,6 +30,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.os.StrictMode;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
@@ -60,6 +65,7 @@ public class AvailableDevicesFragment extends PreferenceFragment {
     private static final String KEY_PREF_BLUETOOTH_AVAILABLE = "pref_bluetoothAvailable";
 
     private static final int PERMISSION_REQUEST = 1;
+    private static final int DISCOVERABLE_REQUEST = 2;
 
     private BluetoothAdapter bluetoothAdapter;
     private HidDeviceProfile hidDeviceProfile;
@@ -70,6 +76,8 @@ public class AvailableDevicesFragment extends PreferenceFragment {
 
     private Preference initiateScanDevices;
     private PreferenceGroup availableDevices;
+
+    private PowerManager.WakeLock wakeLock;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -96,11 +104,16 @@ public class AvailableDevicesFragment extends PreferenceFragment {
 
         registerStateReceiver();
 
-        if (context.checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION)
+        if (context.checkSelfPermission(permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(
-                    new String[] {Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSION_REQUEST);
+                    new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST);
         }
+
+        PowerManager powerManager = getContext().getSystemService(PowerManager.class);
+        wakeLock =
+                powerManager.newWakeLock(
+                        FULL_WAKE_LOCK | ACQUIRE_CAUSES_WAKEUP, "WearMouse:PokeScreen");
     }
 
     @Override
@@ -115,20 +128,17 @@ public class AvailableDevicesFragment extends PreferenceFragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onStart() {
+        super.onStart();
         checkBluetoothState();
-    }
-
-    @Override
-    public void onPause() {
-        stopDiscovery();
-        unregisterScanReceiver();
-        super.onPause();
+        wakeLock.acquire(3*60*1000L /*3 minutes*/);
     }
 
     @Override
     public void onDestroy() {
+        wakeLock.release();
+        stopDiscovery();
+        unregisterScanReceiver();
         unregisterStateReceiver();
         hidDataSender.unregister(getContext(), profileListener);
         super.onDestroy();
@@ -237,8 +247,12 @@ public class AvailableDevicesFragment extends PreferenceFragment {
         intentFilter.addAction(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
         getContext().registerReceiver(scanReceiver = new BluetoothScanReceiver(), intentFilter);
 
-        BluetoothUtils.setScanMode(
-                bluetoothAdapter, BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE, 0);
+        if (!BluetoothUtils.setScanMode(
+                bluetoothAdapter, BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE, 0)) {
+            Intent discoverableIntent =
+                new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+            startActivityForResult(discoverableIntent, DISCOVERABLE_REQUEST);
+        }
     }
 
     private void unregisterScanReceiver() {

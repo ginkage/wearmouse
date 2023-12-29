@@ -31,10 +31,9 @@ OrientationTracker::OrientationTracker(const Vector3& calibration,
       is_tracking_(false),
       sensor_fusion_(new SensorFusionEkf()),
       latest_gyroscope_data_({0, 0, Vector3::Zero()}),
-      accel_sensor_(new SensorEventProducer<AccelerometerData>(
-          sampling_period_us, nullptr)),
-      gyro_sensor_(new SensorEventProducer<GyroscopeData>(sampling_period_us,
-                                                          thread_callbacks)) {
+      accel_sensor_(
+          new SensorEventProducer<AccelerometerData>(sampling_period_us, nullptr)),
+      gyro_sensor_(new SensorEventProducer<GyroscopeData>(sampling_period_us, thread_callbacks)) {
   sensor_fusion_->SetBiasEstimationEnabled(/*kGyroBiasEstimationEnabled*/ true);
   on_accel_callback_ = [&](const AccelerometerData& event) {
     OnAccelerometerData(event);
@@ -44,7 +43,9 @@ OrientationTracker::OrientationTracker(const Vector3& calibration,
   };
 }
 
-OrientationTracker::~OrientationTracker() { UnregisterCallbacks(); }
+OrientationTracker::~OrientationTracker() {
+  UnregisterCallbacks();
+}
 
 void OrientationTracker::Pause() {
   if (!is_tracking_) {
@@ -73,7 +74,7 @@ Vector4 OrientationTracker::GetPose(int64_t timestamp_ns) const {
   const PoseState pose_state = sensor_fusion_->GetLatestPoseState();
   if (!sensor_fusion_->IsFullyInitialized()) {
     CARDBOARD_LOGI(
-        "Tracker not fully initialized yet. Using pose prediction only.");
+        "Orientation Tracker not fully initialized yet. Using pose prediction only.");
     predicted_rotation = pose_prediction::PredictPose(timestamp_ns, pose_state);
   } else {
     predicted_rotation = pose_state.sensor_from_start_rotation;
@@ -104,15 +105,15 @@ void OrientationTracker::OnGyroscopeData(const GyroscopeData& event) {
     return;
   }
 
-  const GyroscopeData data = {.data = event.data - calibration_,
-                              .system_timestamp = event.system_timestamp,
-                              .sensor_timestamp_ns = event.sensor_timestamp_ns};
+  const GyroscopeData data = {.system_timestamp = event.system_timestamp,
+                              .sensor_timestamp_ns = event.sensor_timestamp_ns,
+                              .data = event.data - calibration_};
 
   latest_gyroscope_data_ = data;
   sensor_fusion_->ProcessGyroscopeSample(data);
 
-  thread_callbacks_->onOrientation(OrientationTracker::GetPose(
-      data.sensor_timestamp_ns + sampling_period_ns_));
+  thread_callbacks_->onOrientation(
+      OrientationTracker::GetPose(data.sensor_timestamp_ns + sampling_period_ns_));
 }
 
 }  // namespace cardboard

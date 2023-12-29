@@ -34,7 +34,8 @@ namespace cardboard {
 // This pose tracker reports poses in display space.
 class OrientationTracker {
  public:
-  OrientationTracker(const Vector3& calibration, const int sampling_period_us,
+  OrientationTracker(const Vector3& calibration,
+                     const int sampling_period_us,
                      SensorThreadCallbacks* callbacks);
   virtual ~OrientationTracker();
 

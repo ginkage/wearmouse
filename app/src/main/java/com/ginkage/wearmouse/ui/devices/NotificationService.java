@@ -78,7 +78,7 @@ public class NotificationService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (ACTION_START.equals(intent.getAction()) && hidDataSender.isConnected()) {
+        if (intent != null && ACTION_START.equals(intent.getAction()) && hidDataSender.isConnected()) {
             String device = intent.getStringExtra(EXTRA_DEVICE);
             int state = intent.getIntExtra(EXTRA_STATE, BluetoothProfile.STATE_DISCONNECTED);
             updateNotification(device, state);
@@ -149,7 +149,8 @@ public class NotificationService extends Service {
                         .setAction(Intent.ACTION_MAIN)
                         .addCategory(Intent.CATEGORY_LAUNCHER);
 
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        PendingIntent pendingIntent =
+                PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
         return new Notification.Builder(this, NOTIFICATION_CHANNEL_ID)
                 .setLocalOnly(true)
