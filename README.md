@@ -1,3 +1,5 @@
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ginkage)
+
 # WearMouse
 
 This project is a sample for the new Bluetooth HID Device API, which was
