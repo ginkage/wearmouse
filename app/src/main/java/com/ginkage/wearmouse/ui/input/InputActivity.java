@@ -107,6 +107,7 @@ public class InputActivity extends WearableActivity {
     protected void onResume() {
         super.onResume();
         keyboardController.onResume();
+        getFragment().getView().requestFocus();
     }
 
     @Override

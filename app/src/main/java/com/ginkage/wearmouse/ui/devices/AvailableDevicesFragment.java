@@ -117,6 +117,12 @@ public class AvailableDevicesFragment extends PreferenceFragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        getView().requestFocus();
+    }
+
+    @Override
     public void onRequestPermissionsResult(
             int requestCode, String[] permissions, int[] grantResults) {
         if (requestCode == PERMISSION_REQUEST) {

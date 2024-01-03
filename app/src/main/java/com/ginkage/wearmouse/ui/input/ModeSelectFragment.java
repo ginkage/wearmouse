@@ -69,6 +69,7 @@ public class ModeSelectFragment extends PreferenceFragment {
     public void onResume() {
         super.onResume();
         keyboardController.onResume();
+        getView().requestFocus();
     }
 
     @Override

@@ -2,23 +2,23 @@ apply plugin: 'com.android.application'
 
 android {
     namespace 'com.ginkage.wearmouse'
-    compileSdkVersion 33
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.ginkage.wearmouse"
-        minSdkVersion 28
+        minSdkVersion 26
         targetSdkVersion 33
-        versionCode 31
-        versionName "1.23"
+        versionCode 36
+        versionName "1.24"
         externalNativeBuild {
             cmake {
                 arguments "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=clang"
                 cppFlags.addAll([
-                        "-std=c++11",
-                        "-Os",
-                        "-ffunction-sections",
-                        "-fdata-sections",
-                        "-fvisibility=hidden",
+                    "-std=c++11",
+                    "-Os",
+                    "-ffunction-sections",
+                    "-fdata-sections",
+                    "-fvisibility=hidden",
                 ])
             }
         }
@@ -39,8 +39,8 @@ android {
         }
     }
     compileOptions {
-        targetCompatibility JavaVersion.VERSION_11
-        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_17
     }
     lint {
         checkReleaseBuilds false
@@ -67,7 +67,8 @@ dependencies {
     implementation 'com.google.guava:guava:31.1-android'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
-    implementation "androidx.lifecycle:lifecycle-common-java8:2.5.1"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.5.1'
     implementation 'androidx.wear:wear:1.2.0'
+    implementation 'androidx.core:core-splashscreen:1.0.1'
 }

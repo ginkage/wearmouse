@@ -23,4 +23,5 @@
     <dimen name="info_action_padding">@dimen/screen_percentage_15</dimen>
     <dimen name="content_start_padding">@dimen/screen_percentage_05</dimen>
     <dimen name="content_end_padding">@dimen/screen_percentage_15</dimen>
+    <dimen name="splash_screen_icon_size">48dp</dimen>
 </resources>

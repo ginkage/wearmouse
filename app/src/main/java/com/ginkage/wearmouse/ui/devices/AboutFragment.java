@@ -62,6 +62,12 @@ public class AboutFragment extends Fragment {
         return root;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        getView().requestFocus();
+    }
+
     private static void createLicenseDialog(Context context) {
         Dialog dialog = new Dialog(context);
         dialog.setContentView(R.layout.dialog_open_source);
@@ -70,6 +76,7 @@ public class AboutFragment extends Fragment {
                 getTextFromInputStream(
                         context.getResources().openRawResource(R.raw.apache_license)));
         dialog.show();
+        dialog.findViewById(R.id.root_view).requestFocus();
     }
 
     private static String getTextFromInputStream(InputStream stream) {

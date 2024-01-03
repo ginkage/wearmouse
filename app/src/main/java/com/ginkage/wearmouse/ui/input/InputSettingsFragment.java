@@ -80,6 +80,12 @@ public class InputSettingsFragment extends PreferenceFragment {
                 });
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        getView().requestFocus();
+    }
+
     private void initBooleanPref(@SettingKey final String key) {
         final SwitchPreference pref = (SwitchPreference) findPreference(key);
         pref.setChecked(settings.getBoolean(key));

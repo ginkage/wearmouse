@@ -83,6 +83,7 @@ public class PairedDevicesFragment extends PreferenceFragment {
     public void onResume() {
         super.onResume();
         updateBluetoothStateAndDevices();
+        getView().requestFocus();
     }
 
     @Override

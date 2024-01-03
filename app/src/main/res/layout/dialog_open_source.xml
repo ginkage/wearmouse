@@ -20,8 +20,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:overScrollMode="never"
-    android:scrollbars="none"
+    android:background="@color/black"
+    android:id="@+id/root_view"
     tools:context=".ui.onboarding.OnboardingActivity" >
 
     <LinearLayout

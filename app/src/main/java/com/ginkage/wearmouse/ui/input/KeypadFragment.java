@@ -137,6 +137,7 @@ public class KeypadFragment extends Fragment {
     public void onResume() {
         super.onResume();
         controller.onResume();
+        getView().requestFocus();
     }
 
     @Override

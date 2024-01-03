@@ -53,6 +53,12 @@ public class OnboardingActivity extends Activity {
         findViewById(R.id.roundbutton_image).setOnClickListener(this::onClick);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        findViewById(R.id.root_view).requestFocus();
+    }
+
     private void onClick(View v) {
         setResult(RESULT_OK, getIntent());
         finish();

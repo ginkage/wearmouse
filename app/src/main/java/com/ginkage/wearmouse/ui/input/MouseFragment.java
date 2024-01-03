@@ -171,6 +171,7 @@ public class MouseFragment extends Fragment {
         super.onResume();
         navigationDrawer.getController().peekDrawer();
         actionDrawer.getController().peekDrawer();
+        getView().requestFocus();
     }
 
     @Override

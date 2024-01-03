@@ -25,6 +25,9 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.wearable.preference.WearablePreferenceActivity;
+
+import androidx.core.splashscreen.SplashScreen;
+
 import com.ginkage.wearmouse.ui.onboarding.OnboardingController.ScreenKey;
 import com.ginkage.wearmouse.ui.onboarding.OnboardingRequest;
 import com.google.common.collect.ImmutableList;
@@ -44,7 +47,7 @@ public class WelcomeActivity extends WearablePreferenceActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 1) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                startPreferenceFragment(new PairedDevicesFragment(), false);
+                maybeStartOnboarding();
                 return;
             }
             finish();
@@ -53,6 +56,7 @@ public class WelcomeActivity extends WearablePreferenceActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -68,12 +72,7 @@ public class WelcomeActivity extends WearablePreferenceActivity {
             }
         }
 
-        onboardingRequest = new OnboardingRequest(this, ScreenKey.WELCOME);
-        if (onboardingRequest.isComplete()) {
-            startPreferenceFragment(new PairedDevicesFragment(), false);
-        } else {
-            onboardingRequest.start();
-        }
+        maybeStartOnboarding();
     }
 
     @Override
@@ -86,5 +85,18 @@ public class WelcomeActivity extends WearablePreferenceActivity {
             finish();
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void maybeStartOnboarding() {
+        onboardingRequest = new OnboardingRequest(this, ScreenKey.WELCOME);
+        if (onboardingRequest.isComplete()) {
+            startDevicesFragment();
+        } else {
+            onboardingRequest.start();
+        }
+    }
+
+    private void startDevicesFragment() {
+        startPreferenceFragment(new PairedDevicesFragment(), false);
     }
 }

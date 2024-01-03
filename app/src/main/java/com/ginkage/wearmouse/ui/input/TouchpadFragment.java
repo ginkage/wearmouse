@@ -67,6 +67,12 @@ public class TouchpadFragment extends Fragment {
         super.onDestroy();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        getView().requestFocus();
+    }
+
     public boolean onTouchEvent(MotionEvent e) {
         if (e.getActionMasked() == MotionEvent.ACTION_DOWN) {
             // Prevent Swipe-To-Dismiss

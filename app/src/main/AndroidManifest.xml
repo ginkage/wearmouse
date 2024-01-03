@@ -46,7 +46,7 @@
             tools:ignore="DataExtractionRules,GoogleAppIndexingWarning"
             tools:targetApi="31">
 
-        <meta-data android:name="com.google.android.wearable.standalone" android:value="false" />
+        <meta-data android:name="com.google.android.wearable.standalone" android:value="true" />
         <uses-library android:name="com.google.android.wearable" android:required="false" />
 
         <service android:name=".sensors.SensorService" />
@@ -58,7 +58,8 @@
         <activity
                 android:name=".ui.devices.WelcomeActivity"
                 android:exported="true"
-                android:launchMode="singleTop">
+                android:launchMode="singleTop"
+                android:theme="@style/Theme.App.Starting" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -61,6 +61,9 @@
                 android:id="@+id/left_button"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:layout_marginHorizontal="2dp"
+                android:layout_marginVertical="2dp"
+                android:background="@drawable/button_left"
                 android:backgroundTint="@color/grey"
                 android:text="@string/left_button_label"
                 android:textColor="@color/dark_grey"
@@ -68,12 +71,17 @@
                 app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
                 app:layout_constraintLeft_toLeftOf="@id/left_guideline"
                 app:layout_constraintRight_toRightOf="@id/right_guideline"
-                app:layout_constraintTop_toTopOf="@id/top_guideline"/>
+                app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
             <Button
                 android:id="@+id/right_button"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/button_right"
                 android:backgroundTint="@color/grey"
                 android:text="@string/right_button_label"
                 android:textColor="@color/dark_grey"
@@ -81,7 +89,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
                 app:layout_constraintLeft_toLeftOf="@id/right_guideline"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@id/top_guideline"/>
+                app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
             <ImageView
                 android:id="@+id/pointer_direction"
@@ -112,14 +120,14 @@
             android:id="@+id/top_navigation_drawer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/dark_grey"
+            android:background="#202020"
             app:navigationStyle="singlePage"/>
 
         <androidx.wear.widget.drawer.WearableActionDrawerView
             android:id="@+id/bottom_action_drawer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/grey"
+            android:background="#202020"
             app:actionMenu="@menu/action_drawer_menu"
             app:showOverflowInPeek="true"/>
 
