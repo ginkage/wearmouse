@@ -17,91 +17,91 @@
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Name of the app in launcher. -->
-    <string name="app_name">WearMouse</string>
+    <string name="app_name">WearMouse - 腕上滑鼠</string>
     <!-- Prompt to wait for Bluetooth to turn on. -->
-    <string name="please_wait">Vänta …</string>
+    <string name="please_wait">請稍候…</string>
     <!-- Generic text to indicate that a setting is disabled. Should be in all caps. -->
-    <string name="generic_disabled">AV</string>
+    <string name="generic_disabled">關閉</string>
     <!-- The title of the activity for managing paired bluetooth devices -->
-    <string name="pref_bluetooth">Kopplade enheter</string>
+    <string name="pref_bluetooth">配對裝置</string>
     <!-- The title of the category for unpaired bluetooth devices available to pair with. -->
-    <string name="pref_bluetoothAvailable">Tillgängliga enheter</string>
+    <string name="pref_bluetoothAvailable">可用的裝置</string>
     <!-- Title of the list item to be clicked on when the user wants to trigger a new bluetooth device discovery process. -->
-    <string name="pref_bluetoothScan">Sök efter enheter i närheten</string>
+    <string name="pref_bluetoothScan">掃描附近的裝置</string>
     <!-- Message to be shown during the bluetooth device discovery process. -->
-    <string name="pref_bluetoothScan_scanning">Söker efter enheter i närheten …</string>
+    <string name="pref_bluetoothScan_scanning">正在掃描附近的裝置…</string>
     <!-- Action to connect to a paired Bluetooth device. -->
-    <string name="pref_bluetooth_connect">Anslut</string>
+    <string name="pref_bluetooth_connect">連線</string>
     <!-- Action to disconnect from a connected paired Bluetooth device. -->
-    <string name="pref_bluetooth_disconnect">Koppla från</string>
+    <string name="pref_bluetooth_disconnect">中斷連線</string>
     <!-- Action to unpair a paired Bluetooth device. -->
-    <string name="pref_bluetooth_unpair">Koppla från</string>
+    <string name="pref_bluetooth_unpair">解除配對</string>
     <!-- Action to select a connected paired Bluetooth device. -->
-    <string name="pref_bluetooth_select">Välj</string>
+    <string name="pref_bluetooth_select">選取</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is enabling. -->
-    <string name="pref_bluetooth_turningOn">Bluetooth aktiveras …</string>
+    <string name="pref_bluetooth_turningOn">正在開啟藍牙功能…</string>
     <!-- Message which is shown on entering the bluetooth settings when bluetooth is disabling. -->
-    <string name="pref_bluetooth_turningOff">Bluetooth inaktiveras …</string>
+    <string name="pref_bluetooth_turningOff">正在關閉藍牙功能…</string>
     <!-- The connection status of an unpaired remote bluetooth device. It means the device is available for pairing. -->
-    <string name="pref_bluetooth_available">Tillgänglig</string>
+    <string name="pref_bluetooth_available">可供使用</string>
     <!-- The profile availability of the remote device. It means no shared profiles between the two devices. -->
-    <string name="pref_bluetooth_unavailable">Inte tillgänglig</string>
+    <string name="pref_bluetooth_unavailable">無法使用</string>
     <!-- The connection status of a remote bluetooth device which is currently being paired with. -->
-    <string name="pref_bluetooth_pairing">Kopplar …</string>
+    <string name="pref_bluetooth_pairing">配對中…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_connecting">Ansluter …</string>
+    <string name="pref_bluetooth_connecting">連線中…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_connected">Ansluten</string>
+    <string name="pref_bluetooth_connected">已連線</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnecting">Kopplar från …</string>
+    <string name="pref_bluetooth_disconnecting">正在中斷連線…</string>
     <!-- The connection status of a paired remote bluetooth device. -->
-    <string name="pref_bluetooth_disconnected">Frånkopplad</string>
+    <string name="pref_bluetooth_disconnected">已中斷連線</string>
     <!-- The ability to forget a shared bluetooth device. -->
-    <string name="pref_bluetooth_forget">Glöm bort</string>
+    <string name="pref_bluetooth_forget">清除</string>
     <!-- Name of the menu entry for the About dialog. -->
-    <string name="pref_appAbout">Om</string>
+    <string name="pref_appAbout">關於</string>
     <!-- Title of the button that shows the license. -->
-    <string name="pref_about_openSource">Licens för öppen källkod</string>
+    <string name="pref_about_openSource">開放原始碼授權</string>
     <!-- Title at the top of the input mode selection -->
-    <string name="pref_mode_select">Inmatningsläge</string>
+    <string name="pref_mode_select">輸入模式</string>
     <!-- Title of the Mouse emulation mode -->
-    <string name="pref_inputMouse">Mus</string>
+    <string name="pref_inputMouse">滑鼠</string>
     <!-- Single-letter left button label -->
-    <string name="left_button_label">V</string>
+    <string name="left_button_label">左</string>
     <!-- Single-letter right button label -->
-    <string name="right_button_label">H</string>
+    <string name="right_button_label">右</string>
     <!-- Name of the extra option to click and hold the left mouse button -->
-    <string name="click_and_hold">Vänsterklicka och håll kvar</string>
+    <string name="click_and_hold">按住左鍵</string>
     <!-- Name of the extra option to click and hold the right mouse button -->
-    <string name="right_click_hold">Högerklicka och håll kvar</string>
+    <string name="right_click_hold">按住右鍵</string>
     <!-- Name of the extra option to click the middle mouse button -->
-    <string name="middle_click">Mittenklicka</string>
+    <string name="middle_click">按中間鍵</string>
     <!-- Hint for the users about the way they can navigate in the mouse emulation mode (3 lines) -->
-    <string name="tap_to_click">Vinka med handen för att flytta muspekaren\nTryck på knappen för att klicka\nDra nedåt från skärmens överkant för att byta hand</string>
+    <string name="tap_to_click">揮手可移動游標\n輕觸按鈕可點選\n從頂端往下拉可換手</string>
     <!-- Name of the left wrist mode (2 lines) -->
-    <string name="mouse_hand_left">Vänster hand\n(klockan sitter på vänster handled)</string>
+    <string name="mouse_hand_left">左手\n(手錶在左手腕上)</string>
     <!-- Name of the hand-held mode (2 lines) -->
-    <string name="mouse_hand_center">I mitten\n(du håller klockan i handen)</string>
+    <string name="mouse_hand_center">中央\n(手錶在你手中)</string>
     <!-- Name of the right wrist mode (2 lines) -->
-    <string name="mouse_hand_right">Höger hand\n(klockan sitter på höger handled)</string>
+    <string name="mouse_hand_right">右手\n(手錶在右手腕上)</string>
     <!-- Title of the Touchpad emulation mode -->
-    <string name="pref_inputTouchpad">Styrplatta</string>
+    <string name="pref_inputTouchpad">觸控板</string>
     <!-- Title of the Keypad cursor emulation mode -->
-    <string name="pref_inputCursor">Piltangenter</string>
+    <string name="pref_inputCursor">游標鍵</string>
     <!-- Hint for the user to learn about the keypad mode interaction -->
-    <string name="keypad_hint">Trycka snabbt två gånger: Returtangenten\nTrycka länge: Avsluta knappsatsläget\nSvep från mitten för extra tangenter</string>
+    <string name="keypad_hint">輕觸兩下：Enter 鍵\n長按：退出鍵盤模式\n從中央往外滑動可查看更多按鍵</string>
     <!-- Name of the Escape key -->
     <string name="key_name_escape">Escape</string>
     <!-- Name of the Backspace key -->
-    <string name="key_name_backspace">Backsteg</string>
+    <string name="key_name_backspace">Backspace</string>
     <!-- Name of the Tab key -->
-    <string name="key_name_tab">Tabb</string>
+    <string name="key_name_tab">Tab</string>
     <!-- Name of the Space key -->
-    <string name="key_name_space">Blanksteg</string>
+    <string name="key_name_space">空格</string>
     <!-- Title of the Keyboard text input emulation mode -->
-    <string name="pref_inputKeyboard">Tangentbordsinmatning</string>
+    <string name="pref_inputKeyboard">鍵盤輸入</string>
     <!-- Title at the top of settings view -->
-    <string name="pref_inputSettings">Inställningar</string>
+    <string name="pref_inputSettings">設定</string>
     <!-- Name of the preference for gyroscope calibration [CHAR_LIMIT=40] -->
     <string name="pref_settingCalibration">Calibrate sensors</string>
     <!-- Description of the preference for gyroscope calibration [CHAR_LIMIT=80] -->
@@ -111,31 +111,31 @@
     <!-- Prompt for the user to wait while the gyroscope calibration is running [CHAR_LIMIT=24] -->
     <string name="setting_calibration_running">Calibrating\u2026</string>
     <!-- Name of the preference for stabilizing mouse pointer movements -->
-    <string name="pref_settingStabilize">Stabilisera pekarrörelser</string>
+    <string name="pref_settingStabilize">穩定游標移動方式</string>
     <!-- Description of the preference for stabilizing mouse pointer movements -->
-    <string name="pref_settingStabilize_summary">Detta gör det lättare att peka på små mål</string>
+    <string name="pref_settingStabilize_summary">可以更輕鬆地將游標移至小型目標</string>
     <!-- Name of the preference for enabling 8-way keypad instead of 4-way -->
-    <string name="pref_settingCursor8Way">Åttariktad markör</string>
+    <string name="pref_settingCursor8Way">8 向游標</string>
     <!-- Description of the preference for enabling 8-way keypad instead of 4-way -->
-    <string name="pref_settingCursor8Way_summary">Tillåt diagonala rörelser i knappsatsläget</string>
+    <string name="pref_settingCursor8Way_summary">允許在鍵盤模式進行對角移動</string>
     <!-- Name of the preference for reducing the mouse data rate -->
-    <string name="pref_settingReducedRate">Minska datahastighet till 50 Hz</string>
+    <string name="pref_settingReducedRate">將資料傳輸速率降為 50 Hz</string>
     <!-- Description of the preference for reducing the mouse data rate -->
-    <string name="pref_settingReducedRate_summary">Aktivera detta om muspekaren inte hänger med i rörelsen</string>
+    <string name="pref_settingReducedRate_summary">如果滑鼠游標無法跟上動作，請啟用這項功能</string>
     <!-- Name of the preference for keeping the device connection in the background -->
-    <string name="pref_settingStayConnected">Stay connected in the background</string>
+    <string name="pref_settingStayConnected">在後臺保持連接</string>
     <!-- Description of the preference for keeping the device connection in the background -->
-    <string name="pref_settingStayConnected_summary">Keep device connection active while the app is minimized</string>
+    <string name="pref_settingStayConnected_summary">在應用最小化的情況下保持設備連接處於活動狀態</string>
     <!-- Name of the preference that allows you to go through all tutorials once again -->
-    <string name="pref_settingReplayTutorials">Upprepa alla självstudier</string>
+    <string name="pref_settingReplayTutorials">重複所有教學課程</string>
     <!-- Description of the preference that allows you to go through all tutorials once again -->
-    <string name="pref_settingReplayTutorials_summary">Visa hjälpskärmar för alla lägen en gång till när du öppnar dem</string>
+    <string name="pref_settingReplayTutorials_summary">進入時再次顯示每個模式的說明畫面</string>
     <!-- Tutorial text for the first launch of the application -->
-    <string name="onboarding_message_welcome">Parkoppla din Wear OS-smartklocka till en annan enhet via Bluetooth så kan du använda den som mus eller tangentbord.</string>
+    <string name="onboarding_message_welcome">如要使用 Wear OS 智慧型手錶做為藍牙滑鼠或鍵盤，請先與其他裝置進行配對。</string>
     <!-- Tutorial text for the mouse mode -->
-    <string name="onboarding_message_mouse">Markören på skärmen rör på sig när du flyttar Wear OS-enheten.</string>
+    <string name="onboarding_message_mouse">移動你的 Wear OS 裝置，即可移動畫面上的滑鼠游標。</string>
     <!-- Tutorial text for the cursor keys mode -->
-    <string name="onboarding_message_keypad">Tryck på piltangenterna genom att trycka på sidorna av Wear OS-enhetens skärm.</string>
+    <string name="onboarding_message_keypad">輕觸 Wear OS 裝置的螢幕兩側，即可按下方向鍵。</string>
     <!-- Tutorial text for the calibration process [CHAR_LIMIT=300] -->
     <string name="onboarding_message_calibration">Place your Wear OS device on a solid, level surface and make sure it is completely still.</string>
 </resources>
