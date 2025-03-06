@@ -68,7 +68,8 @@
 
         <activity android:name=".ui.devices.BluetoothStateActivity" />
 
-        <activity android:name=".ui.input.InputActivity" />
+        <activity android:name=".ui.input.InputActivity" 
+        android:theme="@style/Theme.Wearable.Modal"/>
 
         <activity android:name=".ui.input.CalibrationActivity" />
 
