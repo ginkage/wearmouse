@@ -1,5 +1,3 @@
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ginkage)
-[![paypal](https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LF9S5WAF6E4VA)
 
 # WearMouse
 
@@ -54,6 +52,3 @@ The main sections of the code tree are:
        implementation of that sensor.
 1. /ui
     * The user interface
-
-
-[![alt text](https://play.google.com/intl/en_gb/badges/images/generic/en_badge_web_generic.png "Get it on Google Play")](https://play.google.com/store/apps/details?id=com.ginkage.wearmouse)
