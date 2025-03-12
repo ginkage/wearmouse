@@ -14,9 +14,15 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<FrameLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -120,16 +126,16 @@
             android:id="@+id/top_navigation_drawer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#202020"
-            app:navigationStyle="singlePage"/>
+            android:background="@color/black"
+            app:navigationStyle="singlePage" />
 
         <androidx.wear.widget.drawer.WearableActionDrawerView
             android:id="@+id/bottom_action_drawer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#202020"
+            android:background="@color/black"
             app:actionMenu="@menu/action_drawer_menu"
-            app:showOverflowInPeek="true"/>
+            app:showOverflowInPeek="true" />
 
     </androidx.wear.widget.drawer.WearableDrawerLayout>
 
@@ -149,3 +155,5 @@
     </FrameLayout>
 
 </FrameLayout>
+
+</ScrollView>

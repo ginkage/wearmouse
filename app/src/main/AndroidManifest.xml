@@ -23,16 +23,13 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.BLUETOOTH"
-            android:maxSdkVersion="30" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"
-            android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
-            android:usesPermissionFlags="neverForLocation"
-            tools:targetApi="33" />
+            android:usesPermissionFlags="neverForLocation" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -44,16 +41,20 @@
             android:allowBackup="false"
             android:dataExtractionRules="@xml/data_extraction_rules"
             tools:ignore="DataExtractionRules,GoogleAppIndexingWarning"
-            tools:targetApi="31">
+            >
 
         <meta-data android:name="com.google.android.wearable.standalone" android:value="true" />
         <uses-library android:name="com.google.android.wearable" android:required="false" />
 
         <service android:name=".sensors.SensorService" />
 
-        <service android:name=".ui.devices.NotificationService" />
+        <service android:name=".ui.devices.NotificationService"
+            android:foregroundServiceType="connectedDevice" />
 
-        <activity android:name="android.support.wearable.preference.WearablePreferenceActivity" />
+        <activity
+            android:name="android.support.wearable.preference.WearablePreferenceActivity"
+            android:exported="true"
+            />
 
         <activity
                 android:name=".ui.devices.WelcomeActivity"
@@ -66,13 +67,26 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.devices.BluetoothStateActivity" />
+        <activity
+            android:name=".ui.devices.BluetoothStateActivity"
+            android:exported="true"
+            />
 
-        <activity android:name=".ui.input.InputActivity" />
+        <activity
+            android:name=".ui.input.InputActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Wearable.Modal"
+            />
 
-        <activity android:name=".ui.input.CalibrationActivity" />
+        <activity
+            android:name=".ui.input.CalibrationActivity"
+            android:exported="true"
+            />
 
-        <activity android:name=".ui.onboarding.OnboardingActivity" />
+        <activity
+            android:name=".ui.onboarding.OnboardingActivity"
+            android:exported="true"
+            />
 
     </application>
 </manifest>

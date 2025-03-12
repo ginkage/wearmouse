@@ -17,6 +17,9 @@
 package com.ginkage.wearmouse;
 
 import android.app.Application;
+import android.bluetooth.BluetoothProfile;
+import android.content.Intent;
+
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
@@ -24,6 +27,7 @@ import androidx.lifecycle.ProcessLifecycleOwner;
 import com.ginkage.wearmouse.bluetooth.HidDataSender;
 import com.ginkage.wearmouse.input.SettingsUtil;
 import com.ginkage.wearmouse.input.SettingsUtil.SettingKey;
+import com.ginkage.wearmouse.ui.devices.NotificationService;
 
 public class WearMouseApp extends Application {
 

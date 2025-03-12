@@ -16,6 +16,8 @@
 
 package com.ginkage.wearmouse.ui.devices;
 
+import static android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE;
+
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -24,6 +26,7 @@ import android.app.Service;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.content.Intent;
+import android.os.Build;
 import android.os.IBinder;
 import android.text.TextUtils;
 import com.ginkage.wearmouse.R;
@@ -78,7 +81,7 @@ public class NotificationService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (intent != null && ACTION_START.equals(intent.getAction()) && hidDataSender.isConnected()) {
+        if (intent != null && ACTION_START.equals(intent.getAction())) {
             String device = intent.getStringExtra(EXTRA_DEVICE);
             int state = intent.getIntExtra(EXTRA_STATE, BluetoothProfile.STATE_DISCONNECTED);
             updateNotification(device, state);
@@ -137,7 +140,7 @@ public class NotificationService extends Service {
                 notificationManager.notify(ONGOING_NOTIFICATION_ID, notification);
             }
         } else {
-            startForeground(ONGOING_NOTIFICATION_ID, notification);
+            startForeground(ONGOING_NOTIFICATION_ID, notification, FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE);
             isForeground = true;
         }
     }

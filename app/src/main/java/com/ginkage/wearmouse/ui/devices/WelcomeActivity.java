@@ -16,6 +16,7 @@
 
 package com.ginkage.wearmouse.ui.devices;
 
+import static android.Manifest.permission.BLUETOOTH;
 import static android.Manifest.permission.BLUETOOTH_ADVERTISE;
 import static android.Manifest.permission.BLUETOOTH_CONNECT;
 import static android.Manifest.permission.BLUETOOTH_SCAN;
@@ -38,7 +39,7 @@ import java.util.List;
 public class WelcomeActivity extends WearablePreferenceActivity {
     private OnboardingRequest onboardingRequest;
     private static final List<String> requiredPermissions = ImmutableList.of(
-            BLUETOOTH_ADVERTISE, BLUETOOTH_CONNECT, BLUETOOTH_SCAN
+            BLUETOOTH_ADVERTISE, BLUETOOTH_CONNECT, BLUETOOTH_SCAN, BLUETOOTH
     );
 
     @Override
